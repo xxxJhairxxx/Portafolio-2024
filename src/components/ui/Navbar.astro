@@ -1,0 +1,116 @@
+---
+import BtnMenu from '@atoms/BtnMenu.astro';
+import Thumb from '@atoms/Thumb.astro';
+import Networks from '@atoms/Networks.astro';
+import perfil from '@assents/images/perfil.jpg';
+---
+
+<!-- <script>
+	const mediaQuery = window.matchMedia('(min-width: 1200px)');
+
+	const imagePerfil = document.querySelector(
+		'.PerfilContent picture'
+	) as HTMLPictureElement;
+
+	window.innerWidth >= 1200 &&
+		imagePerfil.classList.replace('imagePerfilHidden', 'imagePerfilShow');
+
+	mediaQuery.addEventListener('change', () => {
+		mediaQuery.matches
+			? imagePerfil.classList.replace('imagePerfilHidden', 'imagePerfilShow')
+			: imagePerfil.classList.replace('imagePerfilShow', 'imagePerfilHidden');
+	}); -->
+<div class='Navbar'>
+	<div class='BarContent'>
+		<div class='PerfilContent'>
+			<Thumb img={perfil} className='imagePerfil' />
+			<h2 id='name'>Jhair Infanzon</h2>
+		</div>
+		<nav class='navDesktop'>
+			<a href='#'>Home</a>
+			<a href='#'>Sobre mi</a>
+			<a href='#'>Que hago</a>
+			<a href='#'>Resumen</a>
+			<a href='#'>Portafolio</a>
+			<a href='#'>Testimonios</a>
+			<a href='#'>Contacto</a>
+		</nav>
+		<Networks className='Network ml-auto laptop:ml-0' />
+
+		<BtnMenu className='mx-[2rem] laptop:hidden' />
+	</div>
+
+	<nav class='navMobile'>
+		<a href='#'>Home</a>
+		<a href='#'>Sobre mi</a>
+		<a href='#'>Que hago</a>
+		<a href='#'>Resumen</a>
+		<a href='#'>Portafolio</a>
+		<a href='#'>Testimonios</a>
+		<a href='#'>Contacto</a>
+	</nav>
+</div>
+
+<style scoped>
+	.Navbar {
+		@apply bg-secondary w-full  text-white top-0 left-0 fixed flex items-center justify-between z-[99];
+		@screen laptop {
+			position: relative;
+			width: 40rem;
+			align-items: start;
+		}
+	}
+	.BarContent {
+		@apply flex items-center w-full justify-between  bg-secondary py-[1.7rem] z-[90];
+		@screen laptop {
+			height:100vh;
+			flex-direction:column;
+			padding-bottom: 6rem;
+		}
+	}
+	.navMobile {
+		@apply absolute  top-[100%] flex flex-col bg-[#343A40] translate-y-[-120%] w-full px-[2rem] py-[1.5rem] rounded-b-2xl z-[80];
+		transition: transform 0.5s ease-in-out;
+		a {
+			@apply pt-[1.5rem] pb-[1.2rem] relative;
+			&::before {
+				@apply absolute bottom-0 h-[0.1rem] w-full bg-white;
+				content: '';
+			}
+
+			&:last-child {
+				&::before {
+					@apply hidden;
+				}
+			}
+		}
+	}
+
+	.navDesktop{
+		@apply flex flex-col h-full justify-between items-center py-[27%] text-[1.6rem]; 
+		a{
+			transition: color 0.3s ease-in-out;
+		}
+		a:hover{
+			@apply text-tertiary;
+		}
+	}
+
+
+	.PerfilContent {
+		.imagePerfil {
+			@apply hidden rounded-full relative mx-auto w-[18rem] border-[1rem] border-[#343A40] ;
+			img {
+				@apply rounded-full;
+			}
+
+			@screen laptop {
+				display: block;
+			}
+		}
+
+		h2 {
+			@apply text-[2.2rem] font-[500] px-[2rem] mt-4;
+		}
+	}
+</style>

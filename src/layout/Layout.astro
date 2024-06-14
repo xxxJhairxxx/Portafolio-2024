@@ -1,0 +1,36 @@
+---
+import SeoEngine from '@globals/SeoEngine.astro';
+import Navbar from '@components/ui/Navbar.astro';
+import Footer from '@ui/Footer.astro';
+import Header from '@ui/Header.astro';
+const { title } = Astro.props;
+---
+
+<html lang='es'>
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<SeoEngine title={title} />
+	</head>
+	<body>
+		<div class='Body'>
+			<Navbar />
+			<div class='Content'>
+				<Header />
+				<main>
+					<slot />
+				</main>
+				<Footer />
+			</div>
+		</div>
+
+		<!-- tu contenido es inyectado aquí -->
+	</body><style>
+		.Body {
+			@apply flex max-h-[100vh] w-[100vw] overflow-hidden;
+		}
+		.Content{
+			@apply w-full overflow-y-auto;
+		}
+	</style>
+</html>

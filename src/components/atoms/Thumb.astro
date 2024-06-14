@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	className?: string;
+	img: string | ImageMetadata;
+	contain?: boolean;
+	
+    alt?: string;
+}
+
+const { className, img, contain,alt="" } = Astro.props;
+---
+
+<picture class={`block ${className}`}>
+	{
+		(img as ImageMetadata).src === undefined ? (
+			<img
+				src={img as string}
+				class={`w-full h-full ${contain ? 'object-contain' : 'object-cover'}`}
+				alt={alt}
+			/>
+		) : (
+			<Image
+				class={`w-full h-full ${contain ? 'object-contain' : 'object-cover'}`}
+				src={img as ImageMetadata}
+                alt={alt}
+			/>
+		)
+	}
+</picture>

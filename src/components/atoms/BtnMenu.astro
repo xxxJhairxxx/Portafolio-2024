@@ -1,0 +1,38 @@
+---
+interface Props {
+	className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const btnMenu = document.querySelector('.btnMenu') as HTMLButtonElement;
+		const nav = document.querySelector('.navMobile') as HTMLDivElement;
+
+		btnMenu.addEventListener('click', () => {
+			nav.classList.toggle("visible")
+		});
+	});
+</script>
+
+<button class={`btnMenu ${className}`}>
+	<span />
+	<span />
+	<span />
+</button>
+
+<style is:global>
+	.btnMenu {
+		@apply w-[2.5rem] h-[1.85rem] flex flex-col justify-between;
+		span {
+			@apply bg-white w-full rounded-2xl h-[0.25rem] block;
+		}
+	}
+    .visible{
+        @apply !translate-y-[0%];
+        
+    }
+</style>
+

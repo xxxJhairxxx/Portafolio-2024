@@ -1,0 +1,60 @@
+---
+import Thumb from '@atoms/Thumb.astro';
+---
+
+<script>
+	function writing(name :string) {
+		for (let i = 0; i < name.length; i++) {
+			setTimeout(() => {
+				const span = document.createElement('span');
+				span.classList.add('titulo__letra');
+				if (name[i] === ' ') {
+					span.style.minWidth = '22px';
+				}
+				span.append(name[i]);
+				document.querySelector('.titulo__cursor')!.before(span);
+			}, 100 * i);
+		}
+	}
+
+	window.addEventListener('DOMContentLoaded', () => {
+		writing('Soy Jhair Infanzon.');
+	});
+</script>
+<header class='header'>
+	<Thumb
+		className='h-full w-full z-[-1] fixed '
+		img='https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+	/>
+	<div class='text-center w-full text-white mx-auto'>
+		<p class='title-up'>Bienvenidos</p>
+		<h1>
+			<span class='titulo__cursor'>|</span>
+		</h1>
+		<p class='title-down'>Lima, Perú</p>
+
+		<button class='btn-contact'> Contratos </button>
+	</div>
+</header>
+
+<style scoped>
+	.header {
+		@apply h-[100vh] w-full relative bg-black/70 flex items-center;
+	}
+    h1{
+        @apply text-[4.5rem] font-[600];
+    }
+    .title-up{
+        @apply text-[2.8rem]; 
+    }
+    .title-down{
+        @apply text-[2.1rem];
+    }
+    .btn-contact{
+        @apply text-tertiary border-[0.2rem] px-[3.7rem] py-[0.9rem] my-[2rem] rounded-[1.9rem] border-tertiary;
+        transition: background 0.5s ease-in-out ;
+        &:hover{
+            @apply bg-tertiary text-white;
+        }
+    }
+</style>

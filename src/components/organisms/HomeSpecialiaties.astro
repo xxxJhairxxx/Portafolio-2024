@@ -1,0 +1,15 @@
+---
+import Container from '@globals/Container.astro'
+import Title from '@atoms/Title.astro'
+import CardEspecial from '@molecules/CardEspecial.astro'
+
+const list = [1,2,3,4,5,6]
+---
+
+<Container>
+    <Title title='Mis Especialidades' subtitle='Servicios' />
+
+    <div class='grid tablet:grid-cols-2 laptop:grid-cols-3'>
+        {list.map(()=>  <CardEspecial title='Diseño Gráfico' text='Diseños publicitarios para anuncios físicos y en redes sociales' />)}
+    </div>
+</Container>

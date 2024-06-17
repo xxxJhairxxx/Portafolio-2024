@@ -1,0 +1,38 @@
+---
+interface Props {
+	title: string;
+	text: string;
+}
+const {title,text} = Astro.props as Props;
+---
+
+<div class='CardEspecial'>
+	<div class='logo'>
+		<i class='bi bi-palette-fill'/>
+	</div>
+	<div class='content'>
+		<h2>{title}</h2>
+		<p>{text}</p>
+	</div>
+</div>
+
+<style>
+    .CardEspecial{
+        @apply flex px-4 py-6;
+    }
+
+    .logo{
+        @apply text-tertiary text-[4rem] mx-[6%];
+    }
+
+    .content{
+        h2{
+            @apply text-black text-[2rem];
+        }
+        p{
+            @apply text-gris-100
+        }
+
+    }
+
+</style>

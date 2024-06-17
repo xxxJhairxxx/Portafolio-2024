@@ -40,7 +40,7 @@ const Characteristics = () => {
 
 
   return (
-    <div className='w-full tablet:w-[60%] mx-auto laptop:w-full py-8'>
+    <div className='w-full tablet:w-[60%] mx-auto laptop:w-full pt-8'>
       <Swiper {...swiperOptions} className="mySwiper text-gris-400 py-4  ">
         <SwiperSlide className='text-center'>
           <span className='text-[5rem] font-[500] py-4'>2+</span>

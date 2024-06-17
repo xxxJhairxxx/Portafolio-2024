@@ -1,0 +1,39 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	className?: string;
+}
+
+const { title, subtitle, className } = Astro.props;
+---
+
+<div class={`Title ${className}`}>
+	<h2>{title}</h2>
+	<h3>{subtitle}</h3>
+</div>
+
+<style>
+	.Title {
+		@apply font-bold text-center relative flex items-center justify-center my-[6rem];
+		h2 {
+			@apply text-[3.6rem] relative z-20;
+			&::before {
+				@apply w-[40%] absolute bottom-[-0.3rem] left-0 right-0 mx-auto h-[0.3rem] bg-tertiary;
+				content: '';
+			}
+		}
+		h3 {
+			@apply text-[5.5rem] uppercase absolute  text-[#fef2ea] z-10;
+		}
+	}
+
+	@screen laptop {
+		.Title {
+			@apply w-full my-[8rem];
+			h3 {
+				@apply text-[12rem];
+			}
+		}
+	}
+</style>

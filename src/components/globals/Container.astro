@@ -1,0 +1,16 @@
+---
+interface Props {
+    class?:string;
+}
+const props = Astro.props as Props;
+---
+
+<section {...props } >
+    <slot />
+</section>
+
+<style scoped >
+    section{
+        @apply mx-auto py-[5rem] px-[6%] bg-white;
+    }
+</style>

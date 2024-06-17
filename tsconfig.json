@@ -3,14 +3,32 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@molecules/*": ["./src/components/molecules/*"],
-      "@organisms/*": ["./src/components/organisms/*"],
-      "@atoms/*":["./src/components/atoms/*"],
-      "@globals/*": ["./src/components/globals/*"],
-      "@ui/*": ["./src/components/ui/*"],
-      "@assents/*": ["./src/assets/*"],
-      "@/*": ["./*"],
-    }
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@molecules/*": [
+        "./src/components/molecules/*"
+      ],
+      "@organisms/*": [
+        "./src/components/organisms/*"
+      ],
+      "@atoms/*": [
+        "./src/components/atoms/*"
+      ],
+      "@globals/*": [
+        "./src/components/globals/*"
+      ],
+      "@ui/*": [
+        "./src/components/ui/*"
+      ],
+      "@assents/*": [
+        "./src/assets/*"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

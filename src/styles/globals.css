@@ -18,11 +18,15 @@ html {
   font-size: 62.5%;
 }
 body {
-  @apply text-[1.6rem];
+  @apply text-[1.6rem] text-secondary;
   font-family: "Poppins", sans-serif;
   @screen laptop {
     font-size: calc(1.9rem * var(--scale));
   }
+}
+
+p{
+  @apply text-gris-300;
 }
 
 

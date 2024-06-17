@@ -27,11 +27,11 @@ import Thumb from '@atoms/Thumb.astro';
 		img='https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 	/>
 	<div class='text-center w-full text-white mx-auto'>
-		<p class='title-up'>Bienvenidos</p>
+		<span class='title-up'>Bienvenidos</span>
 		<h1>
 			<span class='titulo__cursor'>|</span>
 		</h1>
-		<p class='title-down'>Lima, Perú</p>
+		<span class='title-down'>Lima, Perú</span>
 
 		<button class='btn-contact'> Contratos </button>
 	</div>
@@ -45,14 +45,14 @@ import Thumb from '@atoms/Thumb.astro';
         @apply text-[4.5rem] font-[600];
     }
     .title-up{
-        @apply text-[2.8rem]; 
+        @apply text-[2.8rem] block; 
     }
     .title-down{
-        @apply text-[2.1rem];
+        @apply text-[2.1rem] block;
     }
     .btn-contact{
         @apply text-tertiary border-[0.2rem] px-[3.7rem] py-[0.9rem] my-[2rem] rounded-[1.9rem] border-tertiary;
-        transition: background 0.5s ease-in-out ;
+        transition: background 0.3s ease-in-out ,color 0.3s ease-in-out ;
         &:hover{
             @apply bg-tertiary text-white;
         }

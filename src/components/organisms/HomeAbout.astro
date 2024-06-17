@@ -1,4 +1,107 @@
+---
+import Title from '@atoms/Title.astro';
+import Button from '@atoms/Button.astro';
+import Container from '@globals/Container.astro';
+import Characteristics from "@components/molecules/Characteristics";
 
-<div class='h-[100vh] w-full bg-white'>
-    hola
-</div>
+function calcularEdad(fechaNacimiento: string) {
+	const hoy = new Date();
+	const nacimiento = new Date(fechaNacimiento);
+	let edad = hoy.getFullYear() - nacimiento.getFullYear();
+	const mes = hoy.getMonth() - nacimiento.getMonth();
+	if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+		edad--;
+	}
+	return edad;
+}
+---
+
+<Container class='HomeAbout'>
+	<Title title={'Mi perfil'} subtitle={'Sobre mi'} />
+	<article class='article'>
+		<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Full-Stack.</h4>
+		<p>
+			Desarrollador Web, pro-activo e innovador. Especializadoen la creación
+			de aplicaciones web eficientes y escalables con enfoque integral desdel frontend hasta el backend
+		</p>
+		<p>
+			Constantemente actializado con las últimas tendencias del desarrollo web, buscodesafíos tecnológicos emocionantes.
+		</p>
+	</article>
+	<div class='content-data'>
+		<div class='info'>
+			<p><strong>Nombre:</strong> Jhair Infanzon</p>
+			<p>
+				<strong>Email:</strong>
+				<a target='_blank' href='mailto:jinfanzonquispe30@gmail.com'
+					>jinfanzonquispe30@gmail.com</a
+				>
+			</p>
+			<p>
+				<strong>Celular:</strong>
+				<a href='tel:+51922692354'>+51 922 692 354</a>
+			</p>
+			<p><strong>Edad:</strong> {calcularEdad('1995-01-30')}</p>
+			<p><strong>Ciudad:</strong> Lima, Perú</p>
+		</div>
+
+		<Button>Descargar CV</Button>
+	</div>
+
+    <Characteristics client:load />
+</Container>
+
+<style>
+	.HomeAbout {
+		.article {
+			@apply text-center flex flex-col gap-5;
+
+			h4 {
+				@apply text-[2.8rem] max-w-[50rem] mx-auto font-[600];
+				span {
+					@apply text-tertiary;
+				}
+			}
+			a {
+				@apply text-tertiary;
+			}
+		}
+		.content-data {
+			@apply my-[2rem] flex flex-col gap-8 items-start w-[100%];
+			.info {
+				@apply flex flex-col gap-5 w-full;
+				p {
+					@apply border-gris-300/30 border-b-[0.1rem] pb-4;
+				}
+			}
+		}
+	}
+	@screen tablet {
+		.HomeAbout {
+            .article{
+                @apply w-[85%] mx-auto;
+            }
+			.content-data {
+				@apply items-center w-[60%] mx-auto;
+			}
+		}
+	}
+
+	@screen laptop {
+		.HomeAbout {
+			@apply flex flex-row flex-wrap justify-center gap-[10%];
+			.article {
+                @apply w-[40%] mx-0;
+				h4 {
+					@apply text-left mx-0;
+				}
+                p{
+                @apply text-start;
+                }
+			}
+            .content-data{
+                @apply w-[35%] mx-0;
+            }
+		}
+	}
+</style>

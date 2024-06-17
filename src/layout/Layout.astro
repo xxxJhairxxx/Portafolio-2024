@@ -3,6 +3,9 @@ import SeoEngine from '@globals/SeoEngine.astro';
 import Navbar from '@components/ui/Navbar.astro';
 import Footer from '@ui/Footer.astro';
 import Header from '@ui/Header.astro';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import './styles.css';
 const { title } = Astro.props;
 ---
 
@@ -11,7 +14,8 @@ const { title } = Astro.props;
 		<meta charset='utf-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1' />
 		<SeoEngine title={title} />
-	</head>
+	</head
+	
 	<body>
 		<div class='Body'>
 			<Navbar />
@@ -34,3 +38,4 @@ const { title } = Astro.props;
 		}
 	</style>
 </html>
+

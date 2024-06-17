@@ -35,7 +35,7 @@ import perfil from '@assents/images/perfil.jpg';
 			<a href='#'>Testimonios</a>
 			<a href='#'>Contacto</a>
 		</nav>
-		<Networks className='Network ml-auto laptop:ml-0' />
+		<Networks />
 
 		<BtnMenu className='mx-[2rem] laptop:hidden' />
 	</div>
@@ -56,7 +56,7 @@ import perfil from '@assents/images/perfil.jpg';
 		@apply bg-secondary w-full  text-white top-0 left-0 fixed flex items-center justify-between z-[99];
 		@screen laptop {
 			position: relative;
-			width: 40rem;
+			width: 35rem;
 			align-items: start;
 		}
 	}
@@ -64,8 +64,9 @@ import perfil from '@assents/images/perfil.jpg';
 		@apply flex items-center w-full justify-between  bg-secondary py-[1.7rem] z-[90];
 		@screen laptop {
 			height:100vh;
+			max-height: 90rem;
 			flex-direction:column;
-			padding-bottom: 6rem;
+			padding-bottom: 4rem;
 		}
 	}
 	.navMobile {
@@ -84,10 +85,14 @@ import perfil from '@assents/images/perfil.jpg';
 				}
 			}
 		}
+		@screen laptop {
+			display: none;
+		}
 	}
 
 	.navDesktop{
-		@apply hidden laptop:flex flex-col h-full justify-between items-center py-[27%] text-[1.6rem]; 
+		@apply hidden laptop:flex flex-col h-full justify-between items-center text-[1.6rem];
+		padding-block: 8rem;
 		a{
 			transition: color 0.3s ease-in-out;
 		}

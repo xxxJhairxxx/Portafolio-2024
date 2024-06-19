@@ -5,21 +5,24 @@ import Networks from '@atoms/Networks.astro';
 import perfil from '@assents/images/perfil.jpg';
 ---
 
-<!-- <script>
-	const mediaQuery = window.matchMedia('(min-width: 1200px)');
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const links = document.querySelectorAll('.Navbar.navDesktop > a');
 
-	const imagePerfil = document.querySelector(
-		'.PerfilContent picture'
-	) as HTMLPictureElement;
+		links.forEach((link) => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				const targetId = link.getAttribute('href')!.substring(1);
+				const targetElement = document.getElementById(targetId);
 
-	window.innerWidth >= 1200 &&
-		imagePerfil.classList.replace('imagePerfilHidden', 'imagePerfilShow');
-
-	mediaQuery.addEventListener('change', () => {
-		mediaQuery.matches
-			? imagePerfil.classList.replace('imagePerfilHidden', 'imagePerfilShow')
-			: imagePerfil.classList.replace('imagePerfilShow', 'imagePerfilHidden');
-	}); -->
+				window.scrollTo({
+					top: targetElement!.offsetTop,
+					behavior: 'smooth',
+				});
+			});
+		});
+	});
+</script>
 <div class='Navbar'>
 	<div class='BarContent'>
 		<div class='PerfilContent'>
@@ -27,13 +30,13 @@ import perfil from '@assents/images/perfil.jpg';
 			<h2 id='name'>Jhair Infanzon</h2>
 		</div>
 		<nav class='navDesktop'>
-			<a href='#'>Home</a>
-			<a href='#'>Sobre mi</a>
-			<a href='#'>Que hago</a>
-			<a href='#'>Resumen</a>
-			<a href='#'>Portafolio</a>
+			<a href='#index'>Home</a>
+			<a href='#about'>Sobre mi</a>
+			<a href='#howdo'>Que hago</a>
+			<a href='#resume'>Resumen</a>
+			<a href='#portfolio'>Portafolio</a>
 			<a href='#'>Testimonios</a>
-			<a href='#'>Contacto</a>
+			<a href='#contact'>Contacto</a>
 		</nav>
 		<Networks />
 
@@ -41,13 +44,13 @@ import perfil from '@assents/images/perfil.jpg';
 	</div>
 
 	<nav class='navMobile'>
-		<a href='#'>Home</a>
-		<a href='#'>Sobre mi</a>
-		<a href='#'>Que hago</a>
-		<a href='#'>Resumen</a>
-		<a href='#'>Portafolio</a>
+		<a href='#index'>Home</a>
+		<a href='#about'>Sobre mi</a>
+		<a href='#howdo'>Que hago</a>
+		<a href='#resume'>Resumen</a>
+		<a href='#portfolio'>Portafolio</a>
 		<a href='#'>Testimonios</a>
-		<a href='#'>Contacto</a>
+		<a href='#contact'>Contacto</a>
 	</nav>
 </div>
 
@@ -63,9 +66,9 @@ import perfil from '@assents/images/perfil.jpg';
 	.BarContent {
 		@apply flex items-center w-full justify-between  bg-secondary py-[1.7rem] z-[90];
 		@screen laptop {
-			height:100vh;
+			height: 100vh;
 			max-height: 90rem;
-			flex-direction:column;
+			flex-direction: column;
 			padding-bottom: 4rem;
 		}
 	}
@@ -90,21 +93,20 @@ import perfil from '@assents/images/perfil.jpg';
 		}
 	}
 
-	.navDesktop{
+	.navDesktop {
 		@apply hidden laptop:flex flex-col h-full justify-between items-center text-[1.6rem];
 		padding-block: 8rem;
-		a{
+		a {
 			transition: color 0.3s ease-in-out;
 		}
-		a:hover{
+		a:hover {
 			@apply text-tertiary;
 		}
 	}
 
-
 	.PerfilContent {
 		.imagePerfil {
-			@apply hidden rounded-full relative mx-auto w-[18rem] border-[1rem] border-[#343A40] ;
+			@apply hidden rounded-full relative mx-auto w-[18rem] border-[1rem] border-[#343A40];
 			img {
 				@apply rounded-full;
 			}

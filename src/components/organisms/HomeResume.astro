@@ -1,9 +1,96 @@
 ---
-import Container from '@globals/Container.astro'
-import Title from '@atoms/Title.astro'
-import CardEspecial from '@molecules/CardEspecial.astro'
+import Container from '@globals/Container.astro';
+import Title from '@atoms/Title.astro';
+import CardResume from '@molecules/CardResume.astro';
+import CardSkills from '@molecules/CardSkills.astro';
+import Button from '@atoms/Button.astro';
+
+const list = [1, 2, 3, 4, 5, 6];
+const list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 ---
 
-<Container>
-    <Title title='Mis Especialidades' subtitle='Servicios' />
+<Container class='Resume' id='resume'>
+	<Title className='col-span-2' title='Resumen' subtitle='Sumario' />
+	<section class='Resume-details'>
+		<div class='Resume-Estudios'>
+			<h2>Mis Estudios</h2>
+			{
+				list.map(() => (
+					<CardResume
+						rangoYear='2022 - 2023'
+						title='Desarrollador Web FullStack'
+						subtitle='Codigo Tecsup'
+						text='Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End.'
+					/>
+				))
+			}
+		</div>
+		<div class='Resume-Experience'>
+			<h2>Mi Experiencia</h2>
+			{
+				list.map(() => (
+					<CardResume
+						rangoYear='2022 - 2023'
+						title='Desarrollador Web FullStack'
+						subtitle='Codigo Tecsup'
+						text='Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End.'
+					/>
+				))
+			}
+		</div>
+	</section>
+
+	<section class='Content__Skills'>
+		<h2>Mis Skills</h2>
+		{list2.map(() => <CardSkills />)}
+	</section>
+
+	<Button class='mx-auto flex text-[1.6rem] gap-3'>
+		Descargar CV<i class='bi bi-download'></i></Button
+	>
 </Container>
+<style>
+	.Resume {
+		@apply h-fit;
+	}
+	.Resume-details {
+		@apply grid  gap-x-[10%];
+	}
+	
+	.Resume-Estudios {
+		width: 100%;
+		max-width: 480px;
+		margin-bottom: 7%;
+		@apply ml-auto;
+		h2 {
+			@apply text-[2.4rem] font-semibold;
+		}
+	}
+	.Resume-Experience {
+		width: 100%;
+		max-width: 480px;
+		margin-bottom: 7%;
+		@apply mr-auto;
+		h2 {
+			@apply text-[2.4rem] font-semibold;
+		}
+	}
+	.Content__Skills {
+		width: 90%;
+		margin: 5% auto;
+		@apply h-[80rem] flex flex-col gap-[5%];
+		h2 {
+			@apply text-[2.4rem] font-semibold col-span-2;
+		}
+		
+	}
+
+	@screen tablet {
+		.Resume-details {
+			@apply grid-cols-2;
+		}
+		.Content__Skills {
+			@apply bg-red-500;
+		}
+	}
+</style>

@@ -1,4 +1,25 @@
+---
+import HomeContacto from '@components/organisms/HomeContacto.astro';
+---
 
-<footer>
-    
+<footer class='footer'>
+	<HomeContacto />
+	<p class='footer__copy'>
+		Copyright © 2023 <span class='resalt'> Jhair </span>. All Rights Reserved.
+	</p>
+	<p class='terms'>Terms & Policy | Disclaimer</p>
 </footer>
+
+<style scoped>
+	.footer {
+		background: #fff;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+        padding-block: 2rem; 
+	}
+    .resalt{
+         @apply text-tertiary;
+    }
+    
+</style>

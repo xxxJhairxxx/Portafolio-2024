@@ -17,7 +17,9 @@ const { title } = Astro.props;
 	</head
 	
 	<body>
-		<div class='Body'>
+		<!-- tu contenido es inyectado aquí -->
+		 
+		<div class='template'>
 			<Navbar />
 			<div class='Content'>
 				<Header />
@@ -27,10 +29,11 @@ const { title } = Astro.props;
 				<Footer />
 			</div>
 		</div>
-
-		<!-- tu contenido es inyectado aquí -->
-	</body><style>
-		.Body {
+	</body>
+	
+	
+	<style>
+		.template {
 			@apply flex max-h-[100vh] w-[100vw] overflow-hidden;
 		}
 		.Content{

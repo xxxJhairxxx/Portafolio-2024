@@ -1,3 +1,11 @@
-<button class='bg-tertiary text-white px-12 py-6 rounded-full'>
+---
+interface Props {
+    class?:string;
+}
+
+const props= Astro.props as Props
+---
+
+<button  class={`bg-tertiary text-white px-12 py-6 rounded-full ${props.class}`}>
     <slot />
 </button>

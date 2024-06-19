@@ -4,10 +4,13 @@ import HomeContacto from '@components/organisms/HomeContacto.astro';
 
 <footer class='footer'>
 	<HomeContacto />
-	<p class='footer__copy'>
-		Copyright © 2023 <span class='resalt'> Jhair </span>. All Rights Reserved.
-	</p>
-	<p class='terms'>Terms & Policy | Disclaimer</p>
+	<div class='footer__copy'>
+		<p>
+			Copyright © 2023 <span class='resalt'> Jhair</span>. All Rights
+			Reserved.
+		</p>
+		<p>Terms & Policy | Disclaimer</p>
+	</div>
 </footer>
 
 <style scoped>
@@ -16,10 +19,19 @@ import HomeContacto from '@components/organisms/HomeContacto.astro';
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-        padding-block: 2rem; 
+		padding-block: 2rem;
 	}
-    .resalt{
-         @apply text-tertiary;
-    }
-    
+
+	.footer__copy {
+		@apply text-[1.6rem] text-center ;
+	}
+	.resalt {
+		@apply text-tertiary;
+	}
+
+	@screen laptop {
+		.footer__copy {
+			@apply w-full flex justify-center;
+		}
+	}
 </style>

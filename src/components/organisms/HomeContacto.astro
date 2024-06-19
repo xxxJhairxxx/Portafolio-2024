@@ -1,36 +1,32 @@
 ---
 import Container from '@globals/Container.astro';
 import Title from '@atoms/Title.astro';
-import Button from '@atoms/Button.astro'
+import Button from '@atoms/Button.astro';
 ---
 
 <Container id='contact' class='Content-contacto'>
-	<Title title='Contacto' subtitle='Contratos' />
+	<Title title='Contacto' subtitle='Contratos' className='col-span-2 laptop:order-1' />
 
 	<form class='Formulario'>
 		<h3 class='for__title'>ESCRIBENOS</h3>
 
 		<input type='text' placeholder='Nombre' class='input' />
 		<input type='email' placeholder='email' class='input' />
-		<textarea
-			class='message'
-			placeholder='Cuentanos sobre lo que necesitas...'></textarea>
-		<Button class='mx-auto w-fit py-4' >Enviar Mensaje </Button>
+		<textarea class='message' placeholder='Cuentanos sobre lo que necesitas...'
+		></textarea>
+		<Button class='mx-auto w-fit py-3 px-8 col-span-2 laptop:px-8 laptop:py-4 laptop:text-[1.5rem]'>Enviar Mensaje </Button>
 	</form>
-	<div class='contacto-items'>
-        <div class='contacto-address'>
-            <h3 class='contacto__title'>DIRECCION</h3>
-		<p class='contacto__text'>
-			4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028
-		</p>
-        </div>
-		
+	<div class='contacto-info'>
+		<div class='contacto-info-address'>
+			<h3 class='contacto__title'>DIRECCION</h3>
+			<p class='contacto__text'>
+				4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028
+			</p>
+		</div>
+
 		<ul class='contacto__skills'>
 			<li class='contacto__items'>
 				<i class='bi bi-phone-fill con'></i> +51 922 692 354
-			</li>
-			<li class='contacto__items'>
-				<i class='bi bi-telephone-fill con'></i> (060) 444 434 444
 			</li>
 			<li class='contacto__items mail'>
 				<i class='bi bi-envelope-fill con'></i> jinfanzonquispe30@gmail.com
@@ -50,35 +46,30 @@ import Button from '@atoms/Button.astro'
 
 <style scoped>
 	.Content-contacto {
-		@apply flex !flex-col items-center w-full gap-10;
+		@apply flex flex-col items-center w-full gap-10;
 	}
-	.contacto-items {
-        @apply w-full flex flex-col items-center justify-center gap-10 ;
+	.contacto-info {
+		@apply w-full flex flex-col items-center justify-center gap-10;
 		line-height: 30px;
-	}
-	.contacto__title {
-		font-weight: 600;
-		color: #4c4d4d;
-	}
-	.contacto__text {
-		color: #4c4d4d;
-		@apply text-center w-[68%]
-	}
+		.contacto-info-address {
+			@apply flex flex-col justify-center items-center;
 
-    .contacto-address{
-        @apply flex flex-col justify-center items-center; 
-    }
+			.contacto__text {
+				color: #4c4d4d;
+				@apply text-center w-[68%];
+			}
+		}
+	}
 
 	.contacto__skills {
-        @apply flex flex-col;
+		@apply flex flex-col;
 		align-items: center;
 		list-style: none;
 		color: #4c4d4d;
 	}
-	
+
 	.sigueme {
-        @apply w-[80%] text-[1.7rem] flex flex-col gap-4 text-center;
-		
+		@apply w-[80%] text-[1.7rem] flex flex-col gap-4 text-center;
 		color: #4c4d4d;
 	}
 
@@ -92,12 +83,12 @@ import Button from '@atoms/Button.astro'
 		color: #4c4d4d;
 		cursor: pointer;
 	}
-	
+
 	.Formulario {
-		@apply w-full grid gap-3;
+		@apply w-full grid grid-cols-2 gap-5;
 	}
 	.for__title {
-        @apply text-[1.7rem];
+		@apply text-[1.7rem] col-span-2;
 		width: 100%;
 		color: #181818;
 		font-weight: 600;
@@ -105,20 +96,57 @@ import Button from '@atoms/Button.astro'
 	}
 
 	.input {
-		@apply w-full;
-		padding: 2%;
+		@apply w-full col-span-2 px-[1.5rem] py-[0.7rem];
 		margin-right: auto;
 		border-radius: 10px;
 		border: 1px solid #aaaaaa;
 	}
 	.message {
-		@apply w-full h-[15rem];
+		@apply w-full h-[15rem] col-span-2  px-[1.5rem] py-[0.7rem];
 		border-radius: 10px;
-        padding: 2%;
 		border: 1px solid #aaaaaa;
 	}
 
-    .bi-github:hover {
+	.bi-github:hover {
 		color: #000;
+	}
+	.contacto__title {
+		@apply py-2;
+		font-weight: 600;
+		color: black;
+	}
+
+	@screen laptop {
+		.Content-contacto {
+			@apply items-center w-[120rem] gap-10 grid grid-cols-2;
+		}
+		.contacto-info {
+			@apply order-2 justify-start items-start h-full;
+			.contacto-info-address {
+				@apply items-start;
+				.contacto__text {
+					@apply text-start mt-5 text-[1.7rem];
+				}
+			}
+			.contacto__skills {
+				@apply flex flex-col items-start text-[1.7rem];
+			}
+			.sigueme {
+				@apply items-start;
+
+				.Logo-redes {
+					@apply gap-12;
+				}
+			}
+		}
+		.Formulario {
+			@apply order-3;
+			.input {
+				@apply col-span-1 px-[7%] py-[4%] text-[1.7rem];
+			}
+			.message {
+				@apply px-[3%] py-[3%]  text-[1.7rem] col-span-2;
+			}
+		}
 	}
 </style>

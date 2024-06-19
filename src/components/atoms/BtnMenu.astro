@@ -6,22 +6,7 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const btnMenu = document.querySelector('.btnMenu') as HTMLButtonElement;
-		const nav = document.querySelector('.navMobile') as HTMLDivElement;
-		const enlace = document.querySelector('.Navbar.navDesktop > a') as HTMLAnchorElement;
 
-		btnMenu.addEventListener('click', () => {
-			nav.classList.toggle("visible")
-		});
-
-		enlace.addEventListener('click', () => {
-			nav.classList.toggle("visible")
-		});
-
-	});
-</script>
 
 <button class={`btnMenu ${className}`}>
 	<span />

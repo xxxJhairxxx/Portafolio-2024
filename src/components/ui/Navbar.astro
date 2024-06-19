@@ -7,52 +7,73 @@ import perfil from '@assents/images/perfil.jpg';
 
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		const links = document.querySelectorAll('.Navbar.navDesktop > a');
+		const btnMenu = document.querySelector(
+			'.btnMenu'
+		) as HTMLButtonElement | null;
+		const nav = document.querySelector('.navMobile') as HTMLDivElement | null;
+		const enlaces = document.querySelectorAll(
+			'.enlace'
+		) as NodeListOf<HTMLAnchorElement>;
+		const back = document.querySelector('#back') as HTMLDivElement | null;
 
-		links.forEach((link) => {
-			link.addEventListener('click', (e) => {
-				e.preventDefault();
-				const targetId = link.getAttribute('href')!.substring(1);
-				const targetElement = document.getElementById(targetId);
+		if (!btnMenu || !nav || !back) {
+			console.error('One or more required elements were not found.');
+			return;
+		}
 
-				window.scrollTo({
-					top: targetElement!.offsetTop,
-					behavior: 'smooth',
-				});
-			});
+		const hiddenMenu = () => {
+			back.classList.add('hidden');
+			nav.classList.remove('visible');
+		};
+
+		btnMenu.addEventListener('click', () => {
+			nav.classList.toggle('visible');
+			back.classList.toggle('hidden');
+		});
+
+		back.addEventListener('click', hiddenMenu);
+
+		enlaces.forEach((item) => {
+			item.addEventListener('click', hiddenMenu);
 		});
 	});
 </script>
-<div class='Navbar'>
-	<div class='BarContent'>
-		<div class='PerfilContent'>
-			<Thumb img={perfil} className='imagePerfil' />
-			<h2 id='name'>Jhair Infanzon</h2>
-		</div>
-		<nav class='navDesktop'>
-			<a href='#index'>Home</a>
-			<a href='#about'>Sobre mi</a>
-			<a href='#howdo'>Que hago</a>
-			<a href='#resume'>Resumen</a>
-			<a href='#portfolio'>Portafolio</a>
-			<a href='#'>Testimonios</a>
-			<a href='#contact'>Contacto</a>
-		</nav>
-		<Networks />
 
-		<BtnMenu className='mx-[2rem] laptop:hidden' />
+	<div
+		id='back'
+		class='fixed top-0 left-0 w-full h-full bg-secondary/50 z-[99] hidden'
+	>
 	</div>
+	<div class='Navbar'>
+		<div class='BarContent'>
+			<div class='PerfilContent'>
+				<Thumb img={perfil} className='imagePerfil' />
+				<h2 id='name'>Jhair Infanzon</h2>
+			</div>
+			<nav class='navDesktop'>
+				<a href='#home'>Home</a>
+				<a href='#about'>Sobre mi</a>
+				<a href='#howdo'>Que hago</a>
+				<a href='#resume'>Resumen</a>
+				<a href='#portfolio'>Portafolio</a>
+				<a href='#'>Testimonios</a>
+				<a href='#contact'>Contacto</a>
+			</nav>
+			<Networks />
 
-	<nav class='navMobile'>
-		<a href='#index'>Home</a>
-		<a href='#about'>Sobre mi</a>
-		<a href='#howdo'>Que hago</a>
-		<a href='#resume'>Resumen</a>
-		<a href='#portfolio'>Portafolio</a>
-		<a href='#'>Testimonios</a>
-		<a href='#contact'>Contacto</a>
-	</nav>
-</div>
+			<BtnMenu className='mx-[2rem] laptop:hidden' />
+		</div>
+
+		<nav class='navMobile'>
+			<a class='enlace' href='#index'>Home</a>
+			<a class='enlace' href='#about'>Sobre mi</a>
+			<a class='enlace' href='#howdo'>Que hago</a>
+			<a class='enlace' href='#resume'>Resumen</a>
+			<a class='enlace' href='#portfolio'>Portafolio</a>
+			<a class='enlace' href='#'>Testimonios</a>
+			<a class='enlace' href='#contact'>Contacto</a>
+		</nav>
+	</div>
 
 <style scoped>
 	.Navbar {

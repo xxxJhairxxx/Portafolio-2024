@@ -49,9 +49,34 @@
 		},
 		"Especialities": [
 			{
-				"title": "Diseño Gráfico",
+				"title": "Diseño de interfaces",
 				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
-				"logo": "bi bi-palette-fill"
+				"icon": "bi bi-palette-fill"
+			},
+			{
+				"title": "Desarrollo Web",
+				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"icon": "bi bi-laptop"
+			},
+			{
+				"title": "Desarrollo Apps",
+				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"icon": "bi bi-android2"
+			},
+			{
+				"title": "Diseño de interfaces",
+				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"icon": "bi bi-pencil-fill"
+			},
+			{
+				"title": "Base de Datos",
+				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"icon": "bi bi-database-fill"
+			},
+			{
+				"title": "Administrador de servidor",
+				"text": "Posiciona tu pagina web y se el primero en la lista del buscador web",
+				"icon": "bi bi-hdd-rack"
 			}
 		],
 		"Studies": [

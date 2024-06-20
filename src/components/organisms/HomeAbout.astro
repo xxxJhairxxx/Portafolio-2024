@@ -3,14 +3,14 @@ import Title from '@atoms/Title.astro';
 import Button from '@atoms/Button.astro';
 import Container from '@globals/Container.astro';
 import Characteristics from '@components/molecules/Characteristics';
-import type { IHomeAbout } from '@interface/home';
+import type { IHomeAbout,IEspecialities } from '@interface/home';
 import { calcularEdad } from '../../lib/utils';
 import { getGenerals } from '../../lib/getGenerals';
 
 const { title, subtitle, text } = Astro.props as IHomeAbout;
-const { infogeneral } = await getGenerals();
 
-console.log(infogeneral);
+const { infogeneral } =getGenerals();
+
 ---
 
 <Container class='HomeAbout' id='about'>
@@ -36,7 +36,7 @@ console.log(infogeneral);
 		<Button>Descargar CV</Button>
 	</div>
 
-	<Characteristics client:load />
+	<Characteristics client:load  />
 </Container>
 
 <style>

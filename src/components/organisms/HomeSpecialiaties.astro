@@ -1,15 +1,30 @@
 ---
-import Container from '@globals/Container.astro'
-import Title from '@atoms/Title.astro'
-import CardEspecial from '@molecules/CardEspecial.astro'
+import Container from '@globals/Container.astro';
+import Title from '@atoms/Title.astro';
+import CardEspecial from '@molecules/CardEspecial.astro';
+import type {IHomeSpecialities,IEspecialities} from '@interface/home'
 
-const list = [1,2,3,4,5,6]
+interface Props {
+	Especialities: IEspecialities[];
+	HomeSpecialities: IHomeSpecialities;
+}
+
+const { Especialities, HomeSpecialities } = Astro.props as Props;
+
 ---
 
 <Container>
-    <Title title='Mis Especialidades' subtitle='Servicios' />
+	<Title title={HomeSpecialities.title} subtitle={HomeSpecialities.subtitle} />
 
-    <div class='grid tablet:grid-cols-2 laptop:grid-cols-3'>
-        {list.map(()=>  <CardEspecial title='Diseño Gráfico' text='Diseños publicitarios para anuncios físicos y en redes sociales' />)}
-    </div>
+	<div class='grid tablet:grid-cols-2 laptop:grid-cols-3'>
+		{
+			Especialities.map(({title,text,icon}) => (
+				<CardEspecial
+					title={title}
+					text={text}
+                    icon={icon}
+				/>
+			))
+		}
+	</div>
 </Container>

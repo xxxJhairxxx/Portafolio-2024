@@ -4,11 +4,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import HomeAbout from '@organisms/HomeAbout.astro';
 import HomeSpecialiaties from '@organisms/HomeSpecialiaties.astro';
 import HomeResume from '@organisms/HomeResume.astro';
-import HomePortafolio from '@organisms/HomePortafolio.astro'
-import type { IDataApi } from '@interface/home.ts';
-import fetch from '../../public/data.json'
+import HomePortafolio from '@organisms/HomePortafolio.astro';
+import type { IData } from '@interface/home';
+import { baseApi } from '../lib/baseApi';
 
-const {data} = fetch;
+const data = baseApi() as IData;
 ---
 
 <Layout title='Portafolio Jhair Infanzon' homeHeader={data.HomeHeader}>
@@ -17,7 +17,10 @@ const {data} = fetch;
 		subtitle={data.HomeAbout.subtitle}
 		text={data.HomeAbout.text}
 	/>
-	<HomeSpecialiaties />
+	<HomeSpecialiaties
+		HomeSpecialities={data.HomeSpecialities}
+		Especialities={data.Especialities}
+	/>
 	<HomeResume />
 	<HomePortafolio />
 </Layout>

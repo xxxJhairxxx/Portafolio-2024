@@ -1,6 +1,4 @@
-/** @format */
-
-import { type IDataApi } from '@interface/home.ts';
+import type { IDataApi,IGenerals } from '@interface/home.ts';
 import fetching from '../../public/data.json';
 
 export const getGeneralsApi = async () => {
@@ -15,10 +13,8 @@ export const getGeneralsApi = async () => {
 	return Generals;
 };
 
-export const getGenerals = async () => {
-	const {
-		data: { Generals },
-	} = fetching;
+export const getGenerals = () :IGenerals => {
+	const {data: { Generals }} = fetching;
 
 	return Generals;
 };

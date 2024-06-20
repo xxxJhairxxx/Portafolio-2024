@@ -58,3 +58,7 @@
       content: '';
     } */
   }
+
+  .pagination span{
+    @apply bg-tertiary;
+  }

@@ -3,8 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules'
+import { getGenerals } from '../../lib/getGenerals';
+
+
 
 const Characteristics = () => {
+
+  const { characteristics } = getGenerals();
 
   const swiperOptions: any = {
     direction: 'horizontal',
@@ -41,26 +46,15 @@ const Characteristics = () => {
 
   return (
     <div className='w-full tablet:w-[60%] mx-auto laptop:w-full pt-8'>
-      <Swiper {...swiperOptions} className="mySwiper text-gris-400 py-4  ">
-        <SwiperSlide className='text-center'>
-          <span className='text-[5rem] font-[500] py-4'>2+</span>
-          <p>Años de experiencia</p>
-        </SwiperSlide>
-        <SwiperSlide className='text-center'>
-          <span className='text-[5rem] font-[500] py-4'>250+</span>
-          <p>Clientes</p>
-        </SwiperSlide>
-        <SwiperSlide className='text-center'>
-          <span className='text-[5rem] font-[500] py-4'>650+</span>
-          <p>Proyectos Realizados</p>
-        </SwiperSlide>
-        <SwiperSlide className='text-center'>
-          <span className='text-[5rem] font-[500] py-4'>38</span>
-          <p>Estudios</p>
-        </SwiperSlide>
+      <Swiper {...swiperOptions} className="mySwiper text-gris-400 py-4">
+        {characteristics.map(({ value, text }, index) =>
+          <SwiperSlide key={index} className='text-center'>
+            <span className='text-[5rem] font-[500] py-4'>{value}</span>
+            <p>{text}</p>
+          </SwiperSlide>
+        )}
       </Swiper>
-      <section className='py-6'>
-
+      <section className='py-6 laptop:hidden'>
         <div className='pagination mx-auto flex justify-center gap-[1.5rem]' />
       </section>
 

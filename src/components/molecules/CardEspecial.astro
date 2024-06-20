@@ -2,13 +2,14 @@
 interface Props {
 	title: string;
 	text: string;
+    icon: string;
 }
-const {title,text} = Astro.props as Props;
+const {title,text,icon} = Astro.props as Props;
 ---
 
 <div class='CardEspecial'>
 	<div class='logo'>
-		<i class='bi bi-palette-fill'/>
+		<i class={icon}/>
 	</div>
 	<div class='content'>
 		<h2>{title}</h2>
@@ -16,7 +17,7 @@ const {title,text} = Astro.props as Props;
 	</div>
 </div>
 
-<style>
+<style scoped>
     .CardEspecial{
         @apply flex px-4 py-6;
     }
@@ -30,9 +31,8 @@ const {title,text} = Astro.props as Props;
             @apply text-black text-[2rem];
         }
         p{
-            @apply text-gris-100
+            @apply text-gris-100;
         }
-
     }
 
 </style>

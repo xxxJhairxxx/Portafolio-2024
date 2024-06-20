@@ -10,7 +10,7 @@ export interface IData {
 	HomeSpecialities: IHomeSpecialities;
 	HomeResume: IHomeResume;
 	Generals: IGenerals;
-	Especialities: IEspecialities;
+	Especialities: IEspecialities[];
 	Studies: IResume[];
 	Experience: IResume[];
 	Skills: ISkills[];
@@ -71,7 +71,7 @@ export interface INavbar {
 export interface IEspecialities {
 	title: string;
 	text: string;
-	logo: string;
+	icon: string;
 }
 export interface IResume {
 	rangoYear: string;

@@ -4,11 +4,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import HomeAbout from '@organisms/HomeAbout.astro';
 import HomeSpecialiaties from '@organisms/HomeSpecialiaties.astro';
 import HomeResume from '@organisms/HomeResume.astro';
-import HomePortafolio from '@organisms/HomePortafolio.astro';
-import {BaseApi} from '../lib/baseApi';
+import HomePortafolio from '@organisms/HomePortafolio.astro'
+import type { IDataApi } from '@interface/home.ts';
+import fetch from '../../public/data.json'
 
-const data = await BaseApi(import.meta.env.PUBLIC_API_URL);
-
+const {data} = fetch;
 ---
 
 <Layout title='Portafolio Jhair Infanzon' homeHeader={data.HomeHeader}>

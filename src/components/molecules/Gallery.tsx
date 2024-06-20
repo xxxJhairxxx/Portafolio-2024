@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import './style/gallery.css';
 

@@ -1,22 +1,27 @@
 ---
-import Layout from '../layout/Layout.astro'
+import Layout from '../layout/Layout.astro';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import HomeAbout from '@organisms/HomeAbout.astro';
-import HomeSpecialiaties from '@organisms/HomeSpecialiaties.astro'
-import HomeResume from '@organisms/HomeResume.astro'
-import HomePortafolio from '@organisms/HomePortafolio.astro'
-import HomeContacto from '@organisms/HomeContacto.astro'
+import HomeSpecialiaties from '@organisms/HomeSpecialiaties.astro';
+import HomeResume from '@organisms/HomeResume.astro';
+import HomePortafolio from '@organisms/HomePortafolio.astro';
+import {BaseApi} from '../lib/baseApi';
+
+const data = await BaseApi(import.meta.env.PUBLIC_API_URL);
+
 ---
 
-
-<Layout title="Portafolio Jhair Infanzon">
-	<HomeAbout/>
+<Layout title='Portafolio Jhair Infanzon' homeHeader={data.HomeHeader}>
+	<HomeAbout
+		title={data.HomeAbout.title}
+		subtitle={data.HomeAbout.subtitle}
+		text={data.HomeAbout.text}
+	/>
 	<HomeSpecialiaties />
-	<HomeResume/>
-	<HomePortafolio/>
+	<HomeResume />
+	<HomePortafolio />
 </Layout>
 
 <style is:global>
-	@import "../styles/globals.css";
+	@import '../styles/globals.css';
 </style>
-

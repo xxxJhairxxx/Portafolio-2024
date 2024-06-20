@@ -46,7 +46,7 @@ import Button from '@atoms/Button.astro';
 
 <style scoped>
 	.Content-contacto {
-		@apply flex flex-col items-center w-full gap-10;
+		@apply flex flex-col items-center w-full gap-10 ;
 	}
 	.contacto-info {
 		@apply w-full flex flex-col items-center justify-center gap-10;
@@ -118,18 +118,20 @@ import Button from '@atoms/Button.astro';
 
 	@screen laptop {
 		.Content-contacto {
-			@apply items-center w-[120rem] gap-10 grid grid-cols-2;
+			@apply items-center w-[80%] mx-auto gap-10 grid;
+			grid-template-columns: 40% 60%;
+			
 		}
 		.contacto-info {
 			@apply order-2 justify-start items-start h-full;
 			.contacto-info-address {
 				@apply items-start;
 				.contacto__text {
-					@apply text-start mt-5 text-[1.7rem];
+					@apply text-start mt-5 text-[1.7rem] ;
 				}
 			}
 			.contacto__skills {
-				@apply flex flex-col items-start text-[1.7rem];
+				@apply flex flex-col items-start text-[1.7rem] gap-3;
 			}
 			.sigueme {
 				@apply items-start;
@@ -142,10 +144,10 @@ import Button from '@atoms/Button.astro';
 		.Formulario {
 			@apply order-3;
 			.input {
-				@apply col-span-1 px-[7%] py-[4%] text-[1.7rem];
+				@apply col-span-1 text-[1.7rem];
 			}
 			.message {
-				@apply px-[3%] py-[3%]  text-[1.7rem] col-span-2;
+				@apply text-[1.7rem] col-span-2;
 			}
 		}
 	}

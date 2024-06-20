@@ -1,5 +1,10 @@
 ---
 import Thumb from '@atoms/Thumb.astro';
+import type {IHomeHeader} from '@interface/home.ts'
+
+const {title_up,title_down} = Astro.props as IHomeHeader
+
+
 ---
 
 <script>
@@ -27,11 +32,11 @@ import Thumb from '@atoms/Thumb.astro';
 		img='https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 	/>
 	<div class='text-center w-full text-white mx-auto'>
-		<span class='title-up'>Bienvenidos</span>
+		<span class='title-up'>{title_up}</span>
 		<h1>
 			<span class='titulo__cursor'>|</span>
 		</h1>
-		<span class='title-down'>Lima, Perú</span>
+		<span class='title-down'>{title_down}</span>
 
 		<button class='btn-contact'> Contratos </button>
 	</div>

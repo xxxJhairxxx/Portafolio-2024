@@ -2,53 +2,41 @@
 import Title from '@atoms/Title.astro';
 import Button from '@atoms/Button.astro';
 import Container from '@globals/Container.astro';
-import Characteristics from "@components/molecules/Characteristics";
+import Characteristics from '@components/molecules/Characteristics';
+import type { IHomeAbout } from '@interface/home';
+import { calcularEdad } from '../../lib/utils';
+import { getGenerals } from '../../lib/getGenerals';
 
-function calcularEdad(fechaNacimiento: string) {
-	const hoy = new Date();
-	const nacimiento = new Date(fechaNacimiento);
-	let edad = hoy.getFullYear() - nacimiento.getFullYear();
-	const mes = hoy.getMonth() - nacimiento.getMonth();
-	if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
-		edad--;
-	}
-	return edad;
-}
+const { title, subtitle, text } = Astro.props as IHomeAbout;
+const { infogeneral } = await getGenerals();
+
+console.log(infogeneral);
 ---
 
 <Container class='HomeAbout' id='about'>
-	<Title title={'Mi perfil'} subtitle={'Sobre mi'} />
-	<article class='article'>
-		<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Full-Stack.</h4>
-		<p>
-			Desarrollador Web, pro-activo e innovador. Especializadoen la creación
-			de aplicaciones web eficientes y escalables con enfoque integral desdel frontend hasta el backend
-		</p>
-		<p>
-			Constantemente actializado con las últimas tendencias del desarrollo web, buscodesafíos tecnológicos emocionantes.
-		</p>
-	</article>
+	<Title title={title} subtitle={subtitle} />
+	<article class='article' set:html={text} />
 	<div class='content-data'>
 		<div class='info'>
-			<p><strong>Nombre:</strong> Jhair Infanzon</p>
+			<p><strong>Nombre:</strong> {infogeneral.name}</p>
 			<p>
 				<strong>Email:</strong>
-				<a target='_blank' href='mailto:jinfanzonquispe30@gmail.com'
-					>jinfanzonquispe30@gmail.com</a
+				<a target='_blank' href={`mailto:${infogeneral.email}`}
+					>{infogeneral.email}</a
 				>
 			</p>
 			<p>
 				<strong>Celular:</strong>
-				<a href='tel:+51922692354'>+51 922 692 354</a>
+				<a href=`tel:${infogeneral.phone}`>{infogeneral.phone}</a>
 			</p>
-			<p><strong>Edad:</strong> {calcularEdad('1995-01-30')}</p>
-			<p><strong>Ciudad:</strong> Lima, Perú</p>
+			<p><strong>Edad:</strong> {calcularEdad(infogeneral.both_year)}</p>
+			<p><strong>Ciudad:</strong> {infogeneral.city}</p>
 		</div>
 
 		<Button>Descargar CV</Button>
 	</div>
 
-    <Characteristics client:load />
+	<Characteristics client:load />
 </Container>
 
 <style>
@@ -62,9 +50,7 @@ function calcularEdad(fechaNacimiento: string) {
 					@apply text-tertiary;
 				}
 			}
-			a {
-				@apply text-tertiary;
-			}
+			
 		}
 		.content-data {
 			@apply my-[2rem] flex flex-col gap-8 items-start w-[100%];
@@ -73,14 +59,17 @@ function calcularEdad(fechaNacimiento: string) {
 				p {
 					@apply border-gris-300/30 border-b-[0.1rem] pb-4;
 				}
+				a {
+				@apply text-primary font-normal;
+			}
 			}
 		}
 	}
 	@screen tablet {
 		.HomeAbout {
-            .article{
-                @apply w-[85%] mx-auto;
-            }
+			.article {
+				@apply w-[85%] mx-auto;
+			}
 			.content-data {
 				@apply items-center w-[60%] mx-auto;
 			}
@@ -91,17 +80,17 @@ function calcularEdad(fechaNacimiento: string) {
 		.HomeAbout {
 			@apply flex flex-row flex-wrap justify-center gap-[10%];
 			.article {
-                @apply w-[40%] mx-0;
+				@apply w-[40%] mx-0;
 				h4 {
 					@apply text-left mx-0;
 				}
-                p{
-                @apply text-start;
-                }
+				p {
+					@apply text-start;
+				}
 			}
-            .content-data{
-                @apply w-[35%] mx-0;
-            }
+			.content-data {
+				@apply w-[35%] mx-0;
+			}
 		}
 	}
 </style>

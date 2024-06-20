@@ -1,0 +1,150 @@
+{
+	"data": {
+		"HomeHeader": {
+			"title_up": "Bienvenidos",
+			"title_name": "jhair",
+			"title_down": "Lima, Perú"
+		},
+		"HomeAbout": {
+			"title": "Mi perfil",
+			"subtitle": "Sobre mi",
+			"text": "<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Full-Stack.</h4><p>Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desdel frontend hasta el backend</p><p>Constantemente actializado con las últimas tendencias del desarrollo web, busco desafíos tecnológicos emocionantes.</p>"
+		},
+		"HomeSpecialities": {
+			"title": "Mis Especialidades",
+			"subtitle": "Servicios"
+		},
+		"HomeResume": {
+			"title": "Mis Especialidades",
+			"subtitle": "Servicios"
+		},
+		"Generals": {
+			"characteristics": [
+				{ "value": "2+", "text": "Años de experiencia" },
+				{ "value": "35+", "text": "Clientes" },
+				{ "value": "100+", "text": "Proyectos realizados" },
+				{ "value": "11", "text": "Años de experiencia" }
+			],
+			"infogeneral": {
+				"name": "Jhair Infanzon",
+				"email": "jinfanzonquispe30@gmail.com",
+				"phone": "+51 922 692 354",
+				"both_year": "1995-01-30",
+				"city": "Lima, Perú",
+				"address": "4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028"
+			},
+			"networks": [
+				{ "type": "facebook", "url": "https://www.facebook.com/jhair.tec" },
+				{ "type": "twitter", "url": "" },
+				{ "type": "github", "url": "https://github.com/xxxJhairxxx" },
+				{ "type": "linkedin", "url": "https://www.linkedin.com/in/jhair-infanz%C3%B3n-quispe-a31669188/" }
+			],
+			"navbar": [
+				{ "name": "home", "title": "Home", "url": "#home" },
+				{ "name": "about", "title": "Sobre mi", "url": "#about" },
+				{ "name": "resume", "title": "Resumen", "url": "#resume" },
+				{ "name": "portfolio", "title": "Portafolio", "url": "#portfolio" },
+				{ "name": "contact", "title": "Contacto", "url": "#contact" }
+			]
+		},
+		"Especialities": [
+			{
+				"title": "Diseño Gráfico",
+				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"logo": "bi bi-palette-fill"
+			}
+		],
+		"Studies": [
+			{
+				"rangoYear": "2022 - 2023",
+				"title": "Desarrollador Web FullStack",
+				"subtitle": "Codigo Tecsup",
+				"text": "Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End."
+			}
+		],
+		"Experience": [
+			{
+				"rangoYear": "2022 - 2023",
+				"title": "Desarrollador Web FullStack",
+				"subtitle": "Codigo Tecsup",
+				"text": "Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End."
+			}
+		],
+		"Skills": [{ "title": "Html 5 / CSS 3", "value": 98 }],
+		"Proyects": [
+			{
+				"categories": [
+					{
+						"title": "All",
+						"Proyect": [
+							{
+								"image": "",
+								"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
+								"technologies": "",
+								"libries": "",
+								"date": "",
+								"url": ""
+							}
+						]
+					},
+					{
+						"name": "*",
+						"title": "Todo",
+						"Proyect": [
+							{
+								"image": "",
+								"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
+								"technologies": "",
+								"libries": "",
+								"date": "",
+								"url": ""
+							}
+						]
+					},
+					{
+						"name": "lading",
+						"title": "Lading Page",
+						"Proyect": [
+							{
+								"image": "",
+								"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
+								"technologies": "",
+								"libries": "",
+								"date": "",
+								"url": ""
+							}
+						]
+					},
+					{
+						"name": "ecommerce",
+						"title": "Ecommerce",
+						"Proyect": [
+							{
+								"image": "",
+								"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
+								"technologies": "",
+								"libries": "",
+								"date": "",
+								"url": ""
+							}
+						]
+					},
+					{
+						"name": "website",
+						"title": "Web Sites",
+						"Proyect": [
+							{
+								"image": "",
+								"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
+								"technologies": "",
+								"libries": "",
+								"date": "",
+								"url": ""
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

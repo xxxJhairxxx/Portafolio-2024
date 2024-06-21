@@ -1,11 +1,22 @@
 ---
 interface Props {
-    class?:string;
+	class?: string;
+	url?: string;
 }
 
-const props= Astro.props as Props
+const props = Astro.props as Props;
 ---
 
-<button  class={`bg-tertiary text-white px-12 py-6 rounded-full ${props.class}`}>
-    <slot />
-</button>
+{
+	props.url ? (
+		<a href={props.url} target='_blank' class={`w-fit hover:bg-green-600 transition-colors bg-tertiary text-white px-12 py-6 rounded-full ${props.class}`}>
+			<slot />
+		</a>
+	) : (
+		<button
+			class={`bg-tertiary hover:bg-green-600 transition-colors text-white px-12 py-6 rounded-full ${props.class}`}
+		>
+			<slot />
+		</button>
+	)
+}

@@ -6,6 +6,7 @@ import Characteristics from '@components/molecules/Characteristics';
 import type { IHomeAbout } from '@interface/home';
 import { calcularEdad } from '../../lib/utils';
 import { getGenerals } from '../../lib/getGenerals';
+import cv from '@/src/assets/docs/CV - Jhair Infanzon.pdf'
 
 const { title, subtitle, text } = Astro.props as IHomeAbout;
 
@@ -33,7 +34,7 @@ const { infogeneral } =getGenerals();
 			<p><strong>Ciudad:</strong> {infogeneral.city}</p>
 		</div>
 
-		<Button>Descargar CV</Button>
+		<Button url={cv}>Descargar CV</Button>
 	</div>
 
 	<Characteristics client:load  />

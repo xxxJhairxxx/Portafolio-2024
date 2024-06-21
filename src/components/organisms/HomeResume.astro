@@ -5,6 +5,7 @@ import CardResume from '@molecules/CardResume.astro';
 import CardSkills from '@molecules/CardSkills.astro';
 import Button from '@atoms/Button.astro';
 import type {IHomeResume,IResume,ISkills} from '@interface/home'
+import cv from '@/src/assets/docs/CV - Jhair Infanzon.pdf'
 
 interface Props {
 	homeResume : IHomeResume;
@@ -49,7 +50,7 @@ const {homeResume,studies,experience,skills}=Astro.props as Props
 		{skills.map((props) => <CardSkills {...props} />)}
 	</section>
 
-	<Button class='mx-auto flex text-[1.6rem] gap-3'>
+	<Button url={cv} class='mx-auto flex text-[1.6rem] gap-3'>
 		Descargar CV<i class='bi bi-download'/></Button
 	>
 </Container>

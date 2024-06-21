@@ -313,23 +313,25 @@
 				"Proyect": [
 					{
 						"id": 1,
-						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-1-573x800_original.jpg",
-						"title": "Centro Odontológico",
+						"image": "https://i.postimg.cc/C1fVVZLD/ella-and-glam.jpg",
+						"title": "Ella & Glam",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
 						"technologies": ["html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://centro-odontologico.vercel.app/"
+						"url": "https://ella-and-glam.amgbusiness.us/",
+						"orientation": "vertical"
 					},
 					{
 						"id": 2,
-						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-2-1200x800_original.jpg",
-						"title": "Centro Odontológico",
+						"image": "https://i.postimg.cc/k5KVX54r/espinoza-space-solution.png",
+						"title": "Espinoza space solution",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
 						"technologies": [ "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://centro-odontologico.vercel.app/"
+						"url": "https://espinozaspacesolution.com/",
+						"orientation": "horizontal"
 					}
 				]
 			},
@@ -340,8 +342,8 @@
 				"Proyect": [
 					{
 						"id": 1,
-						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-2-1200x800_original.jpg",
-						"title": "Centro Odontológico",
+						"image": "https://i.postimg.cc/0jQ2m58y/dulce-solucion.jpg",
+						"title": "Dulce Solución",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
 						"technologies": ["css","html", "react", "next", "typescript"],
 						"libries": "swiper, lightbox",
@@ -350,13 +352,13 @@
 					},
 					{
 						"id": 2,
-						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-4-666x800_original.jpg",
-						"title": "Centro Odontológico",
+						"image": "https://i.postimg.cc/ydR2bwvy/tapia-tennis.jpg",
+						"title": "Tapia Tennis",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
 						"technologies": ["tailwind","html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://centro-odontologico.vercel.app/"
+						"url": "https://info.tapiatenniscourt.us/"
 					}
 				]
 			},
@@ -367,33 +369,34 @@
 				"Proyect": [
 					{
 						"id": 1,
-						"title": "Centro Odontológico",
-						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-3-628x800_original.jpg",
+						"title": "Angulo's Gallery",
+						"image": "https://i.postimg.cc/HnR35tqv/angulos-gallery.png",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
 						"technologies": ["postcss","html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://centro-odontologico.vercel.app/"
+						"url": "https://angulosgallery.com/",
+						"orientation": "vertical"
 					},
 					{
 						"id": 2,
-						"title": "Centro Odontológico",
-						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-5-1200x831_original.jpg",
+						"title": "Liquidacion del valle",
+						"image": "https://i.postimg.cc/MG3sqxs8/liquidacion-del-valle.jpg",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
 						"technologies": ["html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://centro-odontologico.vercel.app/"
+						"url": "https://liquidacion-del-valle.amgbusiness.us/"
 					},
 					{
 						"id": 3,
-						"title": "Centro Odontológico",
-						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-6-1200x783_original.jpg",
+						"title": "Moving International",
+						"image": "https://i.postimg.cc/5N5nj8Pg/movinginternational.jpg",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
 						"technologies": ["html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://centro-odontologico.vercel.app/"
+						"url": "https://movinginternationallogistics.us/"
 					}
 				]
 			}

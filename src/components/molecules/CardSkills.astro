@@ -1,51 +1,41 @@
 ---
+import type { ISkills } from '@interface/home';
+import Tumb from '@atoms/Thumb.astro';
 
+const { value, title,image } = Astro.props as ISkills;
 ---
 
-<div class="Skill">
-    <div class="Skill__description">
-        <p class="Skill__title">Html 5 / CSS 3</p>
-        <p class="porcentaje__num">98%</p>
-    </div>
-    <div class="Skill__barra">
-        <div class="porcentaje__bar html" ></div>
-    </div>
+<div class='flex items-center h-[6rem] gap-4'>
+	<div class='Skill'>
+		<div class='Skill__description'>
+			<p class='Skill__title'>{title}</p>
+			<p class='porcentaje__num'>{value}%</p>
+		</div>
+		<div class='Skill__barra'>
+			<div class='porcentaje__bar' style={{ width: `${value}%` }}></div>
+		</div>
+	</div>
+    <Tumb className='h-full w-[6rem] px-1 py-2' contain img={image}>
 </div>
 
 <style>
-    .Skill{
-    width: 100%;
-}
-.Skill__description{
-    display: flex;
-    justify-content: space-between;
-}
+	.Skill {
+		width: 100%;
+	}
+	.Skill__description {
+		display: flex;
+		justify-content: space-between;
+	}
 
-.Skill__barra{
-    width: 100%;
-    background-color: #cccccc;
-    height: 8px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.porcentaje__bar{
-    background-color: #20C983;
-    height: 10px;
-}
-    .html{width: 98%;}
-    .js{width: 90%;}
-    .php{width: 65%;}
-    .sql{width: 75%;}
-    .git{width: 65%;}
-    .sass{width: 60%;}
-    .boot{width: 80%;}
-    .mui{width: 75%;}
-    .jq{width: 75%;}
-    .type{width: 80%;}
-    .ecma{width: 80%;}
-    .vue{width: 70%;}
-    .react{width: 90%;}
-    .node{width: 45%;}
-    .laravel{width: 80%;}
-    .codeigniter{width: 80%;}
+	.Skill__barra {
+		width: 100%;
+		background-color: #cccccc;
+		height: 8px;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	.porcentaje__bar {
+		background-color: #20c983;
+		height: 10px;
+	}
 </style>

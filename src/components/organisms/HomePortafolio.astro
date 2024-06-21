@@ -2,12 +2,19 @@
 import Container from '@globals/Container.astro';
 import Title from '@atoms/Title.astro';
 import Gallery from '@molecules/Gallery'
+import type {IHomePortfolio,ICategoriesProjects} from '@interface/home'
 
+interface Props {
+	homePortfolio :IHomePortfolio
+	categoriesProjects:ICategoriesProjects[]
+}
+
+const {homePortfolio,categoriesProjects} = Astro.props;
 ---
 
 <Container id='portfolio'>
-	<Title title='Proyectos' subtitle='Portafolio' />
+	<Title title={homePortfolio.title} subtitle={homePortfolio.subtitle} />
 	<div>
-		<Gallery client:load />
+		<Gallery categories={categoriesProjects} client:load />
 	</div>
 </Container>

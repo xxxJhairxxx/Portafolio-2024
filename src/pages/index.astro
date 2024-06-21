@@ -5,7 +5,7 @@ import HomeAbout from '@organisms/HomeAbout.astro';
 import HomeSpecialiaties from '@organisms/HomeSpecialiaties.astro';
 import HomeResume from '@organisms/HomeResume.astro';
 import HomePortafolio from '@organisms/HomePortafolio.astro';
-import type { IData } from '@interface/home';
+import type { IData} from '@interface/home';
 import { baseApi } from '../lib/baseApi';
 
 const data = baseApi() as IData;
@@ -21,8 +21,16 @@ const data = baseApi() as IData;
 		HomeSpecialities={data.HomeSpecialities}
 		Especialities={data.Especialities}
 	/>
-	<HomeResume />
-	<HomePortafolio />
+	<HomeResume
+		homeResume={data.HomeResume}
+		studies={data.Studies}
+		experience={data.Experience}
+		skills={data.Skills}
+	/>
+	<HomePortafolio
+		homePortfolio={data.HomePortfolio}
+		categoriesProjects={data.CategoriesProjects}
+	/>
 </Layout>
 
 <style is:global>

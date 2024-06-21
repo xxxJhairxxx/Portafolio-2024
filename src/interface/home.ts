@@ -9,12 +9,13 @@ export interface IData {
 	HomeAbout: IHomeAbout;
 	HomeSpecialities: IHomeSpecialities;
 	HomeResume: IHomeResume;
+	HomePortfolio: IHomePortfolio;
 	Generals: IGenerals;
 	Especialities: IEspecialities[];
 	Studies: IResume[];
 	Experience: IResume[];
 	Skills: ISkills[];
-	Proyects: IProject[];
+	CategoriesProjects: ICategoriesProjects[];
 }
 
 export interface IHomeHeader {
@@ -27,6 +28,11 @@ export interface IHomeAbout {
 	title: string;
 	subtitle: string;
 	text: string;
+}
+
+export interface IHomePortfolio{
+	title: string;
+	subtitle: string;
 }
 
 export interface IHomeSpecialities {
@@ -80,21 +86,20 @@ export interface IResume {
 	text: string;
 }
 export interface ISkills {
-	value: string;
-	text: string;
+	value: number;
+	title: string;
+	image: string
 }
 
-export interface IProjects {
-	categories: ICategory[];
-}
-
-export interface ICategory {
+export interface ICategoriesProjects {
+	id:number;
 	name: string;
 	title: string;
 	Proyect: IProject[];
 }
 
 export interface IProject {
+	id:number
 	image: string;
 	text: string;
 	technologies: string;

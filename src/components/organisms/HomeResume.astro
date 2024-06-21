@@ -4,23 +4,31 @@ import Title from '@atoms/Title.astro';
 import CardResume from '@molecules/CardResume.astro';
 import CardSkills from '@molecules/CardSkills.astro';
 import Button from '@atoms/Button.astro';
+import type {IHomeResume,IResume,ISkills} from '@interface/home'
 
-const list = [1, 2, 3, 4, 5, 6];
-const list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+interface Props {
+	homeResume : IHomeResume;
+	studies: IResume[]
+	experience: IResume[]
+	skills:ISkills[]
+}
+
+const {homeResume,studies,experience,skills}=Astro.props as Props
+
 ---
 
 <Container class='Resume' id='resume'>
-	<Title className='col-span-2' title='Resumen' subtitle='Sumario' />
+	<Title className='col-span-2' title={homeResume.title} subtitle={homeResume.subtitle} />
 	<section class='Resume-details'>
 		<div class='Resume-Estudios'>
 			<h2>Mis Estudios</h2>
 			{
-				list.map(() => (
+				studies.map(({rangoYear,title,subtitle,text}) => (
 					<CardResume
-						rangoYear='2022 - 2023'
-						title='Desarrollador Web FullStack'
-						subtitle='Codigo Tecsup'
-						text='Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End.'
+						rangoYear={rangoYear}
+						title={title}
+						subtitle={subtitle}
+						text={text}
 					/>
 				))
 			}
@@ -28,12 +36,8 @@ const list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 		<div class='Resume-Experience'>
 			<h2>Mi Experiencia</h2>
 			{
-				list.map(() => (
-					<CardResume
-						rangoYear='2022 - 2023'
-						title='Desarrollador Web FullStack'
-						subtitle='Codigo Tecsup'
-						text='Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End.'
+				experience.map((props) => (
+					<CardResume {...props}
 					/>
 				))
 			}
@@ -42,11 +46,11 @@ const list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 	<section class='Content__Skills'>
 		<h2>Mis Skills</h2>
-		{list2.map(() => <CardSkills />)}
+		{skills.map((props) => <CardSkills {...props} />)}
 	</section>
 
 	<Button class='mx-auto flex text-[1.6rem] gap-3'>
-		Descargar CV<i class='bi bi-download'></i></Button
+		Descargar CV<i class='bi bi-download'/></Button
 	>
 </Container>
 <style>
@@ -78,7 +82,7 @@ const list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	.Content__Skills {
 		width: 90%;
 		margin: 5% auto;
-		@apply h-[80rem] flex flex-col gap-[5%];
+		@apply h-[110rem] flex flex-col gap-[3rem];
 		h2 {
 			@apply text-[2.4rem] font-semibold col-span-2;
 		}
@@ -89,7 +93,7 @@ const list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 			@apply grid-cols-2;
 		}
 		.Content__Skills {
-			@apply grid grid-cols-2 h-[50rem];
+			@apply grid grid-cols-2 gap-x-[8rem] h-[60rem];
 		}
 	}
 </style>

@@ -1,64 +1,99 @@
+/** @format */
+
 .App {
-  font-family: sans-serif;
-  text-align: center;
+	font-family: sans-serif;
+	text-align: center;
 }
 
 .filter-button-group {
-  margin-bottom: 20px;
-  @apply flex justify-center gap-10;
+	margin-bottom: 20px;
+	@apply flex justify-center gap-10;
 }
 
 .filter-button-group button {
-  padding: 3px 0px;
-  cursor: pointer;
-  @apply text-center text-gris-100 ;
-  font-family: "Poppins", sans-serif;
-  &:hover{@apply text-tertiary;
-  
-  transition: color 0.3s ease-in-out;}
-} 
+	padding: 3px 0px;
+	cursor: pointer;
+	@apply text-center text-gris-100;
+	font-family: 'Poppins', sans-serif;
+	&:hover {
+		@apply text-tertiary;
+
+		transition: color 0.3s ease-in-out;
+	}
+}
 
 .my-masonry-grid {
-  display: flex;
-  margin-left: -30px; /* gutter size offset */
-  width: auto;
+	display: flex;
+	margin-left: -30px; /* gutter size offset */
+	width: auto;
 }
 
 .my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
+	padding-left: 30px; /* gutter size */
+	background-clip: padding-box;
 }
 
 /* Style your items */
 .grid-item {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .grid-item img {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
-  /* Transitions */
-  .fade-in {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .fade-out {
-    opacity: 0;
-    transform: scale(0.9);
-    pointer-events: none;
-  }
+/* Transitions */
+.fade-in {
+	opacity: 1;
+	transform: scale(1);
+}
 
-  .selectCat{
-    @apply relative !text-tertiary;
+.fade-out {
+	opacity: 0;
+	transform: scale(0.9);
+	pointer-events: none;
+}
 
-    /* &:before{
+.selectCat {
+	@apply relative !text-tertiary;
+
+	/* &:before{
       @apply bottom-0 absolute w-full h-[0.2rem]  bg-[#05BEFA] ;
       content: '';
     } */
-  }
+}
 
-  .pagination span{
-    @apply bg-tertiary;
+.pagination span {
+	@apply bg-tertiary;
+}
+
+.cardPortfolio {
+	@apply relative overflow-hidden z-[5] ;
+	&::before {
+		@apply w-full h-full absolute left-0 top-0 bg-black opacity-0 z-20 ;
+		transition: opacity 0.5s ease-in-out;
+		content: '';
+	}
+  &::after{
+    @apply text-white absolute left-0 top-[50%] right-0 translate-y-[-50%] text-[2.2rem] z-30 opacity-0;
+    transition: opacity 0.3s ease-in-out;
+    transition-delay: 0.1s;
+    content: attr(data-title);
   }
+  img{
+
+    transition: transform 0.3s ease-in-out;
+  }
+	&:hover {
+    & > img{
+      @apply scale-125;
+      
+    }
+		&:before {
+			@apply opacity-50;
+		}
+    &::after{
+      @apply opacity-100;
+    }
+	}
+}

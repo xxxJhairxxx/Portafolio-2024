@@ -16,6 +16,7 @@ export interface IData {
 	Experience: IResume[];
 	Skills: ISkills[];
 	CategoriesProjects: ICategoriesProjects[];
+	listTechnologies :ITechnologies[]
 }
 
 export interface IHomeHeader {
@@ -50,6 +51,11 @@ export interface IGenerals {
 	infogeneral: IInfogeneral;
 	networks: INetworks[];
 	navbar: INavbar[];
+	footer: Ifooter;
+}
+
+export interface Ifooter{
+	text:string;
 }
 
 export interface ICharacteristics {
@@ -67,8 +73,10 @@ export interface IInfogeneral {
 export interface INetworks {
 	type: string;
 	url: string;
+	color:string;
 }
 export interface INavbar {
+	id:number
 	name: string;
 	title: string;
 	url: string;
@@ -100,10 +108,15 @@ export interface ICategoriesProjects {
 
 export interface IProject {
 	id:number
+	title:string;
 	image: string;
 	text: string;
-	technologies: string;
+	technologies: string[];
 	libries: string;
 	date: string;
 	url: string;
+}
+export interface ITechnologies{
+	name:string;
+	image:string;
 }

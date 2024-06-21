@@ -3,6 +3,12 @@ import BtnMenu from '@atoms/BtnMenu.astro';
 import Thumb from '@atoms/Thumb.astro';
 import Networks from '@atoms/Networks.astro';
 import perfil from '@assents/images/perfil.jpg';
+import {getGenerals} from '@/src/lib/getGenerals'
+
+
+const {infogeneral,navbar}= getGenerals();
+
+
 ---
 
 <script>
@@ -48,30 +54,19 @@ import perfil from '@assents/images/perfil.jpg';
 		<div class='BarContent'>
 			<div class='PerfilContent'>
 				<Thumb img={perfil} className='imagePerfil' />
-				<h2 id='name'>Jhair Infanzon</h2>
+				<h2 id='name'>{infogeneral.name}</h2>
 			</div>
 			<nav class='navDesktop'>
-				<a href='#home'>Home</a>
-				<a href='#about'>Sobre mi</a>
-				<a href='#howdo'>Que hago</a>
-				<a href='#resume'>Resumen</a>
-				<a href='#portfolio'>Portafolio</a>
-				<a href='#'>Testimonios</a>
-				<a href='#contact'>Contacto</a>
+			{navbar.map((item)=><a  href={'#'+item.name} >{item.title}</a>)}
+		
 			</nav>
 			<Networks />
 
 			<BtnMenu className='mx-[2rem] laptop:hidden' />
 		</div>
 
-		<nav class='navMobile'>
-			<a class='enlace' href='#index'>Home</a>
-			<a class='enlace' href='#about'>Sobre mi</a>
-			<a class='enlace' href='#howdo'>Que hago</a>
-			<a class='enlace' href='#resume'>Resumen</a>
-			<a class='enlace' href='#portfolio'>Portafolio</a>
-			<a class='enlace' href='#'>Testimonios</a>
-			<a class='enlace' href='#contact'>Contacto</a>
+		<nav class='navMobile' >
+			{navbar.map((item)=><a class='enlace'  href={'#'+item.name} >{item.title}</a>)}
 		</nav>
 	</div>
 
@@ -138,7 +133,14 @@ import perfil from '@assents/images/perfil.jpg';
 		}
 
 		h2 {
-			@apply text-[2.2rem] font-[500] px-[2rem] mt-4;
+			@apply text-[2.2rem] font-[500] px-[2rem] ;
 		}
+	}
+	@screen laptop {
+		.PerfilContent {
+		h2 {
+			@apply mt-8;
+		}
+	}
 	}
 </style>

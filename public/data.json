@@ -38,21 +38,42 @@
 				"address": "4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028"
 			},
 			"networks": [
-				{ "type": "facebook", "url": "https://www.facebook.com/jhair.tec" },
-				{ "type": "twitter", "url": "" },
-				{ "type": "github", "url": "https://github.com/xxxJhairxxx" },
+				{
+					"type": "facebook",
+					"url": "https://www.facebook.com/jhair.tec",
+					"color": "#0865FE"
+				},
+				{
+					"type": "youtube",
+					"url": "https://www.youtube.com/channel/UCDs2WDaSXj-jeJI46olpxHw",
+					"color": "#FF0000"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/xxxJhairxxx",
+					"color": "#000"
+				},
 				{
 					"type": "linkedin",
-					"url": "https://www.linkedin.com/in/jhair-infanz%C3%B3n-quispe-a31669188/"
+					"url": "https://www.linkedin.com/in/jhair-infanz%C3%B3n-quispe-a31669188/",
+					"color": "#0A66C2"
 				}
 			],
 			"navbar": [
-				{ "name": "home", "title": "Home", "url": "#home" },
-				{ "name": "about", "title": "Sobre mi", "url": "#about" },
-				{ "name": "resume", "title": "Resumen", "url": "#resume" },
-				{ "name": "portfolio", "title": "Portafolio", "url": "#portfolio" },
-				{ "name": "contact", "title": "Contacto", "url": "#contact" }
-			]
+				{ "id": 1, "name": "home", "title": "Home", "url": "#home" },
+				{ "id": 2, "name": "about", "title": "Sobre mi", "url": "#about" },
+				{ "id": 3, "name": "resume", "title": "Resumen", "url": "#resume" },
+				{
+					"id": 4,
+					"name": "portfolio",
+					"title": "Portafolio",
+					"url": "#portfolio"
+				},
+				{ "id": 5, "name": "contact", "title": "Contacto", "url": "#contact" }
+			],
+			"footer": {
+				"text": "<p>Copyright © 2023 <span class='resalt'> Jhair</span>. All Rights Reserved.</p><p>Terms & Policy | Infatec</p>"
+			}
 		},
 		"Especialities": [
 			{
@@ -104,63 +125,177 @@
 		],
 		"Skills": [
 			{
+				"name": "html",
 				"title": "Html 5",
 				"value": 98,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/q98wpsxlo27oilpoyp2x.png"
 			},
 			{
+				"name": "css",
 				"title": "CSS 3",
 				"value": 85,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/dtkw5q5hg64twwabpjjh.png"
 			},
 			{
+				"name": "mysql",
 				"title": "Mysql",
 				"value": 35,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922817/logo%20skills/eerl2freemhxyyc3d2dz.png"
 			},
 			{
+				"name": "git",
 				"title": "Git",
 				"value": 75,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/q8ysna14pqwmjbgdhkd7.png"
 			},
 			{
+				"name": "javascript",
 				"title": "Javascript",
 				"value": 60,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/jtn7djxzpnl1buw4itep.png"
 			},
 			{
+				"name": "typescript",
 				"title": "Typescript",
 				"value": 98,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/jgedylw9mkykbwnku7g5.png"
 			},
 			{
+				"name": "next",
 				"title": "Next js",
 				"value": 98,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/b30jpfd567kv3xj1kt99.png"
 			},
 			{
+				"name": "node",
 				"title": "Node js",
 				"value": 98,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/uwkv87nwjll8mi7x29tu.png"
 			},
 			{
+				"name": "express",
 				"title": "Express js",
 				"value": 98,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/cb5ttvdwavijkwcaagwx.png"
 			},
 			{
+				"name": "astro",
 				"title": "Astro",
 				"value": 98,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921922/logo%20skills/jtxjqzycmpwx1ebq5c6u.png"
 			},
 			{
+				"name": "python",
 				"title": "Python",
 				"value": 98,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/vbctwpwgjoqn6bitl1kh.png"
 			},
 			{
+				"name": "php",
 				"title": "Php",
 				"value": 98,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/zxyxhnc1lijy7lhzzhfk.png"
+			}
+		],
+		"listTechnologies": [
+			{
+				"name": "bootstrap",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718965793/logo%20skills/qqlnom5sv7nhyryvnsrt.png"
+			},
+			{
+				"name": "nuxt",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958581/logo%20skills/xfl3gk7bsaeq6hjefp7o.png"
+			},
+			{
+				"name": "nest",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958579/logo%20skills/f3w4gzpb99pemdfnuw4r.png"
+			},
+			{
+				"name": "laravel",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958407/logo%20skills/flte8ncaurp59fvacn1j.png"
+			},
+			{
+				"name": "github",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958307/logo%20skills/mwtgtmplxogtub93ybvu.png"
+			},
+			{
+				"name": "strapi",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/k9zo8xwvaqtgvedbbk05.png"
+			},
+			{
+				"name": "vue",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/seusj2buftqicv2zrp11.png"
+			},
+			{
+				"name": "seo",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718923378/logo%20skills/nsr1fcfxeldwtxlveyfs.png"
+			},
+			{
+				"name": "wordpress",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922856/logo%20skills/tp9v1j9gsfqbzidsi8kl.png"
+			},
+			{
+				"name": "tailwind",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/gbqqozll4zuvzlylxcjf.png"
+			},
+			{
+				"name": "postcss",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/a0umbr5d2piymnfv2cb2.png"
+			},
+			{
+				"name": "nginx",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/ljlq8q9cvou2pd2300nc.png"
+			},
+			{
+				"name": "figma",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/fidghdsstrvskpsdwp3d.png"
+			},
+			{
+				"name": "html",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/q98wpsxlo27oilpoyp2x.png"
+			},
+			{
+				"name": "css",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/dtkw5q5hg64twwabpjjh.png"
+			},
+			{
+				"name": "mysql",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922817/logo%20skills/eerl2freemhxyyc3d2dz.png"
+			},
+			{
+				"name": "git",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/q8ysna14pqwmjbgdhkd7.png"
+			},
+			{
+				"name": "javascript",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/jtn7djxzpnl1buw4itep.png"
+			},
+			{
+				"name": "typescript",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/jgedylw9mkykbwnku7g5.png"
+			},
+			{
+				"name": "next",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/b30jpfd567kv3xj1kt99.png"
+			},
+			{
+				"name": "node",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/uwkv87nwjll8mi7x29tu.png"
+			},
+			{
+				"name": "express",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/cb5ttvdwavijkwcaagwx.png"
+			},
+			{
+				"name": "astro",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921922/logo%20skills/jtxjqzycmpwx1ebq5c6u.png"
+			},
+			{
+				"name": "python",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/vbctwpwgjoqn6bitl1kh.png"
+			},
+			{
+				"name": "php",
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/zxyxhnc1lijy7lhzzhfk.png"
 			}
 		],
@@ -179,20 +314,22 @@
 					{
 						"id": 1,
 						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-1-573x800_original.jpg",
+						"title": "Centro Odontológico",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": "",
-						"libries": "",
-						"date": "",
-						"url": ""
-					}
-					,{
+						"technologies": ["html", "react", "next", "typescript"],
+						"libries": "swiper",
+						"date": "2022-05-25",
+						"url": "https://centro-odontologico.vercel.app/"
+					},
+					{
 						"id": 2,
 						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-2-1200x800_original.jpg",
+						"title": "Centro Odontológico",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": "",
-						"libries": "",
-						"date": "",
-						"url": ""
+						"technologies": [ "react", "next", "typescript"],
+						"libries": "swiper",
+						"date": "2022-05-25",
+						"url": "https://centro-odontologico.vercel.app/"
 					}
 				]
 			},
@@ -204,20 +341,22 @@
 					{
 						"id": 1,
 						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-2-1200x800_original.jpg",
+						"title": "Centro Odontológico",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": "",
-						"libries": "",
-						"date": "",
-						"url": ""
+						"technologies": ["css","html", "react", "next", "typescript"],
+						"libries": "swiper, lightbox",
+						"date": "2022-05-25",
+						"url": "https://centro-odontologico.vercel.app/"
 					},
 					{
 						"id": 2,
 						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-4-666x800_original.jpg",
+						"title": "Centro Odontológico",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": "",
-						"libries": "",
-						"date": "",
-						"url": ""
+						"technologies": ["tailwind","html", "react", "next", "typescript"],
+						"libries": "swiper",
+						"date": "2022-05-25",
+						"url": "https://centro-odontologico.vercel.app/"
 					}
 				]
 			},
@@ -228,29 +367,33 @@
 				"Proyect": [
 					{
 						"id": 1,
+						"title": "Centro Odontológico",
 						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-3-628x800_original.jpg",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": "",
-						"libries": "",
-						"date": "",
-						"url": ""
-					}
-					,{
+						"technologies": ["postcss","html", "react", "next", "typescript"],
+						"libries": "swiper",
+						"date": "2022-05-25",
+						"url": "https://centro-odontologico.vercel.app/"
+					},
+					{
 						"id": 2,
+						"title": "Centro Odontológico",
 						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-5-1200x831_original.jpg",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": "",
-						"libries": "",
-						"date": "",
-						"url": ""
+						"technologies": ["html", "react", "next", "typescript"],
+						"libries": "swiper",
+						"date": "2022-05-25",
+						"url": "https://centro-odontologico.vercel.app/"
 					},
 					{
 						"id": 3,
+						"title": "Centro Odontológico",
 						"image": "https://livedemo00.template-help.com/wt_prod-10986/images/grid-gallery-6-1200x783_original.jpg",
-						"technologies": "",
-						"libries": "",
-						"date": "",
-						"url": ""
+						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
+						"technologies": ["html", "react", "next", "typescript"],
+						"libries": "swiper",
+						"date": "2022-05-25",
+						"url": "https://centro-odontologico.vercel.app/"
 					}
 				]
 			}

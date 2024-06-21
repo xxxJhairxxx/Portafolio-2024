@@ -1,15 +1,14 @@
 ---
 import HomeContacto from '@components/organisms/HomeContacto.astro';
+import {getGenerals} from '@/src/lib/getGenerals'
+
+const {footer} = getGenerals();
 ---
 
 <footer class='footer'>
 	<HomeContacto />
-	<div class='footer__copy'>
-		<p>
-			Copyright © 2023 <span class='resalt'> Jhair</span>. All Rights
-			Reserved.
-		</p>
-		<p>Terms & Policy | Disclaimer</p>
+	<div class='footer__copy' set:html={footer.text}>
+		
 	</div>
 </footer>
 

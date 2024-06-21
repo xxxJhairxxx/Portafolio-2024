@@ -2,6 +2,9 @@
 import Container from '@globals/Container.astro';
 import Title from '@atoms/Title.astro';
 import Button from '@atoms/Button.astro';
+import {getGenerals} from '@/src/lib/getGenerals'
+
+ const {infogeneral} = getGenerals()
 ---
 
 <Container id='contact' class='Content-contacto'>
@@ -20,23 +23,23 @@ import Button from '@atoms/Button.astro';
 		<div class='contacto-info-address'>
 			<h3 class='contacto__title'>DIRECCION</h3>
 			<p class='contacto__text'>
-				4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028
+				{infogeneral.address}
 			</p>
 		</div>
 
 		<ul class='contacto__skills'>
 			<li class='contacto__items'>
-				<i class='bi bi-phone-fill con'></i> +51 922 692 354
+				<a href={`tel:${infogeneral.phone}`}><i class='bi bi-phone-fill con'></i> {infogeneral.phone}</a>
 			</li>
 			<li class='contacto__items mail'>
-				<i class='bi bi-envelope-fill con'></i> jinfanzonquispe30@gmail.com
+				<a href={`mailto:${infogeneral.email}`}><i class='bi bi-envelope-fill con'></i> jinfanzonquispe30@gmail.com</a>
 			</li>
 		</ul>
 		<div class='sigueme'>
 			<h3 class='contacto__title'>SIGUEME</h3>
 			<div class='Logo-redes'>
 				<i class='bi bi-facebook conx'></i>
-				<i class='bi bi-twitter conx'></i>
+				<i class='bi bi-youtube conx'></i>
 				<i class='bi bi-github conx'></i>
 				<i class='bi bi-linkedin conx'></i>
 			</div>

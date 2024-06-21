@@ -1,14 +1,12 @@
 ---
 import Thumb from '@atoms/Thumb.astro';
-import type {IHomeHeader} from '@interface/home.ts'
+import type { IHomeHeader } from '@interface/home.ts';
 
-const {title_up,title_down} = Astro.props as IHomeHeader
-
-
+const { title_up, title_down } = Astro.props as IHomeHeader;
 ---
 
 <script>
-	function writing(name :string) {
+	function writing(name: string) {
 		for (let i = 0; i < name.length; i++) {
 			setTimeout(() => {
 				const span = document.createElement('span');
@@ -32,9 +30,9 @@ const {title_up,title_down} = Astro.props as IHomeHeader
 		img='https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 	/>
 	<div class='text-center w-full text-white mx-auto'>
-		<span class='title-up'>{title_up}</span>
+		<span class='title-up '>{title_up}</span>
 		<h1>
-			<span class='titulo__cursor'>|</span>
+			<span class='titulo__cursor  cursor-writing'>|</span>
 		</h1>
 		<span class='title-down'>{title_down}</span>
 
@@ -46,20 +44,38 @@ const {title_up,title_down} = Astro.props as IHomeHeader
 	.header {
 		@apply h-[100vh] w-full relative bg-black/70 flex items-center;
 	}
-    h1{
-        @apply text-[4.5rem] font-[600];
-    }
-    .title-up{
-        @apply text-[2.8rem] block; 
-    }
-    .title-down{
-        @apply text-[2.1rem] block;
-    }
-    .btn-contact{
-        @apply text-tertiary border-[0.2rem] px-[3.7rem] py-[0.9rem] my-[2rem] rounded-[1.9rem] border-tertiary;
-        transition: background 0.3s ease-in-out ,color 0.3s ease-in-out ;
-        &:hover{
-            @apply bg-tertiary text-white;
-        }
-    }
+	h1 {
+		@apply text-[4.5rem] font-[600];
+	}
+	.title-up {
+		@apply text-[2.8rem] block;
+	}
+	.title-down {
+		@apply text-[2.1rem] block;
+	}
+	.btn-contact {
+		@apply text-tertiary border-[0.2rem] px-[3.7rem] py-[0.9rem] my-[2rem] rounded-[1.9rem] border-tertiary;
+		transition:
+			background 0.3s ease-in-out,
+			color 0.3s ease-in-out;
+		&:hover {
+			@apply bg-tertiary text-white;
+		}
+	}
+	@keyframes cursor-writing {
+		0% {
+			opacity: 0;
+		} /* Comienza invisible */
+		50% {
+			opacity: 1;
+		} /* Aparece */
+		100% {
+			opacity: 0;
+		} /* Desaparece */
+	}
+
+	/* Aplica la animación a la clase */
+	.cursor-writing {
+		animation: cursor-writing 1s ease-in-out infinite; /* Duración de 2 segundos con efecto de entrada y salida suave */
+	}
 </style>

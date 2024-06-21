@@ -1,21 +1,53 @@
-<div class='network' >
-	<i class='bi bi-facebook'></i>
-	<i class='bi bi-twitter'></i>
-	<i class='bi bi-github'></i>
-	<i class='bi bi-linkedin'></i>
+---
+import { getGenerals } from '../../lib/getGenerals';
+const { networks } = getGenerals();
+
+
+interface NetworkColors {
+  [key: string]: string;
+}
+
+const networkColors: NetworkColors = networks.reduce((acc, { type, color }) => {
+  acc[type] = color;
+  return acc;
+}, {} as NetworkColors);
+
+
+---
+
+<div class='network'>
+	{
+		networks.map(({ type, url }) => (
+			<a href={url} target='_blank' class={`link-${type}`}>
+				<i class={`bi bi-${type}`} />
+			</a>
+		))
+	}
 </div>
 
-<style>
-	.network{
+<style define:vars={networkColors}>
+	.network {
 		@apply justify-between flex w-[12rem] ml-auto;
-		@screen laptop{
+		@screen laptop {
 			position: absolute;
-			bottom:3rem;
+			bottom: 3rem;
 			width: 100%;
-			padding-inline: 3rem ;
+			padding-inline: 3rem;
 			font-size: 1.7rem;
-			margin-left:0 ;
+			margin-left: 0;
 		}
 	}
 
+	.link-facebook:hover {
+		color: var(--facebook);
+	}
+	.link-youtube:hover {
+		color: var(--youtube);
+	}
+	.link-github:hover {
+		color: var(--github);
+	}
+	.link-linkedin:hover {
+		color: var(--linkedin);
+	}
 </style>

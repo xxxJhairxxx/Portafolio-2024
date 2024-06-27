@@ -21,7 +21,7 @@ import {getGenerals} from '@/src/lib/getGenerals'
 	</form>
 	<div class='contacto-info'>
 		<div class='contacto-info-address'>
-			<h3 class='contacto__title'>DIRECCION</h3>
+			<h2 class='contacto__title'>DIRECCION</h2>
 			<p class='contacto__text'>
 				{infogeneral.address}
 			</p>
@@ -152,6 +152,10 @@ import {getGenerals} from '@/src/lib/getGenerals'
 			.message {
 				@apply text-[1.7rem] col-span-2;
 			}
+		}
+
+		.contacto__title{
+			@apply text-[1.8rem];
 		}
 	}
 </style>

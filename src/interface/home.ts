@@ -115,6 +115,7 @@ export interface IProject {
 	libries: string;
 	date: string;
 	url: string;
+	orientation:string;
 }
 export interface ITechnologies{
 	name:string;

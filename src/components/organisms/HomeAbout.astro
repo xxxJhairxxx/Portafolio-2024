@@ -3,6 +3,7 @@ import Title from '@atoms/Title.astro';
 import Button from '@atoms/Button.astro';
 import Container from '@globals/Container.astro';
 import Characteristics from '@components/molecules/Characteristics';
+import Thumb from '@atoms/Thumb.astro'
 import type { IHomeAbout } from '@interface/home';
 import { calcularEdad } from '../../lib/utils';
 import { getGenerals } from '../../lib/getGenerals';
@@ -31,7 +32,7 @@ const { infogeneral } =getGenerals();
 				<a href=`tel:${infogeneral.phone}`>{infogeneral.phone}</a>
 			</p>
 			<p><strong>Edad:</strong> {calcularEdad(infogeneral.both_year)}</p>
-			<p><strong>Ciudad:</strong> {infogeneral.city}</p>
+			<p><strong>Ciudad:</strong> {infogeneral.city} <Thumb img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH5KbtQ3G0tCWHQT7tloxq_WS11KArKFcYLg&s" className="w-[2rem] inline-block" /></p>
 		</div>
 
 		<Button url={cv}>Descargar CV</Button>

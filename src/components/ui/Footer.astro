@@ -1,15 +1,13 @@
 ---
 import HomeContacto from '@components/organisms/HomeContacto.astro';
-import {getGenerals} from '@/src/lib/getGenerals'
+import { getGenerals } from '@/src/lib/getGenerals';
 
-const {footer} = getGenerals();
+const { footer } = getGenerals();
 ---
 
 <footer class='footer'>
 	<HomeContacto />
-	<div class='footer__copy' set:html={footer.text}>
-		
-	</div>
+	<div class='footer__copy' set:html={footer.text} />
 </footer>
 
 <style scoped>
@@ -18,19 +16,19 @@ const {footer} = getGenerals();
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding-block: 2rem;
+		padding-top: 2rem;
 	}
 
 	.footer__copy {
-		@apply text-[1.6rem] text-center ;
-	}
-	.resalt {
-		@apply text-tertiary;
+		@apply text-[1.6rem] text-center;
+		.resalt {
+			@apply text-tertiary;
+		}
 	}
 
 	@screen laptop {
 		.footer__copy {
-			@apply w-full flex justify-center;
+			@apply w-full flex justify-center py-10 mt-5;
 		}
 	}
 </style>

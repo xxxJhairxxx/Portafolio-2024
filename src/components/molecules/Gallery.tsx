@@ -18,7 +18,8 @@ const Gallery = ({ categories }: props) => {
     technologies: [],
     libries: "",
     date: "",
-    url: ""
+    url: "",
+    orientation:""
   });
   const [showModal, setShowModal] = useState<boolean>(false)
 
@@ -74,6 +75,7 @@ const Gallery = ({ categories }: props) => {
           libries={proyect.libries}
           date={proyect.date}
           url={proyect.url}
+          orientation={proyect.orientation}
           setShowModal={setShowModal} />}
     </>
   );

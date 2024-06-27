@@ -8,7 +8,7 @@
 		"HomeAbout": {
 			"title": "Mi perfil",
 			"subtitle": "Sobre mi",
-			"text": "<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Full-Stack.</h4><p>Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desdel frontend hasta el backend</p><p>Constantemente actializado con las últimas tendencias del desarrollo web, busco desafíos tecnológicos emocionantes.</p>"
+			"text": "<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Frontend.</h4><p>Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desde el frontend.</p><p>Constantemente actializado con las últimas tendencias del desarrollo web, busco desafíos tecnológicos emocionantes.</p>"
 		},
 		"HomeSpecialities": {
 			"title": "Especialidades",
@@ -92,9 +92,9 @@
 				"icon": "bi bi-android2"
 			},
 			{
-				"title": "Diseño de interfaces",
+				"title": "Posicionamiento Seo",
 				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
-				"icon": "bi bi-pencil-fill"
+				"icon": "bi bi-megaphone"
 			},
 			{
 				"title": "Base de Datos",
@@ -109,98 +109,172 @@
 		],
 		"Studies": [
 			{
-				"rangoYear": "2022 - 2023",
-				"title": "Desarrollador Web FullStack",
+				"rangoYear": "2023 - 2024",
+				"title": "Base de Datos",
 				"subtitle": "Codigo Tecsup",
-				"text": "Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End."
+				"text": "fundamentos de las bases de datos relacionales y no relacionales y cómo usar SQL para consultar y manipular datos"
+			},
+			{
+				"rangoYear": "2022 - 2023",
+				"title": "Desarrollo Web Frontend",
+				"subtitle": "Codigo Tecsup",
+				"text": "Desarrollar aplicaciones web Front-End con HTML5, CSS y Javascript hsta frameworks y librerías como react.js"
+			},
+			{
+				"rangoYear": "2021 - 2021",
+				"title": "Desarrollo Web con Laravel",
+				"subtitle": "Codigo Tecsup",
+				"text": "Desarrolla sistemas Web con conexión a base de datos utilizando Laravel y MySQL. conocimientos de Backend."
+			},
+			{
+				"rangoYear": "2021 - 2021",
+				"title": "Desarrollo web con React js",
+				"subtitle": "Udemy (Juan Pablo de la torre)",
+				"text": "Desarrollo Web y app mobiles con React js y React Native, typescript tailwind Postcss y consumo de APIs Rest"
+			},
+			{
+				"rangoYear": "2017 - 2019",
+				"title": "Computación e Informática",
+				"subtitle": "ISETP. José Pardo",
+				"text": "Computación e informática técnicos con habilidades en redes, diseño, animacion digital y programacion"
+			},
+			{
+				"rangoYear": "2009 - 2011",
+				"title": "Inglés Básico-Intermedio",
+				"subtitle": "Codigo Tecsup",
+				"text": "Ingles americano para estudiantes que anhelan cumplir nuevos retos"
 			}
 		],
 		"Experience": [
 			{
-				"rangoYear": "2022 - 2023",
-				"title": "Desarrollador Web FullStack",
-				"subtitle": "Codigo Tecsup",
-				"text": "Desarrollar aplicaciones web conociendo las dos partes importantes del desarrollo web, Front-End y Back-End."
+				"rangoYear": "Junio 2023 - Junio 2024",
+				"title": "Alarcon Management Group",
+				"subtitle": "Desarrollador Web",
+				"text": "Desarrollar web con React, Next, tailwind y Strapi (realizar despliegues). Mantenimiento de proyectos con Vue y Wordpress"
+			},
+			{
+				"rangoYear": "Diciembre 2022 - Marzo 2023",
+				"title": "DevSolution SA",
+				"subtitle": "Desarrollador Web Frontend",
+				"text": "Desarrollar y diseñar interface de usuario para aplicaciones web y despligue con Figma, React js y AWS"
+			},
+			{
+				"rangoYear": "Noviembre 2020 - Junio 2021",
+				"title": "Parroquia la Virgen de Nazareth",
+				"subtitle": "Administar contenido Web",
+				"text": "Desarrollar secciones y actualizaciones de contenido en texto, videos y animaciones enla página web"
+			},
+			{
+				"rangoYear": "Junio 2022 - Mayo 2023",
+				"title": "Encuentros SJM",
+				"subtitle": "Instructor de computatión para adultos",
+				"text": "Dictado de clases a profedores de la escuela socio deportiva MLK de el Agustino, curso de ofimática y computación"
+			},
+			{
+				"rangoYear": "Junio 2022 - Mayo 2023",
+				"title": "Encuentros SJM",
+				"subtitle": "Instructor de computatión para niños",
+				"text": "Dictado de clases de computacíon y introducción al desarrollo web para los niños del programa casitas"
 			}
 		],
 		"Skills": [
 			{
 				"name": "html",
 				"title": "Html 5",
-				"value": 98,
+				"value": 96,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/q98wpsxlo27oilpoyp2x.png"
 			},
 			{
 				"name": "css",
 				"title": "CSS 3",
-				"value": 85,
+				"value": 97,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/dtkw5q5hg64twwabpjjh.png"
-			},
-			{
-				"name": "mysql",
-				"title": "Mysql",
-				"value": 35,
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922817/logo%20skills/eerl2freemhxyyc3d2dz.png"
-			},
-			{
-				"name": "git",
-				"title": "Git",
-				"value": 75,
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/q8ysna14pqwmjbgdhkd7.png"
 			},
 			{
 				"name": "javascript",
 				"title": "Javascript",
-				"value": 60,
+				"value": 90,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/jtn7djxzpnl1buw4itep.png"
 			},
 			{
 				"name": "typescript",
 				"title": "Typescript",
-				"value": 98,
+				"value": 85,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/jgedylw9mkykbwnku7g5.png"
 			},
 			{
-				"name": "next",
-				"title": "Next js",
-				"value": 98,
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/b30jpfd567kv3xj1kt99.png"
+				"name": "tailwind",
+				"title": "Tailwind Css",
+				"value": 90,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/gbqqozll4zuvzlylxcjf.png"
 			},
 			{
-				"name": "node",
-				"title": "Node js",
-				"value": 98,
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/uwkv87nwjll8mi7x29tu.png"
+				"name": "postcss",
+				"title": "PostCss",
+				"value": 75,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/a0umbr5d2piymnfv2cb2.png"
 			},
 			{
-				"name": "express",
-				"title": "Express js",
-				"value": 98,
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/cb5ttvdwavijkwcaagwx.png"
+				"name": "react",
+				"title": "React js",
+				"value": 88,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/tp7swfskljjzmbcq5pb4.png"
+			},
+			{
+				"name": "vue",
+				"title": "Vue js",
+				"value": 60,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/seusj2buftqicv2zrp11.png"
 			},
 			{
 				"name": "astro",
 				"title": "Astro",
-				"value": 98,
+				"value": 87,
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921922/logo%20skills/jtxjqzycmpwx1ebq5c6u.png"
 			},
 			{
-				"name": "python",
-				"title": "Python",
-				"value": 98,
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/vbctwpwgjoqn6bitl1kh.png"
+				"name": "next",
+				"title": "Next js",
+				"value": 92,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/b30jpfd567kv3xj1kt99.png"
 			},
 			{
-				"name": "php",
-				"title": "Php",
-				"value": 98,
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/zxyxhnc1lijy7lhzzhfk.png"
+				"name": "git",
+				"title": "Git",
+				"value": 80,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/q8ysna14pqwmjbgdhkd7.png"
+			},
+			{
+				"name": "node",
+				"title": "Node js",
+				"value": 75,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/uwkv87nwjll8mi7x29tu.png"
+			},
+			{
+				"name": "strapi",
+				"title": "Strapi",
+				"value": 80,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/k9zo8xwvaqtgvedbbk05.png"
+			},
+			{
+				"name": "wordpress",
+				"title": "Wordpress",
+				"value": 80,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922856/logo%20skills/tp9v1j9gsfqbzidsi8kl.png"
 			}
 		],
 		"listTechnologies": [
 			{
+				"name": "astro",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921922/logo%20skills/jtxjqzycmpwx1ebq5c6u.png"
+			},
+			{
 				"name": "bootstrap",
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718965793/logo%20skills/qqlnom5sv7nhyryvnsrt.png"
+			},
+			{
+				"name": "docker",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1719459031/logo%20skills/shp86qx7mhs19ydrv9ms.png"
 			},
 			{
 				"name": "nuxt",
@@ -247,10 +321,6 @@
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/ljlq8q9cvou2pd2300nc.png"
 			},
 			{
-				"name": "figma",
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/fidghdsstrvskpsdwp3d.png"
-			},
-			{
 				"name": "html",
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/q98wpsxlo27oilpoyp2x.png"
 			},
@@ -283,13 +353,14 @@
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/uwkv87nwjll8mi7x29tu.png"
 			},
 			{
+				"name": "react",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/tp7swfskljjzmbcq5pb4.png"
+			},
+			{
 				"name": "express",
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/cb5ttvdwavijkwcaagwx.png"
 			},
-			{
-				"name": "astro",
-				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921922/logo%20skills/jtxjqzycmpwx1ebq5c6u.png"
-			},
+
 			{
 				"name": "python",
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/vbctwpwgjoqn6bitl1kh.png"
@@ -297,6 +368,10 @@
 			{
 				"name": "php",
 				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/zxyxhnc1lijy7lhzzhfk.png"
+			},
+			{
+				"name": "aws",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1719465310/logo%20skills/scwiehwdgn5qaxrqko36.png"
 			}
 		],
 		"CategoriesProjects": [
@@ -327,7 +402,7 @@
 						"image": "https://i.postimg.cc/k5KVX54r/espinoza-space-solution.png",
 						"title": "Espinoza space solution",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": [ "react", "next", "typescript"],
+						"technologies": ["react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
 						"url": "https://espinozaspacesolution.com/",
@@ -345,20 +420,22 @@
 						"image": "https://i.postimg.cc/0jQ2m58y/dulce-solucion.jpg",
 						"title": "Dulce Solución",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": ["css","html", "react", "next", "typescript"],
+						"technologies": ["css", "html", "react", "next", "typescript"],
 						"libries": "swiper, lightbox",
 						"date": "2022-05-25",
-						"url": "https://centro-odontologico.vercel.app/"
+						"url": "https://centro-odontologico.vercel.app/",
+						"orientation": "vertical"
 					},
 					{
 						"id": 2,
 						"image": "https://i.postimg.cc/ydR2bwvy/tapia-tennis.jpg",
 						"title": "Tapia Tennis",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": ["tailwind","html", "react", "next", "typescript"],
+						"technologies": ["tailwind", "html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://info.tapiatenniscourt.us/"
+						"url": "https://info.tapiatenniscourt.us/",
+						"orientation": "horizontal"
 					}
 				]
 			},
@@ -372,11 +449,11 @@
 						"title": "Angulo's Gallery",
 						"image": "https://i.postimg.cc/HnR35tqv/angulos-gallery.png",
 						"text": "proyecto muy pequeño, donde se aplica el posicionamiento relativo y absoluto, un efecto de subrayado en el menú con la seudoclase Hover y el manejo de colores con degradado.",
-						"technologies": ["postcss","html", "react", "next", "typescript"],
+						"technologies": ["postcss", "html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
 						"url": "https://angulosgallery.com/",
-						"orientation": "vertical"
+						"orientation": "horizontal"
 					},
 					{
 						"id": 2,
@@ -386,7 +463,8 @@
 						"technologies": ["html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://liquidacion-del-valle.amgbusiness.us/"
+						"url": "https://liquidacion-del-valle.amgbusiness.us/",
+						"orientation": "vertical"
 					},
 					{
 						"id": 3,
@@ -396,7 +474,8 @@
 						"technologies": ["html", "react", "next", "typescript"],
 						"libries": "swiper",
 						"date": "2022-05-25",
-						"url": "https://movinginternationallogistics.us/"
+						"url": "https://movinginternationallogistics.us/",
+						"orientation": "horizontal"
 					}
 				]
 			}

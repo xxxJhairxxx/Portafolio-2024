@@ -8,7 +8,7 @@
 		"HomeAbout": {
 			"title": "Mi perfil",
 			"subtitle": "Sobre mi",
-			"text": "<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Frontend.</h4><p>Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desde el frontend.</p><p>Constantemente actializado con las últimas tendencias del desarrollo web, busco desafíos tecnológicos emocionantes.</p>"
+			"text": "<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Frontend.</h4><p>Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desde el frontend.</p><p>Constantemente actualizado con las últimas tendencias del desarrollo web, busco desafíos tecnológicos emocionantes.</p>"
 		},
 		"HomeSpecialities": {
 			"title": "Especialidades",
@@ -142,7 +142,7 @@
 				"rangoYear": "2009 - 2011",
 				"title": "Inglés Básico-Intermedio",
 				"subtitle": "Codigo Tecsup",
-				"text": "Ingles americano para estudiantes que anhelan cumplir nuevos retos"
+				"text": "Ingles americano con habilidades gramaticales y fluidez en conversaciones"
 			}
 		],
 		"Experience": [
@@ -160,7 +160,7 @@
 			},
 			{
 				"rangoYear": "Noviembre 2020 - Junio 2021",
-				"title": "Parroquia la Virgen de Nazareth",
+				"title": "P. la Virgen de Nazareth",
 				"subtitle": "Administar contenido Web",
 				"text": "Desarrollar secciones y actualizaciones de contenido en texto, videos y animaciones enla página web"
 			},

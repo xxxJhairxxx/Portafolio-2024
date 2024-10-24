@@ -78,32 +78,32 @@
 		"Especialities": [
 			{
 				"title": "Diseño de interfaces",
-				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"text": "Creación y optimización de interfaces de usuario para aplicaciones y sitios web",
 				"icon": "bi bi-palette-fill"
 			},
 			{
 				"title": "Desarrollo Web",
-				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"text": "Creación y mantenimiento de sitios web y aplicaciones web",
 				"icon": "bi bi-laptop"
 			},
 			{
 				"title": "Desarrollo Apps",
-				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"text": "Diseñar y creaciòn de aplicaciones de software que se ejecutan en dispositivos móviles",
 				"icon": "bi bi-android2"
 			},
 			{
 				"title": "Posicionamiento Seo",
-				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"text": "Mejorar la visibilidad y el posicionamiento de un sitio web en los resultados orgánicos de los motores de búsqueda",
 				"icon": "bi bi-megaphone"
 			},
 			{
 				"title": "Base de Datos",
-				"text": "Diseños publicitarios para anuncios físicos y en redes sociales",
+				"text": "sistema organizado para almacenar, gestionar y recuperar datos de manera eficiente.",
 				"icon": "bi bi-database-fill"
 			},
 			{
 				"title": "Administrador de servidor",
-				"text": "Posiciona tu pagina web y se el primero en la lista del buscador web",
+				"text": "configuración, administración, mantenimiento y seguridad de los servidores web que alojan sitios y aplicaciones",
 				"icon": "bi bi-hdd-rack"
 			}
 		],
@@ -147,34 +147,28 @@
 		],
 		"Experience": [
 			{
-				"rangoYear": "Junio 2023 - Junio 2024",
+				"rangoYear": "Junio 2023 - Agosto 2024",
 				"title": "Alarcon Management Group",
 				"subtitle": "Desarrollador Web",
-				"text": "Desarrollar web con React, Next, tailwind y Strapi (realizar despliegues). Mantenimiento de proyectos con Vue y Wordpress"
+				"text": "He desarrollado interfaces de usuario responsivas utilizando React y Zustand, y he creado aplicaciones de eCommerce responsivas con Next.js, Strapi, Stripe y PayPal. Además, he desplegado y administrado websites utilizando Amazon EC2 y Amazon RDS."
 			},
 			{
 				"rangoYear": "Diciembre 2022 - Marzo 2023",
 				"title": "DevSolution SA",
-				"subtitle": "Desarrollador Web Frontend",
-				"text": "Desarrollar y diseñar interface de usuario para aplicaciones web y despligue con Figma, React js y AWS"
+				"subtitle": "Desarrollador y Diseñador web",
+				"text": "Realicé la maquetación de sitios web y eCommerce responsivos utilizando Figma, y desarrollé aplicaciones web responsivas con React y React Router."
 			},
 			{
 				"rangoYear": "Noviembre 2020 - Junio 2021",
-				"title": "P. la Virgen de Nazareth",
-				"subtitle": "Administar contenido Web",
-				"text": "Desarrollar secciones y actualizaciones de contenido en texto, videos y animaciones enla página web"
+				"title": "CCapaSistemas",
+				"subtitle": "Desarrollador web con Php",
+				"text": "Desarrollé paneles de administración web optimizados para sitios construidos con PHP y CodeIgniter, lo que mejoró significativamente la gestión de contenido y la experiencia del usuario en las aplicaciones."
 			},
 			{
-				"rangoYear": "Junio 2022 - Mayo 2023",
-				"title": "Encuentros SJM",
-				"subtitle": "Instructor de computatión para adultos",
-				"text": "Dictado de clases a profedores de la escuela socio deportiva MLK de el Agustino, curso de ofimática y computación"
-			},
-			{
-				"rangoYear": "Junio 2022 - Mayo 2023",
-				"title": "Encuentros SJM",
-				"subtitle": "Instructor de computatión para niños",
-				"text": "Dictado de clases de computacíon y introducción al desarrollo web para los niños del programa casitas"
+				"rangoYear": "Junio 2019 - Mayo 2020",
+				"title": "Perú Bus",
+				"subtitle": "Practicante Desarrollador web",
+				"text": "Colaboré en el desarrollo y mantenimiento de la página web corporativa, empleando tecnologías como HTML5, CSS3 y JavaScript para asegurar un diseño atractivo y funcional."
 			}
 		],
 		"Skills": [

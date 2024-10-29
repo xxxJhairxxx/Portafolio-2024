@@ -118,13 +118,13 @@
 				"rangoYear": "2022 - 2023",
 				"title": "Desarrollo Web Frontend",
 				"subtitle": "Codigo Tecsup",
-				"text": "Desarrollar aplicaciones web Front-End con HTML5, CSS y Javascript hsta frameworks y librerías como react.js"
+				"text": "Desarrollar aplicaciones web Front-End con HTML5, CSS y Javascript hsta frameworks y librerías como react.js Nextjs"
 			},
 			{
 				"rangoYear": "2021 - 2021",
 				"title": "Desarrollo Web con Laravel",
 				"subtitle": "Codigo Tecsup",
-				"text": "Desarrolla sistemas Web con conexión a base de datos utilizando Laravel y MySQL. conocimientos de Backend."
+				"text": "Desarrolla sistemas Web con conexión a base de datos utilizando Laravel y MySQL. conocimientos de Backend con el lenguaje Php."
 			},
 			{
 				"rangoYear": "2021 - 2021",
@@ -144,7 +144,7 @@
 				"rangoYear": "Junio 2023 - Agosto 2024",
 				"title": "Alarcon Management Group",
 				"subtitle": "Desarrollador Web",
-				"text": "Desarrollé interfaces de usuario responsivas con React y Zustand, y creé aplicaciones de eCommerce con Next.js, Strapi, Stripe y PayPal. También desplegué y administré websites utilizando Amazon EC2 y RDS."
+				"text": "Desarrollé interfaces de usuario responsivas con React y Zustand, y creé aplicaciones de eCommerce con Next.js, Strapi, Stripe y PayPal."
 			},
 			{
 				"rangoYear": "Diciembre 2022 - Marzo 2023",
@@ -156,13 +156,19 @@
 				"rangoYear": "Noviembre 2020 - Junio 2021",
 				"title": "CCapaSistemas",
 				"subtitle": "Desarrollador web con Php",
-				"text": "Desarrollé paneles de administración web optimizados para sitios construidos con PHP y CodeIgniter, lo que mejoró significativamente la gestión de contenido y la experiencia del usuario en las aplicaciones."
+				"text": "Desarrollé paneles de administración web optimizados para sitios construidos con PHP y CodeIgniter, lo que mejoró significativamente la gestión de contenido."
 			},
 			{
 				"rangoYear": "Junio 2019 - Mayo 2020",
 				"title": "Perú Bus",
 				"subtitle": "Practicante Desarrollador web",
-				"text": "Colaboré en el desarrollo y mantenimiento de la página web corporativa, empleando tecnologías como HTML5, CSS3 y JavaScript para asegurar un diseño atractivo y funcional."
+				"text": "Colaboré en el desarrollo y mantenimiento de la página web corporativa, empleando tecnologías como HTML5, CSS3 y JavaScript ."
+			},
+			{
+				"rangoYear": "Junio 2018 - Diciembre 2019",
+				"title": "Encuentros Jesutas",
+				"subtitle": "Instructor de Computación",
+				"text": "Enseñar computacion basica a adultos y niños de la organización "
 			}
 		],
 		"Skills": [

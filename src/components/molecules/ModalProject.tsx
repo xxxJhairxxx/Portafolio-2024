@@ -41,7 +41,7 @@ const ModalProject = ({ title, image, text, technologies, libries, date, url, or
 									tablet:overflow-hidden laptop:max-h-[60rem] ${orientation === "vertical" ? 'laptop:col-span-6' : 'laptop:col-span-8'}`}>
 					<img className='w-full h-full object-cover tablet:object-contain laptop:object-cover laptop:object-center' src={image} alt={title} />
 				</picture>
-				<section className={`flex flex-col laptop:w-[43rem] laptop:py-0 gap-2 overflow-y-auto py-5 ${orientation === "vertical" ? 'laptop:col-span-4' : 'laptop:col-span-4'}`}>
+				<section className={`flex flex-col laptop:w-[100%] laptop:py-0 gap-2 overflow-y-auto py-5 ${orientation === "vertical" ? 'laptop:col-span-6' : 'laptop:col-span-4'}`}>
 					<h3 className='font-semibold text-[1.7rem] laptop:text-[2rem] mt-2'>Descripción del Proyecto :</h3>
 					<p className='text-[1.7rem]'>{text}</p>
 					<h3 className='font-semibold text-[1.7rem] laptop:text-[2rem] mt-2'>Detalles del Proyecto</h3>

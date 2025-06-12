@@ -140,6 +140,12 @@
 			}
 		],
 		"Experience": [
+{
+				"rangoYear": "Marzo 2025 - Actualmente",
+				"title": "Sinapsis",
+				"subtitle": "Desarrollador Frontend Semi-senior",
+				"text": "Desarrollo interfaces modernas y funcionales con Angular para una plataforma omnicanal, mejorando la experiencia del usuario y adaptando soluciones tecnológicas a diversas industrias."
+			},
 			{
 				"rangoYear": "Junio 2023 - Agosto 2024",
 				"title": "Alarcon Management Group",
@@ -164,12 +170,7 @@
 				"subtitle": "Practicante Desarrollador web",
 				"text": "Colaboré en el desarrollo y mantenimiento de la página web corporativa, empleando tecnologías como HTML5, CSS3 y JavaScript ."
 			},
-			{
-				"rangoYear": "Junio 2018 - Diciembre 2019",
-				"title": "Encuentros Jesuitas",
-				"subtitle": "Instructor de Computación",
-				"text": "Enseñar computacion basica a adultos y niños de la organización "
-			}
+			
 		],
 		"Skills": [
 			{

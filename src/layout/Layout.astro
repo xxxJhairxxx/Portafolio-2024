@@ -59,28 +59,38 @@ const { title, homeHeader } = Astro.props as Props;
 		<!-- Meta Tags Generated with https://metatags.io -->
 		<SeoEngine title={title} />
 	</head>
-	<!-- tu contenido es inyectado aquí -->
-
-	<div class='template'>
-		<Navbar />
-		<div class='Content'>
-			<Header
-				title_up={homeHeader.title_up}
-				title_down={homeHeader.title_down}
-			/>
-			<main class='bg-white'>
-				<slot />
-			</main>
-			<Footer />
+	<body>
+		<div class='template'>
+			<Navbar />
+			<div class='Content'>
+				<Header
+					title_up={homeHeader.title_up}
+					title_down={homeHeader.title_down}
+				/>
+				<main class='mainContent'>
+					<slot />
+				</main>
+				<Footer />
+			</div>
 		</div>
-	</div>
+	</body>
 	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			@apply bg-[#f7f7f2];
+		}
 		.template {
 			@apply flex max-h-[100vh] w-[100vw] overflow-hidden;
 		}
 		.Content {
 			@apply w-full overflow-y-auto;
 			scroll-behavior: smooth;
+		}
+		.mainContent {
+			@apply relative z-10 overflow-hidden rounded-t-[3rem] bg-white;
+			margin-top: -3rem;
 		}
 	</style>
 </html>

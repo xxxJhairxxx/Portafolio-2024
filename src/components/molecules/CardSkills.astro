@@ -5,7 +5,7 @@ import Tumb from '@atoms/Thumb.astro';
 const { value, title,image } = Astro.props as ISkills;
 ---
 
-<div class='flex items-center h-[6rem] gap-4'>
+<div class='SkillCard'>
 	<div class='Skill'>
 		<div class='Skill__description'>
 			<p class='Skill__title'>{title}</p>
@@ -15,27 +15,34 @@ const { value, title,image } = Astro.props as ISkills;
 			<div class='porcentaje__bar' style={{ width: `${value}%` }}></div>
 		</div>
 	</div>
-    <Tumb className='h-full w-[6rem] px-1 py-2' contain img={image}>
+    <Tumb className='h-[5.4rem] w-[5.4rem] rounded-[1.4rem] bg-white px-2 py-2' contain img={image}>
 </div>
 
 <style>
+	.SkillCard {
+		@apply flex items-center gap-4 rounded-[2rem] border border-gris-200 bg-white px-5 py-5 shadow-[0_10px_24px_rgba(15,23,42,0.05)];
+	}
 	.Skill {
 		width: 100%;
 	}
 	.Skill__description {
-		display: flex;
-		justify-content: space-between;
+		@apply mb-3 flex justify-between;
+	}
+	.Skill__title,
+	.porcentaje__num {
+		@apply text-[1.5rem] font-medium text-secondary;
 	}
 
 	.Skill__barra {
 		width: 100%;
-		background-color: #cccccc;
+		background-color: #d9dfdf;
 		height: 8px;
-		border-radius: 5px;
+		border-radius: 999px;
 		overflow: hidden;
 	}
 	.porcentaje__bar {
 		background-color: #20c983;
-		height: 10px;
+		height: 8px;
+		border-radius: 999px;
 	}
 </style>

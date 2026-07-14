@@ -14,7 +14,23 @@ const {homePortfolio,categoriesProjects} = Astro.props;
 
 <Container id='portfolio'>
 	<Title title={homePortfolio.title} subtitle={homePortfolio.subtitle} />
+	<div class='portfolioIntro'>
+		<p>
+			Una muestra de proyectos enfocados en presentacion de marca, claridad de mensaje,
+			experiencia responsive y objetivos comerciales concretos.
+		</p>
+	</div>
 	<div>
 		<Gallery categories={categoriesProjects} client:load />
 	</div>
 </Container>
+
+<style>
+	.portfolioIntro {
+		@apply mx-auto mb-10 max-w-[72rem] text-center;
+	}
+
+	.portfolioIntro p {
+		@apply text-[1.7rem] leading-relaxed text-gris-300 laptop:text-[1.9rem];
+	}
+</style>

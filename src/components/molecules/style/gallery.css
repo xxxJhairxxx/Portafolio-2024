@@ -1,99 +1,104 @@
-/** @format */
-
-.App {
-	font-family: sans-serif;
-	text-align: center;
+.portfolioGallery {
+  @apply flex flex-col gap-10;
 }
 
-.filter-button-group {
-	margin-bottom: 20px;
-	@apply flex justify-center gap-10;
+.portfolioFilters {
+  @apply flex gap-4 overflow-x-auto pb-2;
+  scrollbar-width: thin;
 }
 
-.filter-button-group button {
-	padding: 3px 0px;
-	cursor: pointer;
-	@apply text-center text-gris-100;
-	font-family: 'Poppins', sans-serif;
-	&:hover {
-		@apply text-tertiary;
-
-		transition: color 0.3s ease-in-out;
-	}
+.portfolioFilter {
+  @apply shrink-0 rounded-full border border-gris-100 px-6 py-3 text-[1.4rem] font-medium text-gris-100 transition-all duration-300;
 }
 
-.my-masonry-grid {
-	display: flex;
-	margin-left: -30px; /* gutter size offset */
-	width: auto;
+.portfolioFilter:hover,
+.portfolioFilter.is-active {
+  @apply border-tertiary bg-tertiary text-white;
 }
 
-.my-masonry-grid_column {
-	padding-left: 30px; /* gutter size */
-	background-clip: padding-box;
+.portfolioMasonry {
+  display: flex;
+  margin-left: -2.4rem;
+  width: auto;
 }
 
-/* Style your items */
-.grid-item {
-	margin-bottom: 30px;
+.portfolioMasonry__column {
+  padding-left: 2.4rem;
+  background-clip: padding-box;
 }
 
-.grid-item img {
-	width: 100%;
-	display: block;
-}
-/* Transitions */
-.fade-in {
-	opacity: 1;
-	transform: scale(1);
+.portfolioCard {
+  @apply mb-10 overflow-hidden rounded-[2.4rem] bg-white shadow-[0_18px_45px_rgba(15,23,42,0.12)];
 }
 
-.fade-out {
-	opacity: 0;
-	transform: scale(0.9);
-	pointer-events: none;
+.portfolioCard__media {
+  @apply relative block h-[26rem] w-full overflow-hidden bg-slate-100;
 }
 
-.selectCat {
-	@apply relative !text-tertiary;
-
-	/* &:before{
-      @apply bottom-0 absolute w-full h-[0.2rem]  bg-[#05BEFA] ;
-      content: '';
-    } */
+.portfolioCard__media img {
+  @apply h-full w-full object-cover object-top transition-transform duration-500;
 }
 
-.pagination span {
-	@apply bg-tertiary;
+.portfolioCard__overlay {
+  @apply absolute bottom-5 right-5 rounded-full bg-white/90 px-4 py-2 text-[1.2rem] font-semibold uppercase tracking-[0.08em] text-secondary opacity-0 transition-all duration-300;
 }
 
-.cardPortfolio {
-	@apply relative overflow-hidden z-[5] ;
-	&::before {
-		@apply w-full h-full absolute left-0 top-0 bg-black opacity-0 z-20 ;
-		transition: opacity 0.5s ease-in-out;
-		content: '';
-	}
-  &::after{
-    @apply text-white absolute left-0 top-[50%] right-0 translate-y-[-50%] text-[2.2rem] z-30 opacity-0;
-    transition: opacity 0.3s ease-in-out;
-    transition-delay: 0.1s;
-    content: attr(data-title);
-  }
-  img{
+.portfolioCard:hover .portfolioCard__media img {
+  transform: scale(1.04);
+}
 
-    transition: transform 0.3s ease-in-out;
-  }
-	&:hover {
-    & > img{
-      @apply scale-125;
-      
-    }
-		&:before {
-			@apply opacity-50;
-		}
-    &::after{
-      @apply opacity-100;
-    }
-	}
+.portfolioCard:hover .portfolioCard__overlay {
+  @apply opacity-100;
+}
+
+.portfolioCard__body {
+  @apply flex flex-col gap-5 p-8;
+}
+
+.portfolioCard__header {
+  @apply flex items-start justify-between gap-4;
+}
+
+.portfolioCard__header h3 {
+  @apply text-[2rem] font-semibold text-secondary;
+}
+
+.portfolioCard__header a {
+  @apply shrink-0 rounded-full bg-secondary px-4 py-2 text-[1.2rem] font-semibold uppercase tracking-[0.08em] text-white transition-colors duration-300;
+}
+
+.portfolioCard__header a:hover {
+  @apply bg-tertiary;
+}
+
+.portfolioCard__body p {
+  @apply text-[1.5rem] leading-relaxed text-gris-300;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.portfolioCard__stack {
+  @apply flex flex-wrap gap-3;
+}
+
+.portfolioTech {
+  @apply flex h-[4.4rem] w-[4.4rem] items-center justify-center rounded-2xl bg-slate-50 p-2;
+}
+
+.portfolioTech img {
+  @apply h-full w-full object-contain;
+}
+
+.portfolioTech--fallback {
+  @apply h-auto w-auto rounded-full bg-slate-100 px-4 py-2 text-[1.2rem] font-semibold uppercase tracking-[0.04em] text-secondary;
+}
+
+.portfolioCard__meta {
+  @apply flex flex-wrap gap-3;
+}
+
+.portfolioCard__meta span {
+  @apply rounded-full bg-slate-100 px-4 py-2 text-[1.2rem] font-medium text-secondary;
 }

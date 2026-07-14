@@ -65,17 +65,16 @@ const { title_up, title_down } = Astro.props as IHomeHeader;
 	@keyframes cursor-writing {
 		0% {
 			opacity: 0;
-		} /* Comienza invisible */
+		}
 		50% {
 			opacity: 1;
-		} /* Aparece */
+		}
 		100% {
 			opacity: 0;
-		} /* Desaparece */
+		}
 	}
 
-	/* Aplica la animación a la clase */
 	.cursor-writing {
-		animation: cursor-writing 1s ease-in-out infinite; /* Duración de 2 segundos con efecto de entrada y salida suave */
+		animation: cursor-writing 1s ease-in-out infinite;
 	}
 </style>

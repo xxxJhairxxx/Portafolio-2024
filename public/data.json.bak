@@ -1,0 +1,509 @@
+{
+	"data": {
+		"HomeHeader": {
+			"title_up": "Disponible para proyectos freelance y equipos digitales",
+			"title_name": "jhair",
+			"title_down": "Frontend Developer · Lima, Perú"
+		},
+		"HomeAbout": {
+			"title": "Perfil",
+			"subtitle": "Sobre mi",
+			"text": "<h4>Construyo experiencias web claras, rapidas y pensadas para negocio.</h4><p>Soy <span>Jhair Infanzon</span>, desarrollador frontend con experiencia creando sitios corporativos, landing pages y e-commerce orientados a conversion, rendimiento y buena experiencia de usuario.</p><p>Trabajo con enfoque visual y tecnico: cuido la interfaz, la adaptabilidad responsive, la estructura del contenido y la implementacion para que cada proyecto se vea profesional y funcione bien desde el primer contacto.</p>"
+		},
+		"HomeSpecialities": {
+			"title": "Servicios clave",
+			"subtitle": "Como aporto"
+		},
+		"HomeResume": {
+			"title": "Experiencia y stack",
+			"subtitle": "Trayectoria"
+		},
+		"HomePortfolio": {
+			"title": "Proyectos seleccionados",
+			"subtitle": "Portafolio"
+		},
+		"Generals": {
+			"characteristics": [
+				{ "value": "5+", "text": "Años de experiencia" },
+				{ "value": "35+", "text": "Clientes" },
+				{ "value": "100+", "text": "Proyectos realizados" },
+				{ "value": "24h", "text": "Respuesta inicial" }
+			],
+			"infogeneral": {
+				"name": "Jhair Infanzon",
+				"email": "jinfanzonquispe30@gmail.com",
+				"phone": "+51 922 692 354",
+				"both_year": "1995-01-30",
+				"city": "Lima, Perú",
+				"address": "Calle Diamantes 392, C. San José, El Agustino"
+			},
+			"networks": [
+				{
+					"type": "facebook",
+					"url": "https://www.facebook.com/jhair.tec",
+					"color": "#0865FE"
+				},
+				{
+					"type": "youtube",
+					"url": "https://www.youtube.com/channel/UCDs2WDaSXj-jeJI46olpxHw",
+					"color": "#FF0000"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/xxxJhairxxx",
+					"color": "#000"
+				},
+				{
+					"type": "linkedin",
+					"url": "https://www.linkedin.com/in/jhair-infanz%C3%B3n-quispe-a31669188/",
+					"color": "#0A66C2"
+				}
+			],
+			"navbar": [
+				{ "id": 1, "name": "home", "title": "Inicio", "url": "#home" },
+				{ "id": 2, "name": "about", "title": "Perfil", "url": "#about" },
+				{ "id": 3, "name": "portfolio", "title": "Proyectos", "url": "#portfolio" },
+				{
+					"id": 4,
+					"name": "resume",
+					"title": "Experiencia",
+					"url": "#resume"
+				},
+				{ "id": 5, "name": "contact", "title": "Contacto", "url": "#contact" }
+			],
+			"footer": {
+				"text": "<p>© 2026 <span class='resalt'>Jhair Infanzon</span>. Portafolio personal de desarrollo frontend.</p><p>Diseño, desarrollo y optimizacion web con enfoque en resultados.</p>"
+			}
+		},
+		"Especialities": [
+			{
+				"title": "Landing pages que convierten",
+				"text": "Estructuro paginas enfocadas en captar consultas, ordenar la oferta y guiar al usuario hacia la accion correcta.",
+				"icon": "bi bi-palette-fill"
+			},
+			{
+				"title": "Sitios corporativos sólidos",
+				"text": "Desarrollo webs profesionales para marcas y empresas que necesitan transmitir confianza, claridad y orden.",
+				"icon": "bi bi-laptop"
+			},
+			{
+				"title": "E-commerce y catalogos",
+				"text": "Implemento experiencias de compra y navegacion de productos pensadas para rendimiento, claridad y conversion.",
+				"icon": "bi bi-bag-check-fill"
+			},
+			{
+				"title": "UI responsive y performance",
+				"text": "Cuido la adaptacion entre dispositivos, la jerarquia visual y la sensacion de velocidad en toda la interfaz.",
+				"icon": "bi bi-phone-fill"
+			},
+			{
+				"title": "SEO tecnico de base",
+				"text": "Trabajo estructura, contenido y metadatos para que los sitios nazcan con una base mas saludable para buscadores.",
+				"icon": "bi bi-megaphone"
+			},
+			{
+				"title": "Trabajo colaborativo",
+				"text": "Me adapto a equipos, procesos y handoff con diseño para entregar interfaces mantenibles y listas para crecer.",
+				"icon": "bi bi-people-fill"
+			}
+		],
+		"Studies": [
+			{
+				"rangoYear": "2023 - 2024",
+				"title": "Base de Datos",
+				"subtitle": "Codigo Tecsup",
+				"text": "fundamentos de las bases de datos relacionales y no relacionales y cómo usar SQL para consultar y manipular datos"
+			},
+			{
+				"rangoYear": "2022 - 2023",
+				"title": "Desarrollo Web Frontend",
+				"subtitle": "Codigo Tecsup",
+				"text": "Desarrollar aplicaciones web Front-End con HTML5, CSS y Javascript hsta frameworks y librerías como react.js Nextjs"
+			},
+			{
+				"rangoYear": "2021 - 2021",
+				"title": "Desarrollo Web con Laravel",
+				"subtitle": "Codigo Tecsup",
+				"text": "Desarrolla sistemas Web con conexión a base de datos utilizando Laravel y MySQL. conocimientos de Backend con el lenguaje Php."
+			},
+			{
+				"rangoYear": "2021 - 2021",
+				"title": "Desarrollo web con React js",
+				"subtitle": "Udemy (Juan Pablo de la torre)",
+				"text": "Desarrollo Web y app mobiles con React js y React Native, typescript tailwind Postcss y consumo de APIs Rest"
+			},
+			{
+				"rangoYear": "2017 - 2019",
+				"title": "Computación e Informática",
+				"subtitle": "ISETP. José Pardo",
+				"text": "Computación e informática técnicos con habilidades en redes, diseño, animacion digital y programacion"
+			}
+		],
+		"Experience": [
+			{
+				"rangoYear": "Marzo 2025 - Actualmente",
+				"title": "Sinapsis",
+				"subtitle": "Desarrollador Frontend Semi-senior",
+				"text": "Desarrollo interfaces modernas y funcionales con Angular para una plataforma omnicanal, mejorando la experiencia del usuario y adaptando soluciones tecnológicas a diversas industrias."
+			},
+			{
+				"rangoYear": "Junio 2023 - Agosto 2024",
+				"title": "Alarcon Management Group",
+				"subtitle": "Desarrollador Web",
+				"text": "Desarrollé interfaces de usuario responsivas con React y Zustand, y creé aplicaciones de eCommerce con Next.js, Strapi, Stripe y PayPal."
+			},
+			{
+				"rangoYear": "Diciembre 2022 - Marzo 2023",
+				"title": "DevSolution SA",
+				"subtitle": "Desarrollador y Diseñador web",
+				"text": "Realicé la maquetación de sitios web y eCommerce responsivos utilizando Figma, y desarrollé aplicaciones web responsivas con React y React Router."
+			},
+			{
+				"rangoYear": "Noviembre 2020 - Junio 2021",
+				"title": "CCapaSistemas",
+				"subtitle": "Desarrollador web con Php",
+				"text": "Desarrollé paneles de administración web optimizados para sitios construidos con PHP y CodeIgniter, lo que mejoró significativamente la gestión de contenido."
+			},
+			{
+				"rangoYear": "Junio 2019 - Mayo 2020",
+				"title": "Perú Bus",
+				"subtitle": "Practicante Desarrollador web",
+				"text": "Colaboré en el desarrollo y mantenimiento de la página web corporativa, empleando tecnologías como HTML5, CSS3 y JavaScript ."
+			}
+			
+		],
+		
+		"Skills": [
+			{
+				"name": "html",
+				"title": "Html 5",
+				"value": 96,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/q98wpsxlo27oilpoyp2x.png"
+			},
+			{
+				"name": "css",
+				"title": "CSS 3",
+				"value": 97,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/dtkw5q5hg64twwabpjjh.png"
+			},
+			{
+				"name": "javascript",
+				"title": "Javascript",
+				"value": 90,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/jtn7djxzpnl1buw4itep.png"
+			},
+			{
+				"name": "typescript",
+				"title": "Typescript",
+				"value": 85,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/jgedylw9mkykbwnku7g5.png"
+			},
+			{
+				"name": "tailwind",
+				"title": "Tailwind Css",
+				"value": 90,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/gbqqozll4zuvzlylxcjf.png"
+			},
+			{
+				"name": "postcss",
+				"title": "PostCss",
+				"value": 75,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/a0umbr5d2piymnfv2cb2.png"
+			},
+			{
+				"name": "react",
+				"title": "React js",
+				"value": 88,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/tp7swfskljjzmbcq5pb4.png"
+			},
+			{
+				"name": "vue",
+				"title": "Vue js",
+				"value": 60,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/seusj2buftqicv2zrp11.png"
+			},
+			{
+				"name": "astro",
+				"title": "Astro",
+				"value": 87,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921922/logo%20skills/jtxjqzycmpwx1ebq5c6u.png"
+			},
+			{
+				"name": "next",
+				"title": "Next js",
+				"value": 92,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/b30jpfd567kv3xj1kt99.png"
+			},
+			{
+				"name": "git",
+				"title": "Git",
+				"value": 80,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/q8ysna14pqwmjbgdhkd7.png"
+			},
+			{
+				"name": "node",
+				"title": "Node js",
+				"value": 75,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/uwkv87nwjll8mi7x29tu.png"
+			},
+			{
+				"name": "strapi",
+				"title": "Strapi",
+				"value": 80,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/k9zo8xwvaqtgvedbbk05.png"
+			},
+			{
+				"name": "wordpress",
+				"title": "Wordpress",
+				"value": 80,
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922856/logo%20skills/tp9v1j9gsfqbzidsi8kl.png"
+			}
+		],
+		"listTechnologies": [
+			{
+				"name": "astro",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921922/logo%20skills/jtxjqzycmpwx1ebq5c6u.png"
+			},
+			{
+				"name": "bootstrap",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718965793/logo%20skills/qqlnom5sv7nhyryvnsrt.png"
+			},
+			{
+				"name": "docker",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1719459031/logo%20skills/shp86qx7mhs19ydrv9ms.png"
+			},
+			{
+				"name": "nuxt",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958581/logo%20skills/xfl3gk7bsaeq6hjefp7o.png"
+			},
+			{
+				"name": "nest",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958579/logo%20skills/f3w4gzpb99pemdfnuw4r.png"
+			},
+			{
+				"name": "laravel",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958407/logo%20skills/flte8ncaurp59fvacn1j.png"
+			},
+			{
+				"name": "github",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718958307/logo%20skills/mwtgtmplxogtub93ybvu.png"
+			},
+			{
+				"name": "strapi",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/k9zo8xwvaqtgvedbbk05.png"
+			},
+			{
+				"name": "vue",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/seusj2buftqicv2zrp11.png"
+			},
+			{
+				"name": "seo",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718923378/logo%20skills/nsr1fcfxeldwtxlveyfs.png"
+			},
+			{
+				"name": "wordpress",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922856/logo%20skills/tp9v1j9gsfqbzidsi8kl.png"
+			},
+			{
+				"name": "tailwind",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/gbqqozll4zuvzlylxcjf.png"
+			},
+			{
+				"name": "postcss",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/a0umbr5d2piymnfv2cb2.png"
+			},
+			{
+				"name": "nginx",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/ljlq8q9cvou2pd2300nc.png"
+			},
+			{
+				"name": "html",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/q98wpsxlo27oilpoyp2x.png"
+			},
+			{
+				"name": "css",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718924660/logo%20skills/dtkw5q5hg64twwabpjjh.png"
+			},
+			{
+				"name": "mysql",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718922817/logo%20skills/eerl2freemhxyyc3d2dz.png"
+			},
+			{
+				"name": "git",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/q8ysna14pqwmjbgdhkd7.png"
+			},
+			{
+				"name": "javascript",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/jtn7djxzpnl1buw4itep.png"
+			},
+			{
+				"name": "typescript",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921925/logo%20skills/jgedylw9mkykbwnku7g5.png"
+			},
+			{
+				"name": "next",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/b30jpfd567kv3xj1kt99.png"
+			},
+			{
+				"name": "node",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/uwkv87nwjll8mi7x29tu.png"
+			},
+			{
+				"name": "react",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/tp7swfskljjzmbcq5pb4.png"
+			},
+			{
+				"name": "express",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921923/logo%20skills/cb5ttvdwavijkwcaagwx.png"
+			},
+
+			{
+				"name": "python",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/vbctwpwgjoqn6bitl1kh.png"
+			},
+			{
+				"name": "php",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1718921924/logo%20skills/zxyxhnc1lijy7lhzzhfk.png"
+			},
+			{
+				"name": "aws",
+				"image": "https://res.cloudinary.com/dfxwg2qk7/image/upload/v1719465310/logo%20skills/scwiehwdgn5qaxrqko36.png"
+			}
+		],
+		"CategoriesProjects": [
+			{
+				"id": 1,
+				"name": "*",
+				"title": "Todo",
+				"Proyect": []
+			},
+			{
+				"id": 2,
+				"name": "landing",
+				"title": "Landing Page",
+				"Proyect": [
+					{
+						"id": 1,
+						"image": "/projects/constructora-andes.png",
+						"title": "Constructora Andes",
+						"text": "Landing page construida para presentar servicios y proyectos con una estructura visual clara enfocada en generar consultas comerciales.",
+						"technologies": ["html", "css", "javascript", "seo"],
+						"libries": "Landing, Responsive, SEO",
+						"date": "No especificada",
+						"url": "https://constructora-andes.netlify.app/",
+						"orientation": "vertical"
+					},
+					{
+						"id": 2,
+						"image": "/projects/inmobiliaria-vista.png",
+						"title": "Inmobiliaria Vista",
+						"text": "Landing orientada a leads para presentar propiedades y soportar trafico de campanas con una comunicacion directa y efectiva.",
+						"technologies": ["html", "css", "javascript", "seo"],
+						"libries": "Landing, Real estate, Leads",
+						"date": "No especificada",
+						"url": "https://inmobiliaria-vista.netlify.app/",
+						"orientation": "horizontal"
+					},
+					{
+						"id": 3,
+						"image": "/projects/jose-pardo-2023.png",
+						"title": "Jose Pardo 2023",
+						"text": "Landing informativa estructurada para comunicar contenido clave de forma rapida, clara y organizada.",
+						"technologies": ["html", "css", "javascript"],
+						"libries": "Landing, Education, Responsive",
+						"date": "No especificada",
+						"url": "https://jose-pardo2023.vercel.app/",
+						"orientation": "horizontal"
+					}
+				]
+			},
+			{
+				"id": 3,
+				"name": "ecommerce",
+				"title": "Ecommerce",
+				"Proyect": [
+					{
+						"id": 1,
+						"image": "/projects/modaurbana.png",
+						"title": "ModaUrbana",
+						"text": "Tienda online de moda con catalogo visual, navegacion fluida y una estructura pensada para facilitar el descubrimiento de productos.",
+						"technologies": ["html", "css", "javascript"],
+						"libries": "E-commerce, Catalog, Responsive",
+						"date": "No especificada",
+						"url": "https://modurbana.netlify.app/",
+						"orientation": "vertical"
+					},
+					{
+						"id": 2,
+						"image": "/projects/repuestosmax.png",
+						"title": "RepuestosMax",
+						"text": "Proyecto e-commerce de autopartes con navegacion basada en catalogo y una experiencia de compra enfocada en rapidez y claridad.",
+						"technologies": ["html", "css", "javascript"],
+						"libries": "E-commerce, Auto parts, Catalog",
+						"date": "No especificada",
+						"url": "https://repuestosmax.netlify.app/",
+						"orientation": "horizontal"
+					}
+				]
+			},
+			{
+				"id": 4,
+				"name": "corporate",
+				"title": "Corporate",
+				"Proyect": [
+					{
+						"id": 1,
+						"title": "Clinica Bienestar",
+						"image": "/projects/clinica-bienestar.png",
+						"text": "Sitio corporativo del sector salud con informacion clara de servicios y un lenguaje visual orientado a transmitir confianza.",
+						"technologies": ["html", "css", "javascript", "seo"],
+						"libries": "Healthcare, Responsive, SEO",
+						"date": "No especificada",
+						"url": "https://bienestar-clinica.netlify.app",
+						"orientation": "horizontal"
+					},
+					{
+						"id": 2,
+						"title": "Espinoza Space Solution",
+						"image": "/projects/espinoza-space-solution.png",
+						"text": "Sitio corporativo construido para presentar servicios, comunicar valor con claridad y facilitar el contacto comercial.",
+						"technologies": ["html", "css", "javascript"],
+						"libries": "Corporate, Services, Responsive",
+						"date": "No especificada",
+						"url": "https://espinozaspacesolution.com/",
+						"orientation": "vertical"
+					},
+					{
+						"id": 3,
+						"title": "Centro Odontologico",
+						"image": "/projects/centro-odontologico.png",
+						"text": "Web de clinica dental con servicios destacados, secciones informativas y una experiencia de usuario directa y facil de recorrer.",
+						"technologies": ["html", "css", "javascript", "seo"],
+						"libries": "Dental, Corporate, SEO",
+						"date": "No especificada",
+						"url": "https://centro-odontologico.vercel.app/",
+						"orientation": "horizontal"
+					}
+				]
+			},
+			{
+				"id": 5,
+				"name": "branding",
+				"title": "Branding + Web",
+				"Proyect": [
+					{
+						"id": 1,
+						"title": "D'Le Emilia",
+						"image": "/projects/dlemilia.png",
+						"text": "Sitio para marca gastronomica con una identidad visual calida y una presencia online pensada para reflejar su personalidad.",
+						"technologies": ["next", "react", "typescript", "tailwind"],
+						"libries": "Branding, One page, Responsive",
+						"date": "No especificada",
+						"url": "https://dlemilia.vercel.app/",
+						"orientation": "vertical"
+					}
+				]
+			}
+		]
+	}
+}

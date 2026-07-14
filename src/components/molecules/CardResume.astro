@@ -17,30 +17,19 @@
 
 <style scoped>
     .card{
-    padding: 5%;
-    border: #cccccc solid 1px;
-    margin: 5% 0;
-}
-.bg-resalt{
-    background-color: #20C997;
-    color: #fff;
-    font-size: 14px;
-    width: 85px;
-    text-align: center;
-    padding: 3px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
+		@apply mb-5 rounded-[2.2rem] border border-gris-200 bg-white px-6 py-6 shadow-[0_12px_28px_rgba(15,23,42,0.05)];
+	}
+	.bg-resalt{
+		@apply inline-flex rounded-full bg-tertiary px-4 py-2 text-[1.2rem] font-semibold uppercase tracking-[0.08em] text-white;
+	}
 
-.card__title{
-    font-size: 21px;
-    font-weight: 500;
-    margin: 1rem 0;
-}
-.card__subtitle{
-    font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #dc3545;
-}
+	.card__title{
+		@apply mt-4 text-[2.2rem] font-semibold text-secondary;
+	}
+	.card__subtitle{
+		@apply mb-3 mt-2 text-[1.5rem] font-medium text-tertiary;
+	}
+	.card__description {
+		@apply text-[1.55rem] leading-relaxed text-gris-300;
+	}
 </style>

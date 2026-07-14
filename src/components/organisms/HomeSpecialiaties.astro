@@ -13,10 +13,17 @@ const { Especialities, HomeSpecialities } = Astro.props as Props;
 
 ---
 
-<Container>
+<Container id='services' class='HomeServices'>
 	<Title title={HomeSpecialities.title} subtitle={HomeSpecialities.subtitle} />
 
-	<div class='grid tablet:grid-cols-2 laptop:grid-cols-3'>
+	<div class='HomeServices__lead'>
+		<p>
+			No se trata solo de "hacer una web bonita". Mi foco esta en que cada proyecto
+			se entienda rapido, se vea confiable y facilite la accion que el negocio necesita.
+		</p>
+	</div>
+
+	<div class='grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3'>
 		{
 			Especialities.map(({title,text,icon}) => (
 				<CardEspecial
@@ -28,3 +35,13 @@ const { Especialities, HomeSpecialities } = Astro.props as Props;
 		}
 	</div>
 </Container>
+
+<style>
+	.HomeServices__lead {
+		@apply mx-auto mb-10 max-w-[74rem] text-center;
+	}
+
+	.HomeServices__lead p {
+		@apply text-[1.7rem] leading-relaxed text-gris-300 laptop:text-[1.9rem];
+	}
+</style>

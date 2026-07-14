@@ -27,13 +27,10 @@ const networkColors: NetworkColors = networks.reduce((acc, { type, color }) => {
 
 <style define:vars={networkColors}>
 	.network {
-		@apply justify-between flex w-[12rem] ml-auto;
+		@apply ml-auto flex w-[12rem] items-center justify-between text-[1.6rem] text-white/80;
 		@screen laptop {
-			position: absolute;
-			bottom: 3rem;
-			width: 100%;
-			padding-inline: 3rem;
-			font-size: 1.7rem;
+			width: 12rem;
+			padding-inline: 0;
 			margin-left: 0;
 		}
 	}

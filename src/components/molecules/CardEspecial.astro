@@ -19,19 +19,23 @@ const {title,text,icon} = Astro.props as Props;
 
 <style scoped>
     .CardEspecial{
-        @apply flex px-4 py-6;
+        @apply flex h-full flex-col gap-6 rounded-[2.4rem] border border-gris-200 bg-[#fbfbf8] px-6 py-8 shadow-[0_16px_35px_rgba(15,23,42,0.06)] transition-transform duration-300;
     }
 
+	.CardEspecial:hover {
+		transform: translateY(-4px);
+	}
+
     .logo{
-        @apply text-tertiary text-[4rem] mx-[6%];
+        @apply flex h-[6.4rem] w-[6.4rem] items-center justify-center rounded-[1.8rem] bg-secondary text-[3rem] text-tertiary;
     }
 
     .content{
         h2{
-            @apply text-black text-[2rem];
+            @apply text-[2.1rem] font-semibold text-secondary;
         }
         p{
-            @apply text-gris-100;
+            @apply mt-3 text-[1.55rem] leading-relaxed text-gris-300;
         }
     }
 

@@ -46,17 +46,33 @@ const ModalProject = ({ title, image, text, technologies, libries, date, url, or
 					<p className='text-[1.7rem]'>{text}</p>
 					<h3 className='font-semibold text-[1.7rem] laptop:text-[2rem] mt-2'>Detalles del Proyecto</h3>
 					<ul className='flex flex-col gap-2 text-[1.7rem]'>
-						<li className='truncate'>Librerías : {libries}</li>
+						<li>Etiquetas : {libries}</li>
 						<li>Fecha : {date}</li>
 						<li className='truncate'> URL :<a href={url} className='text-green-700 hover:text-green-500 transition-colors' > {url}</a></li>
 					</ul>
 					<div>
 						<h3 className='font-semibold text-[1.7rem] my-2 laptop:text-[2rem]'>Tecnologías : </h3>
-						<div className=' flex items-center gap-5'>
-							{list.map(({ image, name }, index) =>
-								<picture key={index} className='block  w-[3rem] laptop:w-[5rem] laptop:mt-5'>
-									<img src={image} className='w-full h-full object-contain' alt={"logo " + name} />
-								</picture>)}
+						<div className='flex flex-wrap items-center gap-4'>
+							{technologies.map((techName, index) => {
+								const technology = list.find((item) => item.name === techName);
+
+								if (!technology) {
+									return (
+										<span
+											key={`${techName}-${index}`}
+											className='rounded-full bg-slate-100 px-4 py-2 text-[1.2rem] font-semibold uppercase tracking-[0.04em] text-secondary'
+										>
+											{techName}
+										</span>
+									);
+								}
+
+								return (
+									<picture key={`${technology.name}-${index}`} className='block h-[4rem] w-[4rem] rounded-2xl bg-slate-50 p-2 laptop:mt-3 laptop:h-[5rem] laptop:w-[5rem]'>
+										<img src={technology.image} className='w-full h-full object-contain' alt={"logo " + technology.name} />
+									</picture>
+								);
+							})}
 						</div>
 					</div>
 				</section>

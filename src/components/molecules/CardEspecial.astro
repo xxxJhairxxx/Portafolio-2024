@@ -8,8 +8,10 @@ const {title,text,icon} = Astro.props as Props;
 ---
 
 <div class='CardEspecial'>
-	<div class='logo'>
-		<i class={icon}/>
+	<div class={`logo ${icon.includes('display') ? 'logo--display' : ''} ${icon.includes('phone') ? 'logo--phone' : ''} ${icon.includes('bag') ? 'logo--bag' : ''} ${icon.includes('people') ? 'logo--people' : ''} ${icon.includes('megaphone') ? 'logo--megaphone' : ''}`}>
+		<div class='logo__inner'>
+			<i class={icon}/>
+		</div>
 	</div>
 	<div class='content'>
 		<h2>{title}</h2>
@@ -23,10 +25,39 @@ const {title,text,icon} = Astro.props as Props;
     }
 
     .logo{
-        @apply flex h-[6.2rem] w-[6.2rem] shrink-0 items-center justify-center rounded-[1.8rem] bg-[#edf8f3] text-[3rem] text-tertiary;
+        @apply relative flex h-[7rem] w-[7rem] shrink-0 items-center justify-center rounded-[2rem] bg-[#eef8f3] text-tertiary;
+    }
+
+    .logo__inner {
+        @apply flex h-full w-full items-center justify-center;
+    }
+
+    .logo i {
+        @apply text-[2.8rem];
+    }
+
+    .logo--display i {
+        @apply text-[3.1rem];
+    }
+
+    .logo--phone i {
+        @apply text-[2.65rem];
+    }
+
+    .logo--bag i {
+        @apply text-[2.75rem];
+    }
+
+    .logo--people i {
+        @apply text-[2.7rem];
+    }
+
+    .logo--megaphone i {
+        @apply text-[2.7rem];
     }
 
     .content{
+        @apply pt-1;
         h2{
             @apply mb-3 text-[2rem] font-semibold text-secondary;
         }

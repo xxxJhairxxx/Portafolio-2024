@@ -2,183 +2,197 @@
 import Container from '@globals/Container.astro';
 import Title from '@atoms/Title.astro';
 import Button from '@atoms/Button.astro';
+import Networks from '@atoms/Networks.astro';
+import { getGenerals } from '../../lib/getGenerals';
+
+const { infogeneral } = getGenerals();
 ---
 
 <Container id='contact' class='Content-contacto'>
-	<Title title='Contacto' subtitle='Contratos' className='col-span-2 laptop:order-1' />
+	<!-- <Title title='Contacto' subtitle='Contratos' className='col-span-2 laptop:order-1' />
 
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const form = document.querySelector('.Formulario') as HTMLFormElement | null;
-			if (!form) return;
-
-			form.addEventListener('submit', (event) => {
-				event.preventDefault();
-				const formData = new FormData(form);
-				const name = String(formData.get('name') ?? '').trim();
-				const email = String(formData.get('email') ?? '').trim();
-				const message = String(formData.get('message') ?? '').trim();
-
-				const subject = encodeURIComponent(`Nuevo mensaje de ${name || 'tu portafolio'}`);
-				const body = encodeURIComponent(
-					`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
-				);
-
-				window.location.href = `mailto:jinfanzonquispe30@gmail.com?subject=${subject}&body=${body}`;
-			});
-		});
-	</script>
-
-	<form class='Formulario'>
-		<h3 class='for__title'>ESCRIBENOS</h3>
-
-		<input type='text' name='name' placeholder='Nombre' class='input' required />
-		<input type='email' name='email' placeholder='email' class='input' required />
-		<textarea class='message' name='message' placeholder='Cuentanos sobre lo que necesitas...'
-			required
-		></textarea>
-		<Button class='mx-auto w-fit py-3 px-8 col-span-2 laptop:px-8 laptop:py-4 laptop:text-[1.5rem]'>Enviar Mensaje </Button>
-	</form>
-	<div class='contacto-info'>
-		<div class='contacto-info-address'>
-			<h3 class='contacto__title'>DIRECCION</h3>
-			<p class='contacto__text'>
-				4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028
+	<div class='contactLayout'>
+		<section class='contactoHero'>
+			<span class='contactoHero__eyebrow'>Disponible para freelance y vacantes</span>
+			<h3>Conversemos si necesitas ayuda real para lanzar, mejorar o escalar tu presencia web.</h3>
+			<p>
+				Trabajo con marcas, negocios y equipos que buscan claridad, velocidad y una ejecución
+				confiable en desarrollo web full stack.
 			</p>
-		</div>
+			<ul class='contactoHero__points'>
+				<li>Webs corporativas, ecommerce y frontend de producto</li>
+				<li>Trabajo remoto, comunicación directa y entregas ordenadas</li>
+				<li>Base en Lima, Perú y disponibilidad para colaborar con equipos</li>
+			</ul>
+			<div class='contactoHero__actions'>
+				<Button
+					url={`mailto:${infogeneral.email}?subject=Quiero%20contactarte%20desde%20tu%20portafolio`}
+					class='contactoHero__button'
+				>
+					Escribirme por correo
+				</Button>
+				<a class='contactoHero__link' href={`tel:${infogeneral.phone}`}>Llamarme ahora</a>
+			</div>
+		</section>
 
-		<ul class='contacto__skills'>
-			<li class='contacto__items'>
-				<i class='bi bi-phone-fill con'></i> +51 922 692 354
-			</li>
-			<li class='contacto__items mail'>
-				<i class='bi bi-envelope-fill con'></i>
-				<a href='mailto:jinfanzonquispe30@gmail.com'>jinfanzonquispe30@gmail.com</a>
-			</li>
-		</ul>
-		<div class='sigueme'>
-			<h3 class='contacto__title'>SIGUEME</h3>
-			<div class='Logo-redes'>
-				<i class='bi bi-facebook conx'></i>
-				<i class='bi bi-twitter conx'></i>
-				<i class='bi bi-github conx'></i>
-				<i class='bi bi-linkedin conx'></i>
+		<div class='contacto-info'>
+			<div class='contactCard contactoCard--highlight'>
+			<h3 class='contacto__title'>Correo principal</h3>
+			<a class='contacto__text contacto__link' href={`mailto:${infogeneral.email}`}>
+				{infogeneral.email}
+			</a>
+			<p class='contacto__meta'>Ideal para propuestas, vacantes y coordinación inicial.</p>
+			</div>
+
+			<div class='contactCard'>
+				<h3 class='contacto__title'>Teléfono</h3>
+				<a class='contacto__text contacto__link' href={`tel:${infogeneral.phone}`}>
+					{infogeneral.phone}
+				</a>
+				<p class='contacto__meta'>Contacto directo para llamadas o coordinación rápida.</p>
+			</div>
+
+			<div class='contactCard contacto-info-address'>
+				<h3 class='contacto__title'>Ubicación</h3>
+				<p class='contacto__text'>{infogeneral.address}</p>
+				<p class='contacto__meta'>{infogeneral.city}</p>
+			</div>
+
+			<div class='sigueme contactCard'>
+				<h3 class='contacto__title'>Redes profesionales</h3>
+				<div class='Logo-redes'>
+					<Networks />
+				</div>
+				<p class='contacto__meta'>También puedes contactarme o ver más de mi trabajo desde aquí.</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </Container>
 
 <style scoped>
 	.Content-contacto {
-		@apply flex flex-col items-center w-full gap-10;
+		@apply flex w-full flex-col gap-10;
 	}
+
+	.contactLayout {
+		@apply grid w-full gap-6;
+	}
+
+	.contactoHero {
+		@apply flex w-full flex-col gap-5 rounded-[2.8rem] border border-gris-200 bg-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.05)];
+	}
+
+	.contactoHero__eyebrow {
+		@apply w-fit rounded-full bg-[#edf8f3] px-5 py-3 text-[1.2rem] font-semibold uppercase tracking-[0.14em] text-tertiary;
+	}
+
+	.contactoHero h3 {
+		@apply max-w-[18ch] text-[3.2rem] font-semibold leading-tight text-secondary;
+	}
+
+	.contactoHero p {
+		@apply max-w-[62rem] text-[1.7rem] leading-relaxed text-gris-300;
+	}
+
+	.contactoHero__points {
+		@apply grid gap-3 text-[1.5rem] text-secondary;
+	}
+
+	.contactoHero__points li {
+		@apply relative pl-6 leading-relaxed;
+	}
+
+	.contactoHero__points li::before {
+		@apply absolute left-0 top-[0.7rem] h-[0.8rem] w-[0.8rem] rounded-full bg-tertiary;
+		content: '';
+	}
+
+	.contactoHero__actions {
+		@apply flex flex-wrap items-center gap-4 pt-2;
+	}
+
+	.contactoHero__button {
+		@apply px-8 py-4 text-[1.5rem];
+	}
+
+	.contactoHero__link {
+		@apply text-[1.5rem] font-semibold text-secondary underline decoration-tertiary decoration-2 underline-offset-4;
+	}
+
 	.contacto-info {
-		@apply w-full flex flex-col items-center justify-center gap-10;
-		line-height: 30px;
+		@apply grid w-full gap-6;
 		.contacto-info-address {
 			@apply flex flex-col justify-center items-center;
 
 			.contacto__text {
-				color: #4c4d4d;
-				@apply text-center w-[68%];
+				@apply w-full text-center;
 			}
 		}
 	}
 
-	.contacto__skills {
-		@apply flex flex-col;
-		align-items: center;
-		list-style: none;
-		color: #4c4d4d;
+	.contactCard {
+		@apply w-full rounded-[2.4rem] border border-gris-200 bg-white px-6 py-6 shadow-[0_14px_34px_rgba(15,23,42,0.04)];
 	}
 
-	.contacto__items a {
-		@apply text-gris-100 transition-colors;
+	.contactoCard--highlight {
+		@apply border-tertiary/20 bg-[#f8fbf9];
 	}
 
-	.contacto__items a:hover {
+	.contacto__link {
+		@apply transition-colors;
+	}
+
+	.contacto__link:hover {
 		@apply text-tertiary;
 	}
 
 	.sigueme {
-		@apply w-[80%] text-[1.7rem] flex flex-col gap-4 text-center;
+		@apply flex flex-col gap-4 text-center text-[1.7rem];
 		color: #4c4d4d;
 	}
 
 	.Logo-redes {
-		display: flex;
-		justify-content: space-around;
+		@apply flex justify-center;
 	}
 
-	.conx {
-		font-size: 25px;
-		color: #4c4d4d;
-		cursor: pointer;
+	.Logo-redes :global(.network) {
+		@apply ml-0 w-auto gap-5 text-[2.2rem] text-gris-100;
 	}
 
-	.Formulario {
-		@apply w-full grid grid-cols-2 gap-5;
-	}
-	.for__title {
-		@apply text-[1.7rem] col-span-2;
-		width: 100%;
-		color: #181818;
-		font-weight: 600;
-		margin-bottom: 10px;
-	}
-
-	.input {
-		@apply w-full col-span-2 px-[1.5rem] py-[0.7rem];
-		margin-right: auto;
-		border-radius: 10px;
-		border: 1px solid #aaaaaa;
-	}
-	.message {
-		@apply w-full h-[15rem] col-span-2  px-[1.5rem] py-[0.7rem];
-		border-radius: 10px;
-		border: 1px solid #aaaaaa;
-	}
-
-	.bi-github:hover {
-		color: #000;
-	}
 	.contacto__title {
-		@apply py-2;
-		font-weight: 600;
-		color: black;
+		@apply pb-2 text-[1.25rem] font-semibold uppercase tracking-[0.12em] text-tertiary;
+	}
+
+	.contacto__text {
+		@apply text-[1.55rem] leading-relaxed text-gris-100;
+	}
+
+	.contacto__meta {
+		@apply pt-2 text-[1.35rem] leading-relaxed text-gris-300;
 	}
 
 	@screen laptop {
 		.Content-contacto {
-			@apply items-center w-[120rem] gap-10 grid grid-cols-2;
+			@apply w-[120rem];
+		}
+		.contactLayout {
+			@apply grid-cols-[minmax(0,1.1fr)_minmax(32rem,0.9fr)] items-start gap-8;
 		}
 		.contacto-info {
-			@apply order-2 justify-start items-start h-full;
+			@apply h-full items-start justify-start;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 			.contacto-info-address {
 				@apply items-start;
 				.contacto__text {
-					@apply text-start mt-5 text-[1.7rem];
+					@apply mt-0 text-start text-[1.6rem];
 				}
-			}
-			.contacto__skills {
-				@apply flex flex-col items-start text-[1.7rem];
 			}
 			.sigueme {
 				@apply items-start;
-
-				.Logo-redes {
-					@apply gap-12;
-				}
 			}
 		}
-		.Formulario {
-			@apply order-3;
-			.input {
-				@apply col-span-1 px-[7%] py-[4%] text-[1.7rem];
-			}
-			.message {
-				@apply px-[3%] py-[3%]  text-[1.7rem] col-span-2;
-			}
+		.contactCard:last-child {
+			@apply col-span-2;
 		}
 	}
 </style>

@@ -126,7 +126,7 @@ const Characteristics = () => {
   };
 
   return (
-    <div ref={sectionRef} className='w-full'>
+    <div ref={sectionRef} className='w-full mt-20'>
       <div className='hidden gap-5 laptop:grid laptop:grid-cols-4'>
         {characteristics.map(({ value, text }, index) => (
           <MetricCard key={`${text}-${index}`} value={value} text={text} visible={isVisible} index={index} />

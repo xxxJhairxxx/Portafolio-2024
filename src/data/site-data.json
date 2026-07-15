@@ -47,7 +47,7 @@
         "phone": "+51 922 692 354",
         "both_year": "1995-01-30",
         "city": "Lima, Perú",
-        "address": "4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028"
+        "address": "PJs Hauide N300, AAHH C. El Agustino"
       },
       "networks": [
         {
@@ -111,32 +111,32 @@
       {
         "title": "Landing pages",
         "text": "Estructuro paginas enfocadas en captar consultas, ordenar la oferta y guiar al usuario hacia la accion correcta.",
-        "icon": "bi bi-palette-fill"
+        "icon": "bi bi-window-stack"
       },
       {
         "title": "Sitios corporativos",
         "text": "Desarrollo webs profesionales para marcas y empresas que necesitan transmitir confianza, claridad y orden.",
-        "icon": "bi bi-display"
+        "icon": "bi bi-buildings"
       },
       {
         "title": "E-commerce",
         "text": "Implemento experiencias de compra y navegacion de productos pensadas para rendimiento, claridad y conversion.",
-        "icon": "bi bi-bag-check-fill"
+        "icon": "bi bi-cart3"
       },
       {
         "title": "UI responsive",
         "text": "Cuido la adaptacion entre dispositivos, la jerarquia visual y la sensacion de velocidad en toda la interfaz.",
-        "icon": "bi bi-phone-fill"
+        "icon": "bi bi-layout-wtf"
       },
       {
         "title": "SEO tecnico de base",
         "text": "Trabajo estructura, contenido y metadatos para que los sitios nazcan con una base mas saludable para buscadores.",
-        "icon": "bi bi-megaphone"
+        "icon": "bi bi-search"
       },
       {
         "title": "Trabajo colaborativo",
         "text": "Me adapto a equipos, procesos y handoff con diseño para entregar interfaces mantenibles y listas para crecer.",
-        "icon": "bi bi-people-fill"
+        "icon": "bi bi-diagram-3"
       }
     ],
     "Studies": [

@@ -3,132 +3,99 @@ import Title from '@atoms/Title.astro';
 import Button from '@atoms/Button.astro';
 import Container from '@globals/Container.astro';
 import Characteristics from '@components/molecules/Characteristics';
+import Thumb from '@atoms/Thumb.astro';
 import type { IHomeAbout } from '@interface/home';
 import { calcularEdad } from '../../lib/utils';
 import { getGenerals } from '../../lib/getGenerals';
 import cv from '@/src/assets/docs/CV - Jhair Infanzon.pdf';
 
 const { title, subtitle, text } = Astro.props as IHomeAbout;
-const { infogeneral } = getGenerals();
 
-const summaryItems = [
-	'Frontend enfocado en interfaces limpias, responsive y orientadas a negocio.',
-	'Experiencia desarrollando sitios corporativos, landing pages y e-commerce.',
-	'Capacidad para convertir requerimientos en productos claros y listos para publicar.'
-];
+const { infogeneral } =getGenerals();
+
 ---
 
 <Container class='HomeAbout' id='about'>
 	<Title title={title} subtitle={subtitle} />
-
-	<div class='HomeAbout__grid'>
-		<section class='HomeAbout__intro'>
-			<article class='article' set:html={text} />
-
-			<ul class='HomeAbout__summary'>
-				{
-					summaryItems.map((item) => (
-						<li>{item}</li>
-					))
-				}
-			</ul>
-		</section>
-
-		<aside class='HomeAbout__panel'>
-			<div class='HomeAbout__panelTop'>
-				<span class='HomeAbout__label'>Resumen rapido</span>
-				<h3>Perfil con base visual, tecnica y orientada a entrega.</h3>
-			</div>
-
-			<div class='info'>
-				<p><strong>Nombre</strong><span>{infogeneral.name}</span></p>
-				<p><strong>Email</strong><a target='_blank' href={`mailto:${infogeneral.email}`}>{infogeneral.email}</a></p>
-				<p><strong>Telefono</strong><a href={`tel:${infogeneral.phone}`}>{infogeneral.phone}</a></p>
-				<p><strong>Edad</strong><span>{calcularEdad(infogeneral.both_year)} años</span></p>
-				<p><strong>Ubicacion</strong><span>{infogeneral.city}</span></p>
-			</div>
-
-			<Button url={cv}>Descargar CV</Button>
-		</aside>
+	<article class='article' set:html={text} />
+	<div class='content-data'>
+		<div class='info'>
+			<p><strong>Nombre:</strong> {infogeneral.name}</p>
+			<p>
+				<strong>Email:</strong>
+				<a target='_blank' href={`mailto:${infogeneral.email}`}>{infogeneral.email}</a>
+			</p>
+			<p>
+				<strong>Celular:</strong>
+				<a href={`tel:${infogeneral.phone}`}>{infogeneral.phone}</a>
+			</p>
+			<p><strong>Edad:</strong> {calcularEdad(infogeneral.both_year)}</p>
+			<p>
+				<strong>Ciudad:</strong> {infogeneral.city}
+				<Thumb
+					img='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH5KbtQ3G0tCWHQT7tloxq_WS11KArKFcYLg&s'
+					className='w-[2rem] inline-block'
+				/>
+			</p>
+		</div>
+		<Button url={cv}>Descargar CV</Button>
 	</div>
 
-	<div class='HomeAbout__stats'>
-		<Characteristics client:load />
-	</div>
+	<Characteristics client:load />
 </Container>
 
 <style>
 	.HomeAbout {
-		@apply py-[4rem];
+		.article {
+			@apply text-center flex flex-col gap-5;
+
+			h4 {
+				@apply text-[2.8rem] max-w-[50rem] mx-auto font-[600];
+				span {
+					@apply text-tertiary;
+				}
+			}
+		}
+		.content-data {
+			@apply my-[2rem] flex flex-col gap-8 items-start w-[100%];
+			.info {
+				@apply flex flex-col gap-5 w-full;
+				p {
+					@apply border-gris-300/30 border-b-[0.1rem] pb-4;
+				}
+				a {
+					@apply font-normal text-green-600;
+				}
+			}
+		}
 	}
 
-	.HomeAbout__grid {
-		@apply grid gap-10 laptop:grid-cols-[1.15fr_0.85fr] laptop:items-start;
+	@screen tablet {
+		.HomeAbout {
+			.article {
+				@apply w-[85%] mx-auto;
+			}
+			.content-data {
+				@apply items-center w-[60%] mx-auto;
+			}
+		}
 	}
 
-	.HomeAbout__intro {
-		@apply flex flex-col gap-8;
-	}
-
-	.HomeAbout .article {
-		@apply flex flex-col gap-5;
-	}
-
-	.HomeAbout .article h4 {
-		@apply text-[3rem] font-semibold leading-tight text-secondary laptop:text-[4rem];
-	}
-
-	.HomeAbout .article span {
-		@apply text-tertiary;
-	}
-
-	.HomeAbout .article p {
-		@apply max-w-[70rem] text-[1.7rem] leading-relaxed text-gris-300 laptop:text-[1.9rem];
-	}
-
-	.HomeAbout__summary {
-		@apply grid gap-4;
-	}
-
-	.HomeAbout__summary li {
-		@apply relative rounded-[2rem] border border-gris-200 bg-[#f8faf9] px-6 py-5 pl-12 text-[1.6rem] leading-relaxed text-secondary;
-	}
-
-	.HomeAbout__summary li::before {
-		content: '';
-		@apply absolute left-6 top-[2.2rem] h-2 w-2 rounded-full bg-tertiary;
-	}
-
-	.HomeAbout__panel {
-		@apply flex flex-col gap-6 rounded-[2.8rem] border border-gris-200 bg-secondary px-7 py-8 text-white shadow-[0_18px_40px_rgba(17,20,24,0.12)];
-	}
-
-	.HomeAbout__panelTop h3 {
-		@apply mt-3 text-[2.6rem] font-semibold leading-tight;
-	}
-
-	.HomeAbout__label {
-		@apply text-[1.2rem] uppercase tracking-[0.18em] text-tertiary;
-	}
-
-	.HomeAbout .info {
-		@apply flex flex-col gap-4;
-	}
-
-	.HomeAbout .info p {
-		@apply flex flex-col gap-2 rounded-[1.8rem] border border-white/10 bg-white/5 px-5 py-4;
-	}
-
-	.HomeAbout .info strong {
-		@apply text-[1.2rem] uppercase tracking-[0.14em] text-white/60;
-	}
-
-	.HomeAbout .info span,
-	.HomeAbout .info a {
-		@apply text-[1.6rem] text-white;
-	}
-
-	.HomeAbout__stats {
-		@apply mt-14 rounded-[3rem] border border-gris-200 bg-[linear-gradient(180deg,#fcfcf9_0%,#f7faf8_100%)] px-4 py-6 shadow-[0_20px_40px_rgba(15,23,42,0.04)] laptop:px-6 laptop:py-7;
+	@screen laptop {
+		.HomeAbout {
+			@apply flex flex-row flex-wrap justify-center gap-[10%];
+			.article {
+				@apply w-[40%] mx-0;
+				h4 {
+					@apply text-left mx-0;
+				}
+				p {
+					@apply text-start;
+				}
+			}
+			.content-data {
+				@apply w-[35%] mx-0;
+			}
+		}
 	}
 </style>

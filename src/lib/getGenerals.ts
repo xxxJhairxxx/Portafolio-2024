@@ -1,5 +1,5 @@
 import type { IDataApi,IGenerals } from '@interface/home.ts';
-import fetching from '@/public/data.json';
+import fetching from '@/src/data/site-data.json';
 
 export const getGeneralsApi = async () => {
 	const res = await fetch(import.meta.env.PUBLIC_API_URL);
@@ -18,4 +18,3 @@ export const getGenerals = () :IGenerals => {
 
 	return Generals;
 };
-

@@ -94,6 +94,7 @@ export interface IResume {
 	text: string;
 }
 export interface ISkills {
+	name: string;
 	value: number;
 	title: string;
 	image: string

@@ -1,8 +1,5 @@
 ---
 import Thumb from '@atoms/Thumb.astro';
-import type { IHomeHeader } from '@interface/home.ts';
-
-const { title_up, title_down } = Astro.props as IHomeHeader;
 ---
 
 <script>
@@ -24,17 +21,17 @@ const { title_up, title_down } = Astro.props as IHomeHeader;
 		writing('Soy Jhair Infanzon.');
 	});
 </script>
-<header class='header' id='home'>
+<header class='header' id='index'>
 	<Thumb
 		className='h-full w-full z-[-1] fixed '
 		img='https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 	/>
 	<div class='text-center w-full text-white mx-auto'>
-		<span class='title-up '>{title_up}</span>
+		<span class='title-up'>Bienvenidos</span>
 		<h1>
-			<span class='titulo__cursor  cursor-writing'>|</span>
+			<span class='titulo__cursor'>|</span>
 		</h1>
-		<span class='title-down'>{title_down}</span>
+		<span class='title-down'>Lima, Perú</span>
 
 		<button class='btn-contact'> Contratos </button>
 	</div>
@@ -55,26 +52,9 @@ const { title_up, title_down } = Astro.props as IHomeHeader;
 	}
 	.btn-contact {
 		@apply text-tertiary border-[0.2rem] px-[3.7rem] py-[0.9rem] my-[2rem] rounded-[1.9rem] border-tertiary;
-		transition:
-			background 0.3s ease-in-out,
-			color 0.3s ease-in-out;
+		transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 		&:hover {
 			@apply bg-tertiary text-white;
 		}
-	}
-	@keyframes cursor-writing {
-		0% {
-			opacity: 0;
-		}
-		50% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0;
-		}
-	}
-
-	.cursor-writing {
-		animation: cursor-writing 1s ease-in-out infinite;
 	}
 </style>

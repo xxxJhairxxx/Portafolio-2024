@@ -2,43 +2,29 @@
 import Container from '@globals/Container.astro';
 import Title from '@atoms/Title.astro';
 import CardResume from '@molecules/CardResume.astro';
+import CardSkills from '@molecules/CardSkills.astro';
 import Button from '@atoms/Button.astro';
-import type { IHomeResume, IResume } from '@interface/home';
-import cv from '@/src/assets/docs/CV - Jhair Infanzon.pdf';
+import type {IHomeResume,IResume,ISkills} from '@interface/home'
+import cv from '@/src/assets/docs/CV - Jhair Infanzon.pdf'
 
 interface Props {
-	homeResume: IHomeResume;
-	studies: IResume[];
-	experience: IResume[];
+	homeResume : IHomeResume;
+	studies: IResume[]
+	experience: IResume[]
+	skills:ISkills[]
 }
 
-const { homeResume, studies, experience } = Astro.props as Props;
+const {homeResume,studies,experience,skills}=Astro.props as Props
+
 ---
 
 <Container class='Resume' id='resume'>
-	<Title title={homeResume.title} subtitle={homeResume.subtitle} />
-
-	<div class='Resume__lead'>
-		<p>
-			Mi experiencia combina trabajo en producto, desarrollo de interfaces y proyectos
-			comerciales para distintos tipos de cliente. Esta mezcla me ayuda a resolver con
-			mayor criterio tanto lo visual como lo funcional.
-		</p>
-	</div>
-
+	<Title className='col-span-2' title={homeResume.title} subtitle={homeResume.subtitle} />
 	<section class='Resume-details'>
-		<div class='Resume-Experience'>
-			<h2>Experiencia profesional</h2>
-			{
-				experience.map((props) => (
-					<CardResume {...props} />
-				))
-			}
-		</div>
 		<div class='Resume-Estudios'>
-			<h2>Formacion</h2>
+			<h2>Mis Estudios</h2>
 			{
-				studies.map(({ rangoYear, title, subtitle, text }) => (
+				studies.map(({rangoYear,title,subtitle,text}) => (
 					<CardResume
 						rangoYear={rangoYear}
 						title={title}
@@ -48,37 +34,67 @@ const { homeResume, studies, experience } = Astro.props as Props;
 				))
 			}
 		</div>
+		<div class='Resume-Experience'>
+			<h2>Mi Experiencia</h2>
+			{
+				experience.map((props) => (
+					<CardResume {...props}
+					/>
+				))
+			}
+		</div>
 	</section>
 
-	<Button url={cv} class='mx-auto mt-8 flex text-[1.6rem] gap-3'>
-		Descargar CV <i class='bi bi-download'/>
-	</Button>
-</Container>
+	<section class='Content__Skills'>
+		<h2>Mis Skills</h2>
+		{skills.map((props) => <CardSkills {...props} />)}
+	</section>
 
+	<Button url={cv} class='mx-auto flex text-[1.6rem] gap-3'>
+		Descargar CV<i class='bi bi-download'/></Button
+	>
+</Container>
 <style>
 	.Resume {
-		@apply py-[4rem];
+		@apply h-fit;
 	}
-
-	.Resume__lead {
-		@apply mx-auto mb-12 max-w-[72rem] text-center;
-	}
-
-	.Resume__lead p {
-		@apply text-[1.7rem] leading-relaxed text-gris-300 laptop:text-[1.9rem];
-	}
-
 	.Resume-details {
-		@apply grid gap-8 laptop:grid-cols-2;
+		@apply grid gap-x-[10%];
 	}
 
-	.Resume-Estudios,
+	.Resume-Estudios {
+		width: 100%;
+		max-width: 480px;
+		margin-bottom: 7%;
+		@apply ml-auto;
+		h2 {
+			@apply text-[2.4rem] font-semibold;
+		}
+	}
 	.Resume-Experience {
-		@apply flex flex-col;
+		width: 100%;
+		max-width: 480px;
+		margin-bottom: 7%;
+		@apply mr-auto;
+		h2 {
+			@apply text-[2.4rem] font-semibold;
+		}
+	}
+	.Content__Skills {
+		width: 90%;
+		margin: 5% auto;
+		@apply h-[130rem] flex flex-col gap-[3rem];
+		h2 {
+			@apply text-[2.4rem] font-semibold col-span-2;
+		}
 	}
 
-	.Resume-Estudios h2,
-	.Resume-Experience h2 {
-		@apply mb-4 text-[2.6rem] font-semibold text-secondary;
+	@screen tablet {
+		.Resume-details {
+			@apply grid-cols-2;
+		}
+		.Content__Skills {
+			@apply grid grid-cols-2 gap-x-[8rem] h-[80rem];
+		}
 	}
 </style>

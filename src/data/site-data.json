@@ -8,7 +8,7 @@
     "HomeAbout": {
       "title": "Mi perfil",
       "subtitle": "Sobre mi",
-      "text": "<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Frontend.</h4><p>Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desde el frontend.</p><p>Constantemente actializado con las últimas tendencias del desarrollo web, busco desafíos tecnológicos emocionantes.</p>"
+      "text": "<h4>Yo soy <span> Jhair Infanzon</span>, Desarrollador Web Full Stack.</h4><p>Desarrollador web proactivo e innovador, especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral tanto en frontend como en backend.</p><p>Constantemente actualizado con las últimas tendencias del desarrollo web, busco desafíos tecnológicos donde pueda aportar soluciones completas y seguir creciendo profesionalmente.</p>"
     },
     "HomeSpecialities": {
       "title": "Especialidades",
@@ -109,22 +109,22 @@
     },
     "Especialities": [
       {
-        "title": "Landing pages que convierten",
+        "title": "Landing pages",
         "text": "Estructuro paginas enfocadas en captar consultas, ordenar la oferta y guiar al usuario hacia la accion correcta.",
         "icon": "bi bi-palette-fill"
       },
       {
-        "title": "Sitios corporativos sólidos",
+        "title": "Sitios corporativos",
         "text": "Desarrollo webs profesionales para marcas y empresas que necesitan transmitir confianza, claridad y orden.",
-        "icon": "bi bi-laptop"
+        "icon": "bi bi-display"
       },
       {
-        "title": "E-commerce y catalogos",
+        "title": "E-commerce",
         "text": "Implemento experiencias de compra y navegacion de productos pensadas para rendimiento, claridad y conversion.",
         "icon": "bi bi-bag-check-fill"
       },
       {
-        "title": "UI responsive y performance",
+        "title": "UI responsive",
         "text": "Cuido la adaptacion entre dispositivos, la jerarquia visual y la sensacion de velocidad en toda la interfaz.",
         "icon": "bi bi-phone-fill"
       },
@@ -141,6 +141,12 @@
     ],
     "Studies": [
       {
+        "rangoYear": "2025 - 2026",
+        "title": "Agentes de IA y automatización",
+        "subtitle": "Formación especializada",
+        "text": "Diseño y construcción de agentes de IA orientados a automatización de tareas, integración con APIs, flujos conversacionales y asistencia inteligente para productos digitales."
+      },
+      {
         "rangoYear": "2023 - 2024",
         "title": "Base de Datos",
         "subtitle": "Codigo Tecsup",
@@ -148,9 +154,9 @@
       },
       {
         "rangoYear": "2022 - 2023",
-        "title": "Desarrollo Web Frontend",
+        "title": "Desarrollo Web Full Stack",
         "subtitle": "Codigo Tecsup",
-        "text": "Desarrollar aplicaciones web Front-End con HTML5, CSS y Javascript hsta frameworks y librerías como react.js Nextjs"
+        "text": "Desarrollo de aplicaciones web con HTML5, CSS, JavaScript y frameworks modernos como React.js y Next.js, integrando también conceptos backend y consumo de APIs."
       },
       {
         "rangoYear": "2021 - 2021",
@@ -158,12 +164,7 @@
         "subtitle": "Codigo Tecsup",
         "text": "Desarrolla sistemas Web con conexión a base de datos utilizando Laravel y MySQL. conocimientos de Backend con el lenguaje Php."
       },
-      {
-        "rangoYear": "2021 - 2021",
-        "title": "Desarrollo web con React js",
-        "subtitle": "Udemy (Juan Pablo de la torre)",
-        "text": "Desarrollo Web y app mobiles con React js y React Native, typescript tailwind Postcss y consumo de APIs Rest"
-      },
+
       {
         "rangoYear": "2017 - 2019",
         "title": "Computación e Informática",
@@ -175,14 +176,14 @@
       {
         "rangoYear": "Marzo 2025 - Actualmente",
         "title": "Sinapsis",
-        "subtitle": "Desarrollador Frontend Semi-senior",
-        "text": "Desarrollo interfaces modernas y funcionales con Angular para una plataforma omnicanal, mejorando la experiencia del usuario y adaptando soluciones tecnológicas a diversas industrias."
+        "subtitle": "Desarrollador Full Stack Semi-senior",
+        "text": "Desarrollo interfaces modernas y funcionales con Angular para una plataforma omnicanal, participando también en integraciones y soluciones orientadas a mejorar la experiencia del usuario."
       },
       {
         "rangoYear": "Junio 2023 - Agosto 2024",
         "title": "Alarcon Management Group",
-        "subtitle": "Desarrollador Web",
-        "text": "Desarrollé interfaces de usuario responsivas con React y Zustand, y creé aplicaciones de eCommerce con Next.js, Strapi, Stripe y PayPal."
+        "subtitle": "Desarrollador Web Full Stack",
+        "text": "Desarrollé interfaces de usuario responsivas con React y Zustand, y construí aplicaciones de eCommerce con Next.js, Strapi, Stripe y PayPal, participando en frontend, lógica de negocio e integraciones."
       },
       {
         "rangoYear": "Diciembre 2022 - Marzo 2023",
@@ -277,19 +278,23 @@
         "image": "/skills/node.svg"
       },
       {
-        "name": "strapi",
-        "title": "Strapi",
+        "name": "nest",
+        "title": "Nest JS",
         "value": 80,
-        "image": "/skills/strapi.svg"
+        "image": "/skills/nest.svg"
       },
       {
-        "name": "wordpress",
-        "title": "Wordpress",
+        "name": "angular",
+        "title": "Angular",
         "value": 80,
-        "image": "/skills/wordpress.svg"
+        "image": "/skills/angular.svg"
       }
     ],
     "listTechnologies": [
+      {
+        "name": "angular",
+        "image": "/skills/angular.svg"
+      },
       {
         "name": "astro",
         "image": "/skills/astro.svg"
@@ -319,20 +324,12 @@
         "image": "/skills/github.svg"
       },
       {
-        "name": "strapi",
-        "image": "/skills/strapi.svg"
-      },
-      {
         "name": "vue",
         "image": "/skills/vue.svg"
       },
       {
         "name": "seo",
         "image": "/skills/seo.svg"
-      },
-      {
-        "name": "wordpress",
-        "image": "/skills/wordpress.svg"
       },
       {
         "name": "tailwind",

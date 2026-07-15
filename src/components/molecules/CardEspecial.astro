@@ -2,7 +2,7 @@
 interface Props {
 	title: string;
 	text: string;
-    icon: string;
+	icon: string;
 }
 const {title,text,icon} = Astro.props as Props;
 ---
@@ -17,26 +17,23 @@ const {title,text,icon} = Astro.props as Props;
 	</div>
 </div>
 
-<style scoped>
+<style>
     .CardEspecial{
-        @apply flex h-full flex-col gap-6 rounded-[2.4rem] border border-gris-200 bg-[#fbfbf8] px-6 py-8 shadow-[0_16px_35px_rgba(15,23,42,0.06)] transition-transform duration-300;
+        @apply flex gap-5 rounded-[2.4rem] border border-gris-200 bg-white px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.05)] transition-transform duration-300 hover:-translate-y-1;
     }
 
-	.CardEspecial:hover {
-		transform: translateY(-4px);
-	}
-
     .logo{
-        @apply flex h-[6.4rem] w-[6.4rem] items-center justify-center rounded-[1.8rem] bg-secondary text-[3rem] text-tertiary;
+        @apply flex h-[6.2rem] w-[6.2rem] shrink-0 items-center justify-center rounded-[1.8rem] bg-[#edf8f3] text-[3rem] text-tertiary;
     }
 
     .content{
         h2{
-            @apply text-[2.1rem] font-semibold text-secondary;
+            @apply mb-3 text-[2rem] font-semibold text-secondary;
         }
         p{
-            @apply mt-3 text-[1.55rem] leading-relaxed text-gris-300;
+            @apply text-[1.55rem] leading-relaxed text-gris-300
         }
+
     }
 
 </style>

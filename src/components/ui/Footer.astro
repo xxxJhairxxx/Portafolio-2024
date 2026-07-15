@@ -1,22 +1,34 @@
 ---
+import HomeContacto from '@components/organisms/HomeContacto.astro';
 import { getGenerals } from '@/src/lib/getGenerals';
 
 const { footer } = getGenerals();
 ---
 
 <footer class='footer'>
+	<HomeContacto />
 	<div class='footer__copy' set:html={footer.text} />
 </footer>
 
 <style scoped>
 	.footer {
-		@apply border-t border-gris-200 bg-white px-[6%] py-8;
+		background: #fff;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 2rem;
 	}
 
 	.footer__copy {
-		@apply mx-auto flex max-w-[124rem] flex-col gap-2 text-center text-[1.4rem] text-gris-100;
+		@apply text-[1.6rem] text-center;
 		.resalt {
 			@apply text-tertiary;
+		}
+	}
+
+	@screen laptop {
+		.footer__copy {
+			@apply mt-5 flex w-full justify-center py-10;
 		}
 	}
 </style>

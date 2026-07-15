@@ -1,7 +1,7 @@
 
 import type { ITechnologies } from '@interface/home';
-import { useEffect, useState, type Dispatch, type SetStateAction } from 'react';
-import fetching from '@/public/data.json';
+import { useEffect, useState } from 'react';
+import fetching from '@/src/data/site-data.json';
 
 interface IProject {
 	id: number
@@ -13,9 +13,9 @@ interface IProject {
 	date: string;
 	url: string;
 	orientation: string;
-	setShowModal: Dispatch<SetStateAction<boolean>>;
+	onClose: () => void;
 }
-const ModalProject = ({ title, image, text, technologies, libries, date, url, orientation, setShowModal }: IProject) => {
+const ModalProject = ({ title, image, text, technologies, libries, date, url, orientation, onClose }: IProject) => {
 
 
 
@@ -31,11 +31,11 @@ const ModalProject = ({ title, image, text, technologies, libries, date, url, or
 
 	return (
 		<>
-			<button onClick={() => setShowModal(false)} className='fixed top-0 left-0 w-full h-full bg-secondary/90 z-[99] fadeIn' aria-label='back' />
+			<button onClick={onClose} className='fixed top-0 left-0 w-full h-full bg-secondary/90 z-[99] fadeIn' aria-label='back' />
 			<div className={`fadeIn fixed z-[999] flex flex-col laptop:justify-center laptop:gap-x-[4rem] laptop:grid laptop:grid-cols-12 gap-10 
 							top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white w-[90%]  max-w-[140rem] px-[2rem] py-[3rem] laptop:py-[5rem] 
 							laptop:px-[5rem] rounded-lg  max-h-[90vh] ${orientation === "vertical" ?'laptop:w-auto':'laptop:w-[70%]'}`} >
-				<button onClick={() => setShowModal(false)} className='bi bi-x-lg text-[2rem] !font-[700] w-[5rem] h-[5rem] absolute right-0 top-0' aria-label='close' />
+				<button onClick={onClose} className='bi bi-x-lg text-[2rem] !font-[700] w-[5rem] h-[5rem] absolute right-0 top-0' aria-label='close' />
 				<h2 className='text-[2rem] font-semibold text-center laptop:w-full laptop:text-[2.6rem] laptop:col-span-12'>{title}</h2>
 				<picture className={`block laptop:h-[100%] w-full rounded-md max-h-[45rem] 
 									tablet:overflow-hidden laptop:max-h-[60rem] ${orientation === "vertical" ? 'laptop:col-span-6' : 'laptop:col-span-8'}`}>

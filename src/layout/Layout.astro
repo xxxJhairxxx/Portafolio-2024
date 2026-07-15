@@ -3,94 +3,37 @@ import SeoEngine from '@globals/SeoEngine.astro';
 import Navbar from '@components/ui/Navbar.astro';
 import Footer from '@ui/Footer.astro';
 import Header from '@ui/Header.astro';
-import type { IHomeHeader } from '@interface/home.ts';
-
-interface Props {
-	title: string;
-	homeHeader: IHomeHeader;
-}
-const { title, homeHeader } = Astro.props as Props;
+const { title } = Astro.props;
 ---
 
 <html lang='es'>
 	<head>
 		<meta charset='utf-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1' />
-		<!-- Primary Meta Tags -->
-		<title>Desarrollador Web Frontend - Jhair Infanzon</title>
-		<meta name='title' content='Desarrollador Web Frontend - Jhair Infanzon' />
-		<meta
-			name='description'
-			content='Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desde el frontend.'
-		/>
-
-		<!-- Open Graph / Facebook -->
-		<meta property='og:type' content='website' />
-		<meta property='og:url' content='https://portafolio-jhair-infanzon.vercel.app/' />
-		<meta
-			property='og:title'
-			content='Desarrollador Web Frontend - Jhair Infanzon'
-		/>
-		<meta
-			property='og:description'
-			content='Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desde el frontend.'
-		/>
-		<meta
-			property='og:image'
-			content='https://i.postimg.cc/9XxKv5qP/portada-seo.jpg'
-		/>
-
-		<!-- Twitter -->
-		<meta property='twitter:card' content='summary_large_image' />
-		<meta property='twitter:url' content='https://portafolio-jhair-infanzon.vercel.app/' />
-		<meta
-			property='twitter:title'
-			content='Desarrollador Web Frontend - Jhair Infanzon'
-		/>
-		<meta
-			property='twitter:description'
-			content='Desarrollador Web, pro-activo e innovador. Especializado en la creación de aplicaciones web eficientes y escalables con enfoque integral desde el frontend.'
-		/>
-		<meta
-			property='twitter:image'
-			content='https://i.postimg.cc/9XxKv5qP/portada-seo.jpg'
-		/>
-
-		<!-- Meta Tags Generated with https://metatags.io -->
 		<SeoEngine title={title} />
 	</head>
+	
 	<body>
+		 
 		<div class='template'>
 			<Navbar />
 			<div class='Content'>
-				<Header
-					title_up={homeHeader.title_up}
-					title_down={homeHeader.title_down}
-				/>
-				<main class='mainContent'>
+				<Header />
+				<main class="bg-white">
 					<slot />
 				</main>
 				<Footer />
 			</div>
 		</div>
 	</body>
+	
+	
 	<style>
-		html {
-			scroll-behavior: smooth;
-		}
-		body {
-			@apply bg-[#f7f7f2];
-		}
 		.template {
 			@apply flex max-h-[100vh] w-[100vw] overflow-hidden;
 		}
-		.Content {
+		.Content{
 			@apply w-full overflow-y-auto;
-			scroll-behavior: smooth;
-		}
-		.mainContent {
-			@apply relative z-10 overflow-hidden rounded-t-[3rem] bg-white;
-			margin-top: -3rem;
 		}
 	</style>
 </html>

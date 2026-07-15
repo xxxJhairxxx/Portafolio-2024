@@ -2,187 +2,183 @@
 import Container from '@globals/Container.astro';
 import Title from '@atoms/Title.astro';
 import Button from '@atoms/Button.astro';
-import { getGenerals } from '@/src/lib/getGenerals';
-import cv from '@/src/assets/docs/CV - Jhair Infanzon.pdf';
-
-const { infogeneral } = getGenerals();
-const whatsappLink = `https://wa.me/${infogeneral.phone.replace(/\D/g, '')}?text=Hola%20Jhair,%20quiero%20hablar%20sobre%20un%20proyecto%20web.`;
-
-const contactCards = [
-	{
-		title: 'Email',
-		value: infogeneral.email,
-		href: `mailto:${infogeneral.email}`,
-		icon: 'bi bi-envelope-fill'
-	},
-	{
-		title: 'WhatsApp',
-		value: infogeneral.phone,
-		href: whatsappLink,
-		icon: 'bi bi-whatsapp'
-	},
-	{
-		title: 'Ubicacion',
-		value: infogeneral.city,
-		href: 'https://www.google.com/maps/place/Lima,+Peru',
-		icon: 'bi bi-geo-alt-fill'
-	}
-];
-
-const process = [
-	'Entendemos el objetivo del proyecto y el tipo de cliente al que quieres llegar.',
-	'Definimos una estructura clara para contenido, navegacion y llamadas a la accion.',
-	'Diseño y desarrollo una interfaz responsive lista para publicar y escalar.'
-];
 ---
 
 <Container id='contact' class='Content-contacto'>
-	<Title title='Conversemos sobre tu proyecto' subtitle='Contacto' />
+	<Title title='Contacto' subtitle='Contratos' className='col-span-2 laptop:order-1' />
 
-	<div class='contactGrid'>
-		<section class='contactIntro'>
-			<span class='contactLabel'>Disponible para nuevos proyectos</span>
-			<h3>Si necesitas una web profesional, podemos empezar por una conversación clara.</h3>
-			<p>
-				Trabajo con clientes que necesitan mejorar su presentación digital, lanzar una
-				landing, renovar su sitio o construir una experiencia frontend más sólida.
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const form = document.querySelector('.Formulario') as HTMLFormElement | null;
+			if (!form) return;
+
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const formData = new FormData(form);
+				const name = String(formData.get('name') ?? '').trim();
+				const email = String(formData.get('email') ?? '').trim();
+				const message = String(formData.get('message') ?? '').trim();
+
+				const subject = encodeURIComponent(`Nuevo mensaje de ${name || 'tu portafolio'}`);
+				const body = encodeURIComponent(
+					`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
+				);
+
+				window.location.href = `mailto:jinfanzonquispe30@gmail.com?subject=${subject}&body=${body}`;
+			});
+		});
+	</script>
+
+	<form class='Formulario'>
+		<h3 class='for__title'>ESCRIBENOS</h3>
+
+		<input type='text' name='name' placeholder='Nombre' class='input' required />
+		<input type='email' name='email' placeholder='email' class='input' required />
+		<textarea class='message' name='message' placeholder='Cuentanos sobre lo que necesitas...'
+			required
+		></textarea>
+		<Button class='mx-auto w-fit py-3 px-8 col-span-2 laptop:px-8 laptop:py-4 laptop:text-[1.5rem]'>Enviar Mensaje </Button>
+	</form>
+	<div class='contacto-info'>
+		<div class='contacto-info-address'>
+			<h3 class='contacto__title'>DIRECCION</h3>
+			<p class='contacto__text'>
+				4th Floor, Plot No.22, 145 Murphy Canyon Rd. San Diego CA 2028
 			</p>
+		</div>
 
-			<div class='contactActions'>
-				<Button url={whatsappLink} class='contactPrimary'>Escribirme por WhatsApp</Button>
-				<Button url={cv} class='contactSecondary'>Ver CV</Button>
+		<ul class='contacto__skills'>
+			<li class='contacto__items'>
+				<i class='bi bi-phone-fill con'></i> +51 922 692 354
+			</li>
+			<li class='contacto__items mail'>
+				<i class='bi bi-envelope-fill con'></i>
+				<a href='mailto:jinfanzonquispe30@gmail.com'>jinfanzonquispe30@gmail.com</a>
+			</li>
+		</ul>
+		<div class='sigueme'>
+			<h3 class='contacto__title'>SIGUEME</h3>
+			<div class='Logo-redes'>
+				<i class='bi bi-facebook conx'></i>
+				<i class='bi bi-twitter conx'></i>
+				<i class='bi bi-github conx'></i>
+				<i class='bi bi-linkedin conx'></i>
 			</div>
-		</section>
-
-		<section class='contactCards'>
-			{
-				contactCards.map(({ title, value, href, icon }) => (
-					<a href={href} target='_blank' class='contactCard'>
-						<div class='contactCard__icon'>
-							<i class={icon}></i>
-						</div>
-						<div>
-							<p class='contactCard__title'>{title}</p>
-							<p class='contactCard__value'>{value}</p>
-						</div>
-					</a>
-				))
-			}
-		</section>
+		</div>
 	</div>
-
-	<section class='contactProcess'>
-		<div class='contactProcess__header'>
-			<h3>Cómo suelo trabajar</h3>
-			<p>
-				Mi objetivo es que el proceso sea simple, ordenado y orientado a resultados,
-				sin complicar la toma de decisiones.
-			</p>
-		</div>
-		<div class='contactProcess__grid'>
-			{
-				process.map((item, index) => (
-					<article class='processCard'>
-						<span>0{index + 1}</span>
-						<p>{item}</p>
-					</article>
-				))
-			}
-		</div>
-	</section>
 </Container>
 
 <style scoped>
 	.Content-contacto {
-		@apply py-[4rem];
+		@apply flex flex-col items-center w-full gap-10;
+	}
+	.contacto-info {
+		@apply w-full flex flex-col items-center justify-center gap-10;
+		line-height: 30px;
+		.contacto-info-address {
+			@apply flex flex-col justify-center items-center;
+
+			.contacto__text {
+				color: #4c4d4d;
+				@apply text-center w-[68%];
+			}
+		}
 	}
 
-	.contactGrid {
-		@apply grid gap-8 laptop:grid-cols-[1fr_0.9fr];
+	.contacto__skills {
+		@apply flex flex-col;
+		align-items: center;
+		list-style: none;
+		color: #4c4d4d;
 	}
 
-	.contactIntro {
-		@apply rounded-[3rem] bg-secondary px-7 py-8 text-white;
+	.contacto__items a {
+		@apply text-gris-100 transition-colors;
 	}
 
-	.contactLabel {
-		@apply text-[1.2rem] uppercase tracking-[0.16em] text-tertiary;
+	.contacto__items a:hover {
+		@apply text-tertiary;
 	}
 
-	.contactIntro h3 {
-		@apply mt-4 text-[3.2rem] font-semibold leading-tight;
+	.sigueme {
+		@apply w-[80%] text-[1.7rem] flex flex-col gap-4 text-center;
+		color: #4c4d4d;
 	}
 
-	.contactIntro p {
-		@apply mt-5 text-[1.7rem] leading-relaxed text-white/70;
+	.Logo-redes {
+		display: flex;
+		justify-content: space-around;
 	}
 
-	.contactActions {
-		@apply mt-8 flex flex-wrap gap-4;
+	.conx {
+		font-size: 25px;
+		color: #4c4d4d;
+		cursor: pointer;
 	}
 
-	.contactPrimary,
-	.contactSecondary {
-		@apply !px-8 !py-5;
+	.Formulario {
+		@apply w-full grid grid-cols-2 gap-5;
+	}
+	.for__title {
+		@apply text-[1.7rem] col-span-2;
+		width: 100%;
+		color: #181818;
+		font-weight: 600;
+		margin-bottom: 10px;
 	}
 
-	.contactSecondary {
-		@apply !bg-white/10 hover:!bg-white/20;
+	.input {
+		@apply w-full col-span-2 px-[1.5rem] py-[0.7rem];
+		margin-right: auto;
+		border-radius: 10px;
+		border: 1px solid #aaaaaa;
+	}
+	.message {
+		@apply w-full h-[15rem] col-span-2  px-[1.5rem] py-[0.7rem];
+		border-radius: 10px;
+		border: 1px solid #aaaaaa;
 	}
 
-	.contactCards {
-		@apply grid gap-5;
+	.bi-github:hover {
+		color: #000;
+	}
+	.contacto__title {
+		@apply py-2;
+		font-weight: 600;
+		color: black;
 	}
 
-	.contactCard {
-		@apply flex items-center gap-5 rounded-[2.4rem] border border-gris-200 bg-[#fbfbf8] px-6 py-6 transition-transform duration-300;
-	}
+	@screen laptop {
+		.Content-contacto {
+			@apply items-center w-[120rem] gap-10 grid grid-cols-2;
+		}
+		.contacto-info {
+			@apply order-2 justify-start items-start h-full;
+			.contacto-info-address {
+				@apply items-start;
+				.contacto__text {
+					@apply text-start mt-5 text-[1.7rem];
+				}
+			}
+			.contacto__skills {
+				@apply flex flex-col items-start text-[1.7rem];
+			}
+			.sigueme {
+				@apply items-start;
 
-	.contactCard:hover {
-		transform: translateY(-3px);
-	}
-
-	.contactCard__icon {
-		@apply flex h-[5.8rem] w-[5.8rem] items-center justify-center rounded-[1.8rem] bg-secondary text-[2.2rem] text-tertiary;
-	}
-
-	.contactCard__title {
-		@apply text-[1.2rem] uppercase tracking-[0.14em] text-gris-100;
-	}
-
-	.contactCard__value {
-		@apply mt-2 text-[1.8rem] font-medium text-secondary;
-	}
-
-	.contactProcess {
-		@apply mt-12 rounded-[3rem] border border-gris-200 bg-[#fbfbf8] px-6 py-8 laptop:px-10;
-	}
-
-	.contactProcess__header {
-		@apply max-w-[70rem];
-	}
-
-	.contactProcess__header h3 {
-		@apply text-[2.8rem] font-semibold text-secondary;
-	}
-
-	.contactProcess__header p {
-		@apply mt-3 text-[1.6rem] leading-relaxed text-gris-300;
-	}
-
-	.contactProcess__grid {
-		@apply mt-8 grid gap-5 tablet:grid-cols-3;
-	}
-
-	.processCard {
-		@apply rounded-[2.2rem] border border-gris-200 bg-white px-5 py-5;
-	}
-
-	.processCard span {
-		@apply text-[1.2rem] font-semibold uppercase tracking-[0.14em] text-tertiary;
-	}
-
-	.processCard p {
-		@apply mt-3 text-[1.55rem] leading-relaxed text-gris-300;
+				.Logo-redes {
+					@apply gap-12;
+				}
+			}
+		}
+		.Formulario {
+			@apply order-3;
+			.input {
+				@apply col-span-1 px-[7%] py-[4%] text-[1.7rem];
+			}
+			.message {
+				@apply px-[3%] py-[3%]  text-[1.7rem] col-span-2;
+			}
+		}
 	}
 </style>

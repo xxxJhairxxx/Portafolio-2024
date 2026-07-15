@@ -9,29 +9,31 @@ const { title, subtitle, className } = Astro.props;
 ---
 
 <div class={`Title ${className}`}>
-	<h3>{subtitle}</h3>
 	<h2>{title}</h2>
+	<h3>{subtitle}</h3>
 </div>
 
 <style>
 	.Title {
-		@apply relative my-[5rem] flex flex-col items-center justify-center gap-3 text-center font-bold;
-	}
-	.Title h3 {
-		@apply text-[1.2rem] uppercase tracking-[0.24em] text-tertiary;
-	}
-	.Title h2 {
-		@apply relative z-20 text-[3.4rem] leading-tight text-secondary;
-		max-width: 16ch;
-	}
-	.Title h2::before {
-		@apply absolute bottom-[-1rem] left-0 right-0 mx-auto h-[0.35rem] w-[5.5rem] rounded-full bg-tertiary;
-		content: '';
+		@apply relative my-[6rem] flex items-center justify-center text-center font-bold;
+		h2 {
+			@apply relative z-20 text-[3.6rem];
+			&::before {
+				@apply absolute bottom-[-0.3rem] left-0 right-0 mx-auto h-[0.3rem] w-[40%] bg-tertiary;
+				content: '';
+			}
+		}
+		h3 {
+			@apply absolute z-10 text-[5.5rem] uppercase text-[#fef2ea];
+		}
 	}
 
 	@screen laptop {
-		.Title h2 {
-			@apply text-[4.6rem];
+		.Title {
+			@apply my-[8rem] w-full;
+			h3 {
+				@apply text-[12rem];
+			}
 		}
 	}
 </style>
